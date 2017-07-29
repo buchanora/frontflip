@@ -1,0 +1,25 @@
+{
+  "name": "frontflip",
+  "version": "1.0.0",
+  "description": "A mordern frontend development platform",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/theEMFcompany/frontflip.git"
+  },
+  "keywords": [
+    "frontend",
+    "development",
+    "react",
+    "redux"
+  ],
+  "author": "buchanora",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/theEMFcompany/frontflip/issues"
+  },
+  "homepage": "https://github.com/theEMFcompany/frontflip#readme"
+}
