@@ -1,6 +1,6 @@
 {
   "name": "frontflip",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "A frontend development platform",
   "main": "index.js",
   "repository": "https://github.com/theEMFcompany/frontflip.git",
