@@ -1,0 +1,188 @@
+0 silly input [ 'publish' ]
+1 silly flags { _: [ 'publish' ] }
+2 verbose rootPath /Users/admin/DEV/frontflip
+3 info version 2.0.0
+4 info versioning independent
+5 silly isInitialized
+6 silly isInitialized true
+7 silly existsSync /Users/admin/DEV/frontflip/VERSION
+8 silly initialize attempt
+9 silly getUpdates
+10 info Checking for updated packages...
+11 silly hasTags
+12 verbose hasTags true
+13 silly getLastTag
+14 verbose getLastTag frontflip@1.0.1-0
+15 info Comparing with frontflip@1.0.1-0.
+16 silly diffSinceIn frontflip@1.0.1-0 /Users/admin/DEV/frontflip/packages/datagrid
+17 silly diff packages/datagrid/package.json
+18 silly diffSinceIn frontflip@1.0.1-0 /Users/admin/DEV/frontflip/packages/fieldstack
+19 silly diff packages/fieldstack/package.json
+20 silly diffSinceIn frontflip@1.0.1-0 /Users/admin/DEV/frontflip/packages/frontflip-cli
+21 silly diff packages/frontflip-cli/frontflip.js
+21 silly diff packages/frontflip-cli/index.js
+21 silly diff packages/frontflip-cli/node_modules/ansi-regex/index.js
+21 silly diff packages/frontflip-cli/node_modules/ansi-regex/license
+21 silly diff packages/frontflip-cli/node_modules/ansi-regex/package.json
+21 silly diff packages/frontflip-cli/node_modules/ansi-regex/readme.md
+21 silly diff packages/frontflip-cli/node_modules/ansi-styles/index.js
+21 silly diff packages/frontflip-cli/node_modules/ansi-styles/license
+21 silly diff packages/frontflip-cli/node_modules/ansi-styles/package.json
+21 silly diff packages/frontflip-cli/node_modules/ansi-styles/readme.md
+21 silly diff packages/frontflip-cli/node_modules/chalk/index.js
+21 silly diff packages/frontflip-cli/node_modules/chalk/license
+21 silly diff packages/frontflip-cli/node_modules/chalk/package.json
+21 silly diff packages/frontflip-cli/node_modules/chalk/readme.md
+21 silly diff packages/frontflip-cli/node_modules/commander/History.md
+21 silly diff packages/frontflip-cli/node_modules/commander/LICENSE
+21 silly diff packages/frontflip-cli/node_modules/commander/Readme.md
+21 silly diff packages/frontflip-cli/node_modules/commander/index.js
+21 silly diff packages/frontflip-cli/node_modules/commander/package.json
+21 silly diff packages/frontflip-cli/node_modules/escape-string-regexp/index.js
+21 silly diff packages/frontflip-cli/node_modules/escape-string-regexp/license
+21 silly diff packages/frontflip-cli/node_modules/escape-string-regexp/package.json
+21 silly diff packages/frontflip-cli/node_modules/escape-string-regexp/readme.md
+21 silly diff packages/frontflip-cli/node_modules/fs-extra/.npmignore
+21 silly diff packages/frontflip-cli/node_modules/fs-extra/CHANGELOG.md
+21 silly diff packages/frontflip-cli/node_modules/fs-extra/LICENSE
+21 silly diff packages/frontflip-cli/node_modules/fs-extra/README.md
+21 silly diff packages/frontflip-cli/node_modules/fs-extra/lib/copy-sync/copy-file-sync.js
+21 silly diff packages/frontflip-cli/node_modules/fs-extra/lib/copy-sync/copy-sync.js
+21 silly diff packages/frontflip-cli/node_modules/fs-extra/lib/copy-sync/index.js
+21 silly diff packages/frontflip-cli/node_modules/fs-extra/lib/copy/copy.js
+21 silly diff packages/frontflip-cli/node_modules/fs-extra/lib/copy/index.js
+21 silly diff packages/frontflip-cli/node_modules/fs-extra/lib/copy/ncp.js
+21 silly diff packages/frontflip-cli/node_modules/fs-extra/lib/empty/index.js
+21 silly diff packages/frontflip-cli/node_modules/fs-extra/lib/ensure/file.js
+21 silly diff packages/frontflip-cli/node_modules/fs-extra/lib/ensure/index.js
+21 silly diff packages/frontflip-cli/node_modules/fs-extra/lib/ensure/link.js
+21 silly diff packages/frontflip-cli/node_modules/fs-extra/lib/ensure/symlink-paths.js
+21 silly diff packages/frontflip-cli/node_modules/fs-extra/lib/ensure/symlink-type.js
+21 silly diff packages/frontflip-cli/node_modules/fs-extra/lib/ensure/symlink.js
+21 silly diff packages/frontflip-cli/node_modules/fs-extra/lib/index.js
+21 silly diff packages/frontflip-cli/node_modules/fs-extra/lib/json/index.js
+21 silly diff packages/frontflip-cli/node_modules/fs-extra/lib/json/jsonfile.js
+21 silly diff packages/frontflip-cli/node_modules/fs-extra/lib/json/output-json-sync.js
+21 silly diff packages/frontflip-cli/node_modules/fs-extra/lib/json/output-json.js
+21 silly diff packages/frontflip-cli/node_modules/fs-extra/lib/mkdirs/index.js
+21 silly diff packages/frontflip-cli/node_modules/fs-extra/lib/mkdirs/mkdirs-sync.js
+21 silly diff packages/frontflip-cli/node_modules/fs-extra/lib/mkdirs/mkdirs.js
+21 silly diff packages/frontflip-cli/node_modules/fs-extra/lib/mkdirs/win32.js
+21 silly diff packages/frontflip-cli/node_modules/fs-extra/lib/move/index.js
+21 silly diff packages/frontflip-cli/node_modules/fs-extra/lib/output/index.js
+21 silly diff packages/frontflip-cli/node_modules/fs-extra/lib/remove/index.js
+21 silly diff packages/frontflip-cli/node_modules/fs-extra/lib/remove/rimraf.js
+21 silly diff packages/frontflip-cli/node_modules/fs-extra/lib/util/assign.js
+21 silly diff packages/frontflip-cli/node_modules/fs-extra/lib/util/utimes.js
+21 silly diff packages/frontflip-cli/node_modules/fs-extra/lib/walk-sync/index.js
+21 silly diff packages/frontflip-cli/node_modules/fs-extra/lib/walk/index.js
+21 silly diff packages/frontflip-cli/node_modules/fs-extra/package.json
+21 silly diff packages/frontflip-cli/node_modules/graceful-fs/LICENSE
+21 silly diff packages/frontflip-cli/node_modules/graceful-fs/README.md
+21 silly diff packages/frontflip-cli/node_modules/graceful-fs/fs.js
+21 silly diff packages/frontflip-cli/node_modules/graceful-fs/graceful-fs.js
+21 silly diff packages/frontflip-cli/node_modules/graceful-fs/legacy-streams.js
+21 silly diff packages/frontflip-cli/node_modules/graceful-fs/package.json
+21 silly diff packages/frontflip-cli/node_modules/graceful-fs/polyfills.js
+21 silly diff packages/frontflip-cli/node_modules/has-ansi/index.js
+21 silly diff packages/frontflip-cli/node_modules/has-ansi/license
+21 silly diff packages/frontflip-cli/node_modules/has-ansi/package.json
+21 silly diff packages/frontflip-cli/node_modules/has-ansi/readme.md
+21 silly diff packages/frontflip-cli/node_modules/jsonfile/.npmignore
+21 silly diff packages/frontflip-cli/node_modules/jsonfile/CHANGELOG.md
+21 silly diff packages/frontflip-cli/node_modules/jsonfile/LICENSE
+21 silly diff packages/frontflip-cli/node_modules/jsonfile/README.md
+21 silly diff packages/frontflip-cli/node_modules/jsonfile/appveyor.yml
+21 silly diff packages/frontflip-cli/node_modules/jsonfile/index.js
+21 silly diff packages/frontflip-cli/node_modules/jsonfile/package.json
+21 silly diff packages/frontflip-cli/node_modules/klaw/.npmignore
+21 silly diff packages/frontflip-cli/node_modules/klaw/CHANGELOG.md
+21 silly diff packages/frontflip-cli/node_modules/klaw/LICENSE
+21 silly diff packages/frontflip-cli/node_modules/klaw/README.md
+21 silly diff packages/frontflip-cli/node_modules/klaw/package.json
+21 silly diff packages/frontflip-cli/node_modules/klaw/src/assign.js
+21 silly diff packages/frontflip-cli/node_modules/klaw/src/index.js
+21 silly diff packages/frontflip-cli/node_modules/strip-ansi/index.js
+21 silly diff packages/frontflip-cli/node_modules/strip-ansi/license
+21 silly diff packages/frontflip-cli/node_modules/strip-ansi/package.json
+21 silly diff packages/frontflip-cli/node_modules/strip-ansi/readme.md
+21 silly diff packages/frontflip-cli/node_modules/supports-color/index.js
+21 silly diff packages/frontflip-cli/node_modules/supports-color/license
+21 silly diff packages/frontflip-cli/node_modules/supports-color/package.json
+21 silly diff packages/frontflip-cli/node_modules/supports-color/readme.md
+21 silly diff packages/frontflip-cli/package-lock.json
+21 silly diff packages/frontflip-cli/package.json
+22 silly diffSinceIn frontflip@1.0.1-0 /Users/admin/DEV/frontflip/packages/frontflip-ui
+23 silly diff packages/frontflip-ui/package.json
+24 verbose updated datagrid
+25 verbose updated fieldstack
+26 verbose updated frontflip
+27 verbose updated frontflip-ui
+28 silly collectDependents
+29 silly isPackageDependentOf datagrid datagrid
+30 silly isPackageDependentOf datagrid fieldstack
+31 silly isPackageDependentOf datagrid frontflip
+32 silly isPackageDependentOf datagrid frontflip-ui
+33 silly isPackageDependentOf fieldstack datagrid
+34 silly isPackageDependentOf fieldstack fieldstack
+35 silly isPackageDependentOf fieldstack frontflip
+36 silly isPackageDependentOf fieldstack frontflip-ui
+37 silly isPackageDependentOf frontflip datagrid
+38 silly isPackageDependentOf frontflip fieldstack
+39 silly isPackageDependentOf frontflip frontflip
+40 silly isPackageDependentOf frontflip frontflip-ui
+41 silly isPackageDependentOf frontflip-ui datagrid
+42 silly isPackageDependentOf frontflip-ui fieldstack
+43 silly isPackageDependentOf frontflip-ui frontflip
+44 silly isPackageDependentOf frontflip-ui frontflip-ui
+45 silly collectUpdates
+46 verbose has filtered update datagrid
+47 verbose has filtered update fieldstack
+48 verbose has filtered update frontflip
+49 verbose has filtered update frontflip-ui
+50 silly initialize success
+51 silly execute attempt
+52 silly isDetachedHead
+53 silly getCurrentBranch
+54 verbose getCurrentBranch master
+55 verbose isDetachedHead false
+56 silly addFile /Users/admin/DEV/frontflip/packages/datagrid/package.json
+57 silly addFile /Users/admin/DEV/frontflip/packages/fieldstack/package.json
+58 error execute Error: fatal: Unable to create '/Users/admin/DEV/frontflip/.git/index.lock': File exists.
+58 error execute
+58 error execute Another git process seems to be running in this repository, e.g.
+58 error execute an editor opened by 'git commit'. Please make sure all processes
+58 error execute are terminated then try again. If it still fails, a git process
+58 error execute may have crashed in this repository earlier:
+58 error execute remove the file manually to continue.
+58 error execute
+58 error execute     at Function.module.exports.sync (/usr/local/lib/node_modules/lerna/node_modules/execa/index.js:277:26)
+58 error execute     at Function.execSync (/usr/local/lib/node_modules/lerna/lib/ChildProcessUtilities.js:59:30)
+58 error execute     at Function.addFile (/usr/local/lib/node_modules/lerna/lib/GitUtilities.js:68:39)
+58 error execute     at /usr/local/lib/node_modules/lerna/lib/commands/PublishCommand.js:553:41
+58 error execute     at Array.forEach (native)
+58 error execute     at PublishCommand.updateUpdatedPackages (/usr/local/lib/node_modules/lerna/lib/commands/PublishCommand.js:552:22)
+58 error execute     at PublishCommand.execute (/usr/local/lib/node_modules/lerna/lib/commands/PublishCommand.js:258:14)
+58 error execute     at PublishCommand._attempt (/usr/local/lib/node_modules/lerna/lib/Command.js:289:21)
+58 error execute     at /usr/local/lib/node_modules/lerna/lib/Command.js:276:15
+58 error execute     at /usr/local/lib/node_modules/lerna/lib/Command.js:298:13
+58 error execute  callback with error
+58 error execute  { Error: fatal: Unable to create '/Users/admin/DEV/frontflip/.git/index.lock': File exists.
+58 error execute
+58 error execute Another git process seems to be running in this repository, e.g.
+58 error execute an editor opened by 'git commit'. Please make sure all processes
+58 error execute are terminated then try again. If it still fails, a git process
+58 error execute may have crashed in this repository earlier:
+58 error execute remove the file manually to continue.
+58 error execute
+58 error execute     at Function.module.exports.sync (/usr/local/lib/node_modules/lerna/node_modules/execa/index.js:277:26)
+58 error execute     at Function.execSync (/usr/local/lib/node_modules/lerna/lib/ChildProcessUtilities.js:59:30)
+58 error execute     at Function.addFile (/usr/local/lib/node_modules/lerna/lib/GitUtilities.js:68:39)
+58 error execute     at /usr/local/lib/node_modules/lerna/lib/commands/PublishCommand.js:553:41
+58 error execute     at Array.forEach (native)
+58 error execute     at PublishCommand.updateUpdatedPackages (/usr/local/lib/node_modules/lerna/lib/commands/PublishCommand.js:552:22)
+58 error execute     at PublishCommand.execute (/usr/local/lib/node_modules/lerna/lib/commands/PublishCommand.js:258:14)
+58 error execute     at PublishCommand._attempt (/usr/local/lib/node_modules/lerna/lib/Command.js:289:21)
+58 error execute     at /usr/local/lib/node_modules/lerna/lib/Command.js:276:15
+58 error execute     at /usr/local/lib/node_modules/lerna/lib/Command.js:298:13
+58 error execute   stack: 'Error: fatal: Unable to create \'/Users/admin/DEV/frontflip/.git/index.lock\': File exists.\n\nAnother git process seems to be running in this repository, e.g.\nan editor opened by \'git commit\'. Please make sure all processes\nare terminated then try again. If it still fails, a git process\nmay have crashed in this repository earlier:\nremove the file manually to continue.\n\n    at Function.module.exports.sync (/usr/local/lib/node_modules/lerna/node_modules/execa/index.js:277:26)\n    at Function.execSync (/usr/local/lib/node_modules/lerna/lib/ChildProcessUtilities.js:59:30)\n    at Function.addFile (/usr/local/lib/node_modules/lerna/lib/GitUtilities.js:68:39)\n    at /usr/local/lib/node_modules/lerna/lib/commands/PublishCommand.js:553:41\n    at Array.forEach (native)\n    at PublishCommand.updateUpdatedPackages (/usr/local/lib/node_modules/lerna/lib/commands/PublishCommand.js:552:22)\n    at PublishCommand.execute (/usr/local/lib/node_modules/lerna/lib/commands/PublishCommand.js:258:14)\n    at PublishCommand._attempt (/usr/local/lib/node_modules/lerna/lib/Command.js:289:21)\n    at /usr/local/lib/node_modules/lerna/lib/Command.js:276:15\n    at /usr/local/lib/node_modules/lerna/lib/Command.js:298:13' }

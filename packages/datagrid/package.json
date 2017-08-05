@@ -1,0 +1,9 @@
+{
+  "name": "datagrid",
+  "version": "0.0.2",
+  "description": "A flexible ReactJS framework for managing and displaying data",
+  "main": "index.js",
+  "repository": "https://github.com/theEMFcompany/frontflip.git",
+  "author": "buchanora",
+  "license": "MIT"
+}

@@ -1,0 +1,9 @@
+{
+  "name": "frontflip-ui",
+  "version": "0.0.2",
+  "description": "General purpose ui component library for ReactJS",
+  "main": "index.js",
+  "repository": "https://github.com/theEMFcompany/frontflip.git",
+  "author": "buchanora",
+  "license": "MIT"
+}
