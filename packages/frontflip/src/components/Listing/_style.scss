@@ -1,0 +1,154 @@
+.listing-wrap{
+  position: relative;
+  // background: $color-white;
+  // border: 1px solid $color-light-gray;
+  // border-left: 1px solid $color-light-gray;
+  overflow: hidden;
+  // border-bottom: 1px solid $color-light-gray;
+
+}
+.listing-wrap:last-child{
+  margin-bottom: 0;
+}
+.listing-grid > .listing-image{
+  box-sizing: border-box;
+  width: 100%;
+}
+.listing-list > .listing-image{
+  box-sizing: border-box;
+  // flex: 1;
+  width: 100%;
+  height: 180px;
+  @include breakpoint(medium){
+    // flex: auto;
+    max-width: 320px;
+  };
+}
+// .listing-image:hover{
+//   background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.1));
+// }
+.listing-image img{
+  visibility: hidden;
+  box-sizing: border-box;
+  // width: 240px;
+  height: 200px;
+}
+.listing-info-wrap{
+  flex: 1;
+  display: flex;
+}
+.listing-info{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 15px;
+  flex: 1;
+  color: $color-dark-0;
+}
+.listing-grid .listing-info .heading{
+  // white-space: nowrap;
+  max-height: 40px;
+  overflow: hidden;
+  overflow-wrap: break-word;
+  text-overflow: ellipsis;
+}
+.listing-location{
+  color: $color-dark-4;
+  display: flex;
+  align-items: stretch;
+}
+.listing-date{
+  padding: 15px;
+  width: 96px;
+  height: 96px;
+  color: $color-dark-4;
+  border-left: 1px solid $color-tint-1;
+}
+.listing-features{
+  flex:1;
+  vertical-align: top;
+  list-style-type: none;
+  margin-left: 0;
+}
+.listing-feature em, .listing-sale-details em{
+  font-weight: 700;
+  font-style: normal;
+}
+.buyTicket-button{
+  display: flex;
+  align-items: center;
+  float: right;
+  text-align: center;
+  background-color: $color-white-transparent-0;
+  padding: 3.5px 15px 3.5px 3.5px;
+  border-radius: 1000px;
+  font-size: $font-size-down-3;
+  color: $color-dark-0;
+  box-shadow: $shadow-z3;
+  transition: all 0.25s ease-in-out;
+}
+.buyTicket-button i{
+  display: inline-block;
+  background: $linear-gradient-primary-2;
+  // background: $color-primary-2;
+  color: $color-white;
+  padding: 7.5px;
+  border-radius: 1000px;
+  margin-right: 7.5px;
+}
+.buyTicket-button:hover{
+  cursor: pointer;
+  background: $linear-gradient-primary-2;
+  color: $color-white;
+  box-shadow: $shadow-z4;
+}
+.buyTicket-button:hover i{
+  background: $color-white;
+  color: $color-primary-2;
+}
+// Listing Grid styles
+.listing-grid{
+  display: flex;
+  flex-direction: column;
+  background: $color-white;
+  overflow: hidden;
+  box-shadow: $shadow-z2;
+  border-radius: $edge-radius;
+  transition: box-shadow 0.2s ease-in;
+}
+.listing-grid:hover{
+  // z-index: $z6;
+  box-shadow: $shadow-z4;
+}
+.listing-grid > .buyTicket-wrapper{
+    position: absolute;
+    right: 15px;
+    top: 15px;
+  }
+// Listing List styles
+.listing-list{
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  background: $color-white;
+  overflow: hidden;
+  box-shadow: $shadow-z2;
+  border-radius: $edge-radius;
+  margin-bottom: 30px;
+  @include breakpoint(medium){
+    flex-direction: row;
+  }
+}
+.listing-list .listing-info-wrap{
+    display: flex;
+    align-items: stretch;
+}
+.listing-list .listing-date{
+  height: auto;
+}
+.buyTicket-wrapper{
+  display: inline-block;
+  position: absolute;
+  left: 15px;
+  top: 15px;
+}

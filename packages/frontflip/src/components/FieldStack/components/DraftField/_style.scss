@@ -1,0 +1,91 @@
+.draftField{
+  position: relative;
+  z-index: $z2;
+  background: $color-tint-3;
+  // box-shadow: $shadow-z3;
+  margin: 0 auto;
+}
+.draftField:focus{
+  cursor: vertical-text;
+  outline: none;
+}
+.draftField-toolbar{
+  // background: $color-tint-3;
+  padding: 15px 15px 5px 15px;
+  text-align: right;
+  // height: 60px;
+}
+.draft-tool-group{
+  display: inline;
+  margin-right: 7.5px;
+}
+.draft-tool-group:last-child{
+  margin-right: 0;
+}
+.draftField-label{
+  position: absolute;
+  color: lighten($color-dark-4, 20);
+  // bottom: 24px;
+  // left: 15px;
+  font-size: $font-size-default;
+  pointer-events: none;
+  z-index: $z2;
+  transition: transform 0.25s ease-in-out;
+}
+.draftField-label.inFocus {
+  color: $color-secondary-2;
+  transform: translateY(-46px);
+  font-size: $font-size-down-2;
+}
+.draftField-label.dirty:not(.inFocus){
+  font-size: $font-size-down-2;
+  color: $color-gray-0;
+  transform: translateY(-46px);
+}
+.draftField-content{
+  // background: $color-tint-3;
+  padding: 15px;
+  position: relative;
+  min-height: 180px;
+
+}
+.DraftEditor-root{
+  overflow-y: scroll;
+  margin-bottom: 15px;
+}
+.draftField .toolbar-button{
+  display: inline-block;
+  padding: 7.5px;
+  // background-color: $color-tint-4;
+  color: $color-gray-2;
+  // box-shadow: $shadow-z2;
+  border-radius: $edge-radius;
+  margin-right: 7.5px;
+  font-size: $font-size-down-1;
+  transition: all 0.25s ease-in-out;
+}
+.draftField .toolbar-button:last-child{
+  margin-right: 0;
+}
+.draftField .toolbar-button:hover{
+  // box-shadow: $shadow-z3;
+  cursor: pointer;
+  color: $color-dark-4;
+  // padding: 8px;
+}
+.draftField .toolbar-button--active{
+  color: $color-dark-4;
+}
+.draftField-underline{
+    position: relative;
+    // bottom:1px;
+    display: block;
+    background: $color-secondary-2;
+    height: 2px;
+    transform: rotateY(90deg);
+    transition: transform 0.5s, height 0.5s;
+}
+.draftField-underline.inFocus{
+    transform: rotateY(0deg);
+    height: 2px;
+}

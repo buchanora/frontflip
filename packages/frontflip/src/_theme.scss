@@ -1,0 +1,58 @@
+$font-family: Arial, Helvetica, sans-serif;
+$font-size: 1rem;
+$z2: 20;
+$z3: 30;
+$z5: 50;
+$z8: 80;
+$z9: 90;
+
+$color-tint-0: #E7E9F0;
+$color-tint-1: #ECEEF3;
+$color-tint-2: #F2F3F7;
+$color-tint-3: #F9F9FB;
+$color-tint-4: #FFFFFF;
+$color-white:  $color-tint-4;
+$color-off-white:  $color-tint-1;
+
+$color-primary-0: #B32E56;
+$color-primary-3: #D93868;
+$color-secondary-0: #C48A57;
+$color-secondary-2: #E09D63;
+
+$color-gray-0: #9DA9CA;
+$color-gray-2: #BDC4DB;
+$color-gray-3: #CDD3E4;
+$color-gray-4: #DEE1ED;
+$color-light-gray: $color-gray-4;
+$color-mid-gray:   $color-gray-4;
+
+$color-danger: rgb(196, 19, 93);
+$color-dark-0: #2A384D;
+$color-dark-3: #405677;
+$color-dark-4: #476085;
+$color-dark-gray:  $color-dark-0;
+
+$font-size-default: 100%;
+$font-size-down-1: 0.9rem;
+$font-size-down-2: 0.8rem;
+$font-size-up-1: 1.2rem;
+$font-size-up-2: 1.6rem;
+
+$edge-radius: 4px;
+$global-weight-bold: 700;
+
+@mixin breakpoint($mq){
+    $mx: 450px;
+    @if $mq == small{
+        $mx: 450px;
+    }
+    @if $mq == medium{
+        $mx: 450px;
+    }
+    @if $mq == large{
+        $mx: 450px;
+    }
+    @media only screen and (max-width: $mx){
+        @content
+    }
+}

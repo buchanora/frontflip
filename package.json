@@ -1,6 +1,7 @@
 {
+	"license": "MIT",
 	"devDependencies": {
 		"lerna": "^2.0.0"
 	},
-	"description": "A modern frontend development platform"
+	"description": "Powerful & Sexy components library for modern web development"
 }

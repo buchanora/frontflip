@@ -1,0 +1,15 @@
+.overlay-backdrop{
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: $z7;
+  animation: $fade-in;
+}
+.overlay-backdrop.dark{
+  background: $color-dark-transparent-0;
+}
+.overlay-backdrop.light{
+  background: $color-white-transparent-0;
+}

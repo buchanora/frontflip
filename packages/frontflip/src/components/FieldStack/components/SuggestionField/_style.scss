@@ -1,0 +1,83 @@
+.suggestionField{
+  // width: 100%;
+  @include breakpoint(medium){
+    // max-width: 240px;
+    display: block;
+    box-sizing: border-box;
+    position: relative;
+    // background: $color-off-white;
+    height: 56px;
+  };
+}
+.suggestionField-input{
+  width: 100%;
+  box-sizing: border-box;
+  position: relative;
+  background-color: $color-tint-3;
+  border: none;
+  text-align: left;
+  color: $color-dark-gray;
+  // font-weight: $global-weight-bold;
+  padding: 0 15px;
+  margin-bottom: 0;
+  height: 54px;
+}
+.suggestionField-input::placeholder{
+  color: $color-dark-3;
+}
+.suggestionField-input-mask{
+  z-index: $z8;
+  // width: 240px;
+  box-sizing: border-box;
+  position: absolute;
+  background-color: $color-tint-3;
+  text-align: left;
+  color: $color-dark-gray;
+  // font-weight: 700;
+  padding: 0 15px;
+  margin-bottom: 0;
+  height: 54px;
+}
+.suggestionField-input:focus{
+  outline: none;
+  background-color: $color-tint-2;
+  border: none;
+  border-right: none;
+  box-shadow: none;
+}
+
+.suggestionField-dropdown{
+  position: absolute;
+  z-index: $z5;
+  width: 100%;
+  top: 55px;
+  right: 0;
+  background: $color-tint-3;
+  box-shadow: 1px 1px 4px -1px rgba(60, 60, 60, 0.2);
+  overflow: hidden;
+  transition: height 1s;
+}
+.suggestionField-dropdown:focus{
+  outline: none;
+}
+.suggestionField-option{
+  font-size: $font-size-down-1;
+  font-weight: 400;
+  display:block;
+  // border-bottom: 1px solid $color-tint-2;
+  // text-align: center;
+  padding: 7.5px 30px;
+}
+.suggestionField-option:last-of-type{
+  border-bottom: none;
+}
+.suggestionField-option:hover{
+  background: $color-tint-2;
+  cursor: pointer;
+}
+.suggestionField-show-dropdown{
+  height: auto;
+}
+.suggestionField-hide-dropdown{
+  height: 0;
+}

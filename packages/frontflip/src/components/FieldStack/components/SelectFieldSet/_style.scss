@@ -1,0 +1,145 @@
+.radio-field, .radio-label, .check-field, .check-label{
+  color: darken($color-mid-gray, 20);
+}
+.select-group{
+  border: none;
+  box-sizing: border-box;
+  // max-width: 720px;
+  // height: 72px;
+  // display: inline-block;
+  color: $color-dark-gray;
+  padding-top: 16px;
+  padding-bottom: 8px;
+  // margin: 0 auto;
+  // margin-right: 30px;
+  // margin-bottom: 15px;
+  min-width: 160px;
+}
+.select-group::after{
+    display: block;
+    content: ' ';
+    background: $color-mid-gray;
+    height: 1px;
+    margin-top: 7px;
+}
+.select-group:last-of-type::after{
+    display: none;
+}
+.select-label{
+  font-weight: 700;
+  color: $color-dark-gray;
+  font-size: $font-size-down-2;
+  margin-bottom: 0;
+}
+.select-field{
+  // float: left;
+  // padding-bottom: 8px;
+  padding-top: 8px;
+}
+.select-caret{
+  float: right;
+}
+.checker{
+  font-size: $font-size-default;
+  box-sizing: border-box;
+  position: relative;
+  display: inline-block;
+  // width: 24px;
+  // height: 24px;
+  color: $color-white;
+  margin-right: 7.5px;
+  font-size: $font-size-default;
+  
+}
+.checker-box{
+  text-align: center;
+  background-color: $color-mid-gray;
+  border-radius: 4px;
+  padding: 5px;
+  border: 1px solid $color-mid-gray;
+}
+.checker-sphere{
+  // top: 6px;
+  background-color: $color-white;
+  border-radius: 50%;
+  padding: 10px;
+  border: 1px solid $color-mid-gray;
+}
+.checker:hover{
+  cursor: pointer;
+}
+.checker-checked{
+  background: $color-secondary-2;
+  background-clip: padding-box;
+  border: 1px solid $color-secondary-0;
+  color: $color-white;
+}
+.checker-disabled{
+  color: $color-mid-gray;
+}
+.select-option{
+  display: flex;
+  align-items: center;
+  color: $color-dark-gray;
+  margin-right: 30px;
+  margin-bottom: 15px;
+  min-width: 160px;
+  text-align: left;
+}
+.select-option:hover{
+  cursor: pointer;
+}
+.select-option-checked{
+  font-weight: $global-weight-bold;
+  // color: $color-primary-0;
+}
+.select-option-disabled{
+  color: $color-mid-gray;
+}
+.select-button{
+  box-sizing: border-box;
+  display: inline-block;
+  border: 1px solid $color-tint-0;
+  border-radius: $edge-radius;
+  color: $color-dark-4;
+  padding: 7.5px 15px;
+  margin-right: 15px;
+  // margin-left: 7.5px;
+  margin-bottom: 15px;
+  transition: opacity 0.2s ease-in-out;
+}
+.select-button:hover{
+  opacity: 0.6;
+  cursor: pointer;
+}
+.select-button-checked{
+  background-color: $color-secondary-0;
+  color: $color-white;
+}
+.select-button-disabled{
+  color: $color-mid-gray;
+}
+.select-list-item{
+  display: flex;
+  box-sizing: border-box;
+  border-bottom: 1px solid $color-mid-gray;
+  padding: 15px 0;
+}
+.select-list-item:last-child{
+  border-bottom: none;
+}
+.select-list-item:hover{
+  color: $color-primary-3;
+}
+.select-list-item-checked{
+  color: $color-primary-0;
+}
+.select-list-item-disabled{
+  color: $color-mid-gray;
+}
+.select-list-item-checker{
+  display: flex;
+}
+.select-list-item-content{
+  flex: 1;
+}

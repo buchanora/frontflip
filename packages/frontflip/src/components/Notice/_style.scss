@@ -1,0 +1,61 @@
+.notice{
+  position: fixed;
+  border-radius: 2px;
+  margin: 15px;
+  right: 0;
+  padding: 15px;
+  z-index: $z8;
+  text-align: left;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  // border: 1px solid $color-secondary-4;
+  line-height: 1.3;
+  animation: $slide-in-left;
+}
+.notice-success{
+  background:lighten(rgb(0, 255, 179), 40);
+  border: 1px solid rgba(0, 255, 179, 0.3);
+  color: rgba(0, 184, 129, 0.8);
+}
+.notice-warning{
+  background:lighten(rgb(255, 251, 0), 40);
+  border: 1px solid rgba(255, 251, 0, 0.3);
+  color: rgba(185, 182, 3, 0.8);
+}
+.notice-alert{
+  background: lighten(rgb( 255, 94, 0), 40);
+  border: 1px solid rgba(255, 94, 0, 0.3);
+  color: rgba(255, 94, 0, 0.8);
+}
+.shrink-notice{
+  max-width: 520px;
+  @include breakpoint(medium){
+    margin-left: auto;
+    margin-right: auto;
+    min-width: 360px;
+  }
+}
+.notice-message{
+  flex: 1;
+}
+.notice-success i{
+  color: rgba(0, 255, 179, 0.8);
+}
+.notice-warning i{
+  color: rgba(255, 251, 0, 0.8);
+}
+.notice-alert i{
+  color: rgba(255, 94, 0, 0.8);
+}
+.notice i{
+  // position: absolute;
+  cursor: pointer;
+  // padding: 5px;
+  display: flex;
+  margin-right: 15px;
+  margin-left: 0;
+  font-size: 1.5rem;
+  // right: 0;
+  // top: 5px;
+}

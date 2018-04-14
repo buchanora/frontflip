@@ -1,9 +1,0 @@
-{
-  "name": "fieldstack",
-  "version": "0.0.3",
-  "description": "A declarative form engine",
-  "main": "index.js",
-  "repository": "https://github.com/theEMFcompany/frontflip.git",
-  "author": "buchanora",
-  "license": "MIT"
-}

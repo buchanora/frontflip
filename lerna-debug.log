@@ -1,5 +1,5 @@
 0 silly input [ 'publish' ]
-1 silly flags { _: [ 'publish' ] }
+1 silly flags { _: [ 'publish' ], c: true, canary: true }
 2 verbose rootPath /Users/admin/DEV/frontflip
 3 info version 2.0.0
 4 info versioning independent
@@ -7,182 +7,206 @@
 6 silly isInitialized true
 7 silly existsSync /Users/admin/DEV/frontflip/VERSION
 8 silly initialize attempt
-9 silly getUpdates
-10 info Checking for updated packages...
-11 silly hasTags
-12 verbose hasTags true
-13 silly getLastTag
-14 verbose getLastTag frontflip@1.0.1-0
-15 info Comparing with frontflip@1.0.1-0.
-16 silly diffSinceIn frontflip@1.0.1-0 /Users/admin/DEV/frontflip/packages/datagrid
-17 silly diff packages/datagrid/package.json
-18 silly diffSinceIn frontflip@1.0.1-0 /Users/admin/DEV/frontflip/packages/fieldstack
-19 silly diff packages/fieldstack/package.json
-20 silly diffSinceIn frontflip@1.0.1-0 /Users/admin/DEV/frontflip/packages/frontflip-cli
-21 silly diff packages/frontflip-cli/frontflip.js
-21 silly diff packages/frontflip-cli/index.js
-21 silly diff packages/frontflip-cli/node_modules/ansi-regex/index.js
-21 silly diff packages/frontflip-cli/node_modules/ansi-regex/license
-21 silly diff packages/frontflip-cli/node_modules/ansi-regex/package.json
-21 silly diff packages/frontflip-cli/node_modules/ansi-regex/readme.md
-21 silly diff packages/frontflip-cli/node_modules/ansi-styles/index.js
-21 silly diff packages/frontflip-cli/node_modules/ansi-styles/license
-21 silly diff packages/frontflip-cli/node_modules/ansi-styles/package.json
-21 silly diff packages/frontflip-cli/node_modules/ansi-styles/readme.md
-21 silly diff packages/frontflip-cli/node_modules/chalk/index.js
-21 silly diff packages/frontflip-cli/node_modules/chalk/license
-21 silly diff packages/frontflip-cli/node_modules/chalk/package.json
-21 silly diff packages/frontflip-cli/node_modules/chalk/readme.md
-21 silly diff packages/frontflip-cli/node_modules/commander/History.md
-21 silly diff packages/frontflip-cli/node_modules/commander/LICENSE
-21 silly diff packages/frontflip-cli/node_modules/commander/Readme.md
-21 silly diff packages/frontflip-cli/node_modules/commander/index.js
-21 silly diff packages/frontflip-cli/node_modules/commander/package.json
-21 silly diff packages/frontflip-cli/node_modules/escape-string-regexp/index.js
-21 silly diff packages/frontflip-cli/node_modules/escape-string-regexp/license
-21 silly diff packages/frontflip-cli/node_modules/escape-string-regexp/package.json
-21 silly diff packages/frontflip-cli/node_modules/escape-string-regexp/readme.md
-21 silly diff packages/frontflip-cli/node_modules/fs-extra/.npmignore
-21 silly diff packages/frontflip-cli/node_modules/fs-extra/CHANGELOG.md
-21 silly diff packages/frontflip-cli/node_modules/fs-extra/LICENSE
-21 silly diff packages/frontflip-cli/node_modules/fs-extra/README.md
-21 silly diff packages/frontflip-cli/node_modules/fs-extra/lib/copy-sync/copy-file-sync.js
-21 silly diff packages/frontflip-cli/node_modules/fs-extra/lib/copy-sync/copy-sync.js
-21 silly diff packages/frontflip-cli/node_modules/fs-extra/lib/copy-sync/index.js
-21 silly diff packages/frontflip-cli/node_modules/fs-extra/lib/copy/copy.js
-21 silly diff packages/frontflip-cli/node_modules/fs-extra/lib/copy/index.js
-21 silly diff packages/frontflip-cli/node_modules/fs-extra/lib/copy/ncp.js
-21 silly diff packages/frontflip-cli/node_modules/fs-extra/lib/empty/index.js
-21 silly diff packages/frontflip-cli/node_modules/fs-extra/lib/ensure/file.js
-21 silly diff packages/frontflip-cli/node_modules/fs-extra/lib/ensure/index.js
-21 silly diff packages/frontflip-cli/node_modules/fs-extra/lib/ensure/link.js
-21 silly diff packages/frontflip-cli/node_modules/fs-extra/lib/ensure/symlink-paths.js
-21 silly diff packages/frontflip-cli/node_modules/fs-extra/lib/ensure/symlink-type.js
-21 silly diff packages/frontflip-cli/node_modules/fs-extra/lib/ensure/symlink.js
-21 silly diff packages/frontflip-cli/node_modules/fs-extra/lib/index.js
-21 silly diff packages/frontflip-cli/node_modules/fs-extra/lib/json/index.js
-21 silly diff packages/frontflip-cli/node_modules/fs-extra/lib/json/jsonfile.js
-21 silly diff packages/frontflip-cli/node_modules/fs-extra/lib/json/output-json-sync.js
-21 silly diff packages/frontflip-cli/node_modules/fs-extra/lib/json/output-json.js
-21 silly diff packages/frontflip-cli/node_modules/fs-extra/lib/mkdirs/index.js
-21 silly diff packages/frontflip-cli/node_modules/fs-extra/lib/mkdirs/mkdirs-sync.js
-21 silly diff packages/frontflip-cli/node_modules/fs-extra/lib/mkdirs/mkdirs.js
-21 silly diff packages/frontflip-cli/node_modules/fs-extra/lib/mkdirs/win32.js
-21 silly diff packages/frontflip-cli/node_modules/fs-extra/lib/move/index.js
-21 silly diff packages/frontflip-cli/node_modules/fs-extra/lib/output/index.js
-21 silly diff packages/frontflip-cli/node_modules/fs-extra/lib/remove/index.js
-21 silly diff packages/frontflip-cli/node_modules/fs-extra/lib/remove/rimraf.js
-21 silly diff packages/frontflip-cli/node_modules/fs-extra/lib/util/assign.js
-21 silly diff packages/frontflip-cli/node_modules/fs-extra/lib/util/utimes.js
-21 silly diff packages/frontflip-cli/node_modules/fs-extra/lib/walk-sync/index.js
-21 silly diff packages/frontflip-cli/node_modules/fs-extra/lib/walk/index.js
-21 silly diff packages/frontflip-cli/node_modules/fs-extra/package.json
-21 silly diff packages/frontflip-cli/node_modules/graceful-fs/LICENSE
-21 silly diff packages/frontflip-cli/node_modules/graceful-fs/README.md
-21 silly diff packages/frontflip-cli/node_modules/graceful-fs/fs.js
-21 silly diff packages/frontflip-cli/node_modules/graceful-fs/graceful-fs.js
-21 silly diff packages/frontflip-cli/node_modules/graceful-fs/legacy-streams.js
-21 silly diff packages/frontflip-cli/node_modules/graceful-fs/package.json
-21 silly diff packages/frontflip-cli/node_modules/graceful-fs/polyfills.js
-21 silly diff packages/frontflip-cli/node_modules/has-ansi/index.js
-21 silly diff packages/frontflip-cli/node_modules/has-ansi/license
-21 silly diff packages/frontflip-cli/node_modules/has-ansi/package.json
-21 silly diff packages/frontflip-cli/node_modules/has-ansi/readme.md
-21 silly diff packages/frontflip-cli/node_modules/jsonfile/.npmignore
-21 silly diff packages/frontflip-cli/node_modules/jsonfile/CHANGELOG.md
-21 silly diff packages/frontflip-cli/node_modules/jsonfile/LICENSE
-21 silly diff packages/frontflip-cli/node_modules/jsonfile/README.md
-21 silly diff packages/frontflip-cli/node_modules/jsonfile/appveyor.yml
-21 silly diff packages/frontflip-cli/node_modules/jsonfile/index.js
-21 silly diff packages/frontflip-cli/node_modules/jsonfile/package.json
-21 silly diff packages/frontflip-cli/node_modules/klaw/.npmignore
-21 silly diff packages/frontflip-cli/node_modules/klaw/CHANGELOG.md
-21 silly diff packages/frontflip-cli/node_modules/klaw/LICENSE
-21 silly diff packages/frontflip-cli/node_modules/klaw/README.md
-21 silly diff packages/frontflip-cli/node_modules/klaw/package.json
-21 silly diff packages/frontflip-cli/node_modules/klaw/src/assign.js
-21 silly diff packages/frontflip-cli/node_modules/klaw/src/index.js
-21 silly diff packages/frontflip-cli/node_modules/strip-ansi/index.js
-21 silly diff packages/frontflip-cli/node_modules/strip-ansi/license
-21 silly diff packages/frontflip-cli/node_modules/strip-ansi/package.json
-21 silly diff packages/frontflip-cli/node_modules/strip-ansi/readme.md
-21 silly diff packages/frontflip-cli/node_modules/supports-color/index.js
-21 silly diff packages/frontflip-cli/node_modules/supports-color/license
-21 silly diff packages/frontflip-cli/node_modules/supports-color/package.json
-21 silly diff packages/frontflip-cli/node_modules/supports-color/readme.md
-21 silly diff packages/frontflip-cli/package-lock.json
-21 silly diff packages/frontflip-cli/package.json
-22 silly diffSinceIn frontflip@1.0.1-0 /Users/admin/DEV/frontflip/packages/frontflip-ui
-23 silly diff packages/frontflip-ui/package.json
-24 verbose updated datagrid
-25 verbose updated fieldstack
-26 verbose updated frontflip
-27 verbose updated frontflip-ui
+9 info canary enabled
+10 silly getUpdates
+11 info Checking for updated packages...
+12 silly hasTags
+13 verbose hasTags true
+14 silly getCurrentSHA
+15 verbose getCurrentSHA 915ae20184425a9abc42142f88465f492deacb3c
+16 info Comparing with 915ae201^..915ae201.
+17 silly diffSinceIn 915ae201^..915ae201 /Users/admin/DEV/frontflip/packages/datagrid
+18 silly diff
+19 silly diffSinceIn 915ae201^..915ae201 /Users/admin/DEV/frontflip/packages/fieldstack
+20 silly diff
+21 silly diffSinceIn 915ae201^..915ae201 /Users/admin/DEV/frontflip/packages/frontflip-cli
+22 silly diff packages/frontflip-cli/package.json
+23 silly diffSinceIn 915ae201^..915ae201 /Users/admin/DEV/frontflip/packages/frontflip-scripts
+24 silly diff
+25 silly diffSinceIn 915ae201^..915ae201 /Users/admin/DEV/frontflip/packages/frontflip-ui
+26 silly diff
+27 verbose updated frontflip-cli
 28 silly collectDependents
-29 silly isPackageDependentOf datagrid datagrid
-30 silly isPackageDependentOf datagrid fieldstack
-31 silly isPackageDependentOf datagrid frontflip
-32 silly isPackageDependentOf datagrid frontflip-ui
-33 silly isPackageDependentOf fieldstack datagrid
-34 silly isPackageDependentOf fieldstack fieldstack
-35 silly isPackageDependentOf fieldstack frontflip
-36 silly isPackageDependentOf fieldstack frontflip-ui
-37 silly isPackageDependentOf frontflip datagrid
-38 silly isPackageDependentOf frontflip fieldstack
-39 silly isPackageDependentOf frontflip frontflip
-40 silly isPackageDependentOf frontflip frontflip-ui
-41 silly isPackageDependentOf frontflip-ui datagrid
-42 silly isPackageDependentOf frontflip-ui fieldstack
-43 silly isPackageDependentOf frontflip-ui frontflip
-44 silly isPackageDependentOf frontflip-ui frontflip-ui
-45 silly collectUpdates
-46 verbose has filtered update datagrid
-47 verbose has filtered update fieldstack
-48 verbose has filtered update frontflip
-49 verbose has filtered update frontflip-ui
+29 silly isPackageDependentOf datagrid frontflip-cli
+30 silly isPackageDependentOf fieldstack frontflip-cli
+31 silly isPackageDependentOf frontflip-cli frontflip-cli
+32 silly isPackageDependentOf frontflip-scripts frontflip-cli
+33 silly isPackageDependentOf frontflip-ui frontflip-cli
+34 silly collectUpdates
+35 verbose has filtered update datagrid
+36 verbose has filtered update fieldstack
+37 verbose has filtered update frontflip-cli
+38 verbose has filtered update frontflip-scripts
+39 verbose has filtered update frontflip-ui
+40 silly getCurrentSHA
+41 verbose getCurrentSHA 915ae20184425a9abc42142f88465f492deacb3c
+42 silly getCurrentSHA
+43 verbose getCurrentSHA 915ae20184425a9abc42142f88465f492deacb3c
+44 silly getCurrentSHA
+45 verbose getCurrentSHA 915ae20184425a9abc42142f88465f492deacb3c
+46 silly getCurrentSHA
+47 verbose getCurrentSHA 915ae20184425a9abc42142f88465f492deacb3c
+48 silly getCurrentSHA
+49 verbose getCurrentSHA 915ae20184425a9abc42142f88465f492deacb3c
 50 silly initialize success
 51 silly execute attempt
-52 silly isDetachedHead
-53 silly getCurrentBranch
-54 verbose getCurrentBranch master
-55 verbose isDetachedHead false
-56 silly addFile /Users/admin/DEV/frontflip/packages/datagrid/package.json
-57 silly addFile /Users/admin/DEV/frontflip/packages/fieldstack/package.json
-58 error execute Error: fatal: Unable to create '/Users/admin/DEV/frontflip/.git/index.lock': File exists.
-58 error execute
-58 error execute Another git process seems to be running in this repository, e.g.
-58 error execute an editor opened by 'git commit'. Please make sure all processes
-58 error execute are terminated then try again. If it still fails, a git process
-58 error execute may have crashed in this repository earlier:
-58 error execute remove the file manually to continue.
-58 error execute
-58 error execute     at Function.module.exports.sync (/usr/local/lib/node_modules/lerna/node_modules/execa/index.js:277:26)
-58 error execute     at Function.execSync (/usr/local/lib/node_modules/lerna/lib/ChildProcessUtilities.js:59:30)
-58 error execute     at Function.addFile (/usr/local/lib/node_modules/lerna/lib/GitUtilities.js:68:39)
-58 error execute     at /usr/local/lib/node_modules/lerna/lib/commands/PublishCommand.js:553:41
-58 error execute     at Array.forEach (native)
-58 error execute     at PublishCommand.updateUpdatedPackages (/usr/local/lib/node_modules/lerna/lib/commands/PublishCommand.js:552:22)
-58 error execute     at PublishCommand.execute (/usr/local/lib/node_modules/lerna/lib/commands/PublishCommand.js:258:14)
-58 error execute     at PublishCommand._attempt (/usr/local/lib/node_modules/lerna/lib/Command.js:289:21)
-58 error execute     at /usr/local/lib/node_modules/lerna/lib/Command.js:276:15
-58 error execute     at /usr/local/lib/node_modules/lerna/lib/Command.js:298:13
-58 error execute  callback with error
-58 error execute  { Error: fatal: Unable to create '/Users/admin/DEV/frontflip/.git/index.lock': File exists.
-58 error execute
-58 error execute Another git process seems to be running in this repository, e.g.
-58 error execute an editor opened by 'git commit'. Please make sure all processes
-58 error execute are terminated then try again. If it still fails, a git process
-58 error execute may have crashed in this repository earlier:
-58 error execute remove the file manually to continue.
-58 error execute
-58 error execute     at Function.module.exports.sync (/usr/local/lib/node_modules/lerna/node_modules/execa/index.js:277:26)
-58 error execute     at Function.execSync (/usr/local/lib/node_modules/lerna/lib/ChildProcessUtilities.js:59:30)
-58 error execute     at Function.addFile (/usr/local/lib/node_modules/lerna/lib/GitUtilities.js:68:39)
-58 error execute     at /usr/local/lib/node_modules/lerna/lib/commands/PublishCommand.js:553:41
-58 error execute     at Array.forEach (native)
-58 error execute     at PublishCommand.updateUpdatedPackages (/usr/local/lib/node_modules/lerna/lib/commands/PublishCommand.js:552:22)
-58 error execute     at PublishCommand.execute (/usr/local/lib/node_modules/lerna/lib/commands/PublishCommand.js:258:14)
-58 error execute     at PublishCommand._attempt (/usr/local/lib/node_modules/lerna/lib/Command.js:289:21)
-58 error execute     at /usr/local/lib/node_modules/lerna/lib/Command.js:276:15
-58 error execute     at /usr/local/lib/node_modules/lerna/lib/Command.js:298:13
-58 error execute   stack: 'Error: fatal: Unable to create \'/Users/admin/DEV/frontflip/.git/index.lock\': File exists.\n\nAnother git process seems to be running in this repository, e.g.\nan editor opened by \'git commit\'. Please make sure all processes\nare terminated then try again. If it still fails, a git process\nmay have crashed in this repository earlier:\nremove the file manually to continue.\n\n    at Function.module.exports.sync (/usr/local/lib/node_modules/lerna/node_modules/execa/index.js:277:26)\n    at Function.execSync (/usr/local/lib/node_modules/lerna/lib/ChildProcessUtilities.js:59:30)\n    at Function.addFile (/usr/local/lib/node_modules/lerna/lib/GitUtilities.js:68:39)\n    at /usr/local/lib/node_modules/lerna/lib/commands/PublishCommand.js:553:41\n    at Array.forEach (native)\n    at PublishCommand.updateUpdatedPackages (/usr/local/lib/node_modules/lerna/lib/commands/PublishCommand.js:552:22)\n    at PublishCommand.execute (/usr/local/lib/node_modules/lerna/lib/commands/PublishCommand.js:258:14)\n    at PublishCommand._attempt (/usr/local/lib/node_modules/lerna/lib/Command.js:289:21)\n    at /usr/local/lib/node_modules/lerna/lib/Command.js:276:15\n    at /usr/local/lib/node_modules/lerna/lib/Command.js:298:13' }
+52 info publish Publishing packages to npm...
+53 silly existsSync /Users/admin/DEV/frontflip/packages/datagrid/scripts/prepublish.js
+54 verbose execScript No prepublish script found at /Users/admin/DEV/frontflip/packages/datagrid/scripts/prepublish.js
+55 silly existsSync /Users/admin/DEV/frontflip/packages/fieldstack/scripts/prepublish.js
+56 verbose execScript No prepublish script found at /Users/admin/DEV/frontflip/packages/fieldstack/scripts/prepublish.js
+57 silly existsSync /Users/admin/DEV/frontflip/packages/frontflip-cli/scripts/prepublish.js
+58 verbose execScript No prepublish script found at /Users/admin/DEV/frontflip/packages/frontflip-cli/scripts/prepublish.js
+59 silly existsSync /Users/admin/DEV/frontflip/packages/frontflip-scripts/scripts/prepublish.js
+60 verbose execScript No prepublish script found at /Users/admin/DEV/frontflip/packages/frontflip-scripts/scripts/prepublish.js
+61 silly existsSync /Users/admin/DEV/frontflip/packages/frontflip-ui/scripts/prepublish.js
+62 verbose execScript No prepublish script found at /Users/admin/DEV/frontflip/packages/frontflip-ui/scripts/prepublish.js
+63 verbose publishing datagrid
+64 silly publishTaggedInDir canary datagrid
+65 silly getExecOpts { cwd: '/Users/admin/DEV/frontflip/packages/datagrid' }
+66 verbose publishing fieldstack
+67 silly publishTaggedInDir canary fieldstack
+68 silly getExecOpts { cwd: '/Users/admin/DEV/frontflip/packages/fieldstack' }
+69 verbose publishing frontflip-cli
+70 silly publishTaggedInDir canary frontflip-cli
+71 silly getExecOpts { cwd: '/Users/admin/DEV/frontflip/packages/frontflip-cli' }
+72 verbose publishing frontflip-scripts
+73 silly publishTaggedInDir canary frontflip-scripts
+74 silly getExecOpts { cwd: '/Users/admin/DEV/frontflip/packages/frontflip-scripts' }
+75 error publish Retrying failed publish: datagrid
+76 verbose publish error Error: Command failed: npm publish --tag canary
+76 verbose publish error npm ERR! publish Failed PUT 403
+76 verbose publish error npm ERR! Darwin 17.4.0
+76 verbose publish error npm ERR! argv "/usr/local/Cellar/node/8.2.1/bin/node" "/usr/local/bin/npm" "publish" "--tag" "canary"
+76 verbose publish error npm ERR! node v7.10.1
+76 verbose publish error npm ERR! npm  v4.2.0
+76 verbose publish error npm ERR! code E403
+76 verbose publish error
+76 verbose publish error npm ERR! You do not have permission to publish "datagrid". Are you logged in as the correct user? : datagrid
+76 verbose publish error npm ERR!
+76 verbose publish error npm ERR! If you need help, you may report this error at:
+76 verbose publish error npm ERR!     <https://github.com/npm/npm/issues>
+76 verbose publish error
+76 verbose publish error npm ERR! Please include the following file with any support request:
+76 verbose publish error npm ERR!     /Users/admin/.npm/_logs/2018-04-01T20_14_39_533Z-debug.log
+76 verbose publish error
+76 verbose publish error     at Promise.all.then.arr (/usr/local/lib/node_modules/lerna/node_modules/execa/index.js:210:11)
+76 verbose publish error     at process._tickCallback (internal/process/next_tick.js:109:7)
+77 verbose publishing datagrid
+78 silly publishTaggedInDir canary datagrid
+79 silly getExecOpts { cwd: '/Users/admin/DEV/frontflip/packages/datagrid' }
+80 info published frontflip-cli
+81 silly existsSync /Users/admin/DEV/frontflip/packages/frontflip-cli/scripts/postpublish.js
+82 verbose execScript No postpublish script found at /Users/admin/DEV/frontflip/packages/frontflip-cli/scripts/postpublish.js
+83 verbose publishing frontflip-ui
+84 silly publishTaggedInDir canary frontflip-ui
+85 silly getExecOpts { cwd: '/Users/admin/DEV/frontflip/packages/frontflip-ui' }
+86 info published frontflip-scripts
+87 silly existsSync /Users/admin/DEV/frontflip/packages/frontflip-scripts/scripts/postpublish.js
+88 verbose execScript No postpublish script found at /Users/admin/DEV/frontflip/packages/frontflip-scripts/scripts/postpublish.js
+89 error publish Retrying failed publish: datagrid
+90 verbose publish error Error: Command failed: npm publish --tag canary
+90 verbose publish error npm ERR! publish Failed PUT 403
+90 verbose publish error npm ERR! Darwin 17.4.0
+90 verbose publish error npm ERR! argv "/usr/local/Cellar/node/8.2.1/bin/node" "/usr/local/bin/npm" "publish" "--tag" "canary"
+90 verbose publish error npm ERR! node v7.10.1
+90 verbose publish error npm ERR! npm  v4.2.0
+90 verbose publish error npm ERR! code E403
+90 verbose publish error
+90 verbose publish error npm ERR! You do not have permission to publish "datagrid". Are you logged in as the correct user? : datagrid
+90 verbose publish error npm ERR!
+90 verbose publish error npm ERR! If you need help, you may report this error at:
+90 verbose publish error npm ERR!     <https://github.com/npm/npm/issues>
+90 verbose publish error
+90 verbose publish error npm ERR! Please include the following file with any support request:
+90 verbose publish error npm ERR!     /Users/admin/.npm/_logs/2018-04-01T20_14_42_024Z-debug.log
+90 verbose publish error
+90 verbose publish error     at Promise.all.then.arr (/usr/local/lib/node_modules/lerna/node_modules/execa/index.js:210:11)
+90 verbose publish error     at process._tickCallback (internal/process/next_tick.js:109:7)
+91 verbose publishing datagrid
+92 silly publishTaggedInDir canary datagrid
+93 silly getExecOpts { cwd: '/Users/admin/DEV/frontflip/packages/datagrid' }
+94 info published frontflip-ui
+95 silly existsSync /Users/admin/DEV/frontflip/packages/frontflip-ui/scripts/postpublish.js
+96 verbose execScript No postpublish script found at /Users/admin/DEV/frontflip/packages/frontflip-ui/scripts/postpublish.js
+97 error publish Retrying failed publish: datagrid
+98 verbose publish error Error: Command failed: npm publish --tag canary
+98 verbose publish error npm ERR! publish Failed PUT 403
+98 verbose publish error npm ERR! Darwin 17.4.0
+98 verbose publish error npm ERR! argv "/usr/local/Cellar/node/8.2.1/bin/node" "/usr/local/bin/npm" "publish" "--tag" "canary"
+98 verbose publish error npm ERR! node v7.10.1
+98 verbose publish error npm ERR! npm  v4.2.0
+98 verbose publish error npm ERR! code E403
+98 verbose publish error
+98 verbose publish error npm ERR! You do not have permission to publish "datagrid". Are you logged in as the correct user? : datagrid
+98 verbose publish error npm ERR!
+98 verbose publish error npm ERR! If you need help, you may report this error at:
+98 verbose publish error npm ERR!     <https://github.com/npm/npm/issues>
+98 verbose publish error
+98 verbose publish error npm ERR! Please include the following file with any support request:
+98 verbose publish error npm ERR!     /Users/admin/.npm/_logs/2018-04-01T20_14_44_653Z-debug.log
+98 verbose publish error
+98 verbose publish error     at Promise.all.then.arr (/usr/local/lib/node_modules/lerna/node_modules/execa/index.js:210:11)
+98 verbose publish error     at process._tickCallback (internal/process/next_tick.js:109:7)
+99 verbose publishing datagrid
+100 silly publishTaggedInDir canary datagrid
+101 silly getExecOpts { cwd: '/Users/admin/DEV/frontflip/packages/datagrid' }
+102 error publish Retrying failed publish: datagrid
+103 verbose publish error Error: Command failed: npm publish --tag canary
+103 verbose publish error npm ERR! publish Failed PUT 403
+103 verbose publish error npm ERR! Darwin 17.4.0
+103 verbose publish error npm ERR! argv "/usr/local/Cellar/node/8.2.1/bin/node" "/usr/local/bin/npm" "publish" "--tag" "canary"
+103 verbose publish error npm ERR! node v7.10.1
+103 verbose publish error npm ERR! npm  v4.2.0
+103 verbose publish error npm ERR! code E403
+103 verbose publish error
+103 verbose publish error npm ERR! You do not have permission to publish "datagrid". Are you logged in as the correct user? : datagrid
+103 verbose publish error npm ERR!
+103 verbose publish error npm ERR! If you need help, you may report this error at:
+103 verbose publish error npm ERR!     <https://github.com/npm/npm/issues>
+103 verbose publish error
+103 verbose publish error npm ERR! Please include the following file with any support request:
+103 verbose publish error npm ERR!     /Users/admin/.npm/_logs/2018-04-01T20_14_46_498Z-debug.log
+103 verbose publish error
+103 verbose publish error     at Promise.all.then.arr (/usr/local/lib/node_modules/lerna/node_modules/execa/index.js:210:11)
+103 verbose publish error     at process._tickCallback (internal/process/next_tick.js:109:7)
+104 verbose publishing datagrid
+105 silly publishTaggedInDir canary datagrid
+106 silly getExecOpts { cwd: '/Users/admin/DEV/frontflip/packages/datagrid' }
+107 error publish Ran out of retries while publishing datagrid Error: Command failed: npm publish --tag canary
+107 error publish npm ERR! publish Failed PUT 403
+107 error publish npm ERR! Darwin 17.4.0
+107 error publish npm ERR! argv "/usr/local/Cellar/node/8.2.1/bin/node" "/usr/local/bin/npm" "publish" "--tag" "canary"
+107 error publish npm ERR! node v7.10.1
+107 error publish npm ERR! npm  v4.2.0
+107 error publish npm ERR! code E403
+107 error publish
+107 error publish npm ERR! You do not have permission to publish "datagrid". Are you logged in as the correct user? : datagrid
+107 error publish npm ERR!
+107 error publish npm ERR! If you need help, you may report this error at:
+107 error publish npm ERR!     <https://github.com/npm/npm/issues>
+107 error publish
+107 error publish npm ERR! Please include the following file with any support request:
+107 error publish npm ERR!     /Users/admin/.npm/_logs/2018-04-01T20_14_49_160Z-debug.log
+107 error publish
+107 error publish     at Promise.all.then.arr (/usr/local/lib/node_modules/lerna/node_modules/execa/index.js:210:11)
+107 error publish     at process._tickCallback (internal/process/next_tick.js:109:7)
+108 error execute callback with error
+108 error execute  Error: Command failed: npm publish --tag canary
+108 error execute npm ERR! publish Failed PUT 403
+108 error execute npm ERR! Darwin 17.4.0
+108 error execute npm ERR! argv "/usr/local/Cellar/node/8.2.1/bin/node" "/usr/local/bin/npm" "publish" "--tag" "canary"
+108 error execute npm ERR! node v7.10.1
+108 error execute npm ERR! npm  v4.2.0
+108 error execute npm ERR! code E403
+108 error execute
+108 error execute npm ERR! You do not have permission to publish "datagrid". Are you logged in as the correct user? : datagrid
+108 error execute npm ERR!
+108 error execute npm ERR! If you need help, you may report this error at:
+108 error execute npm ERR!     <https://github.com/npm/npm/issues>
+108 error execute
+108 error execute npm ERR! Please include the following file with any support request:
+108 error execute npm ERR!     /Users/admin/.npm/_logs/2018-04-01T20_14_49_160Z-debug.log
+108 error execute
+108 error execute     at Promise.all.then.arr (/usr/local/lib/node_modules/lerna/node_modules/execa/index.js:210:11)
+108 error execute     at process._tickCallback (internal/process/next_tick.js:109:7)

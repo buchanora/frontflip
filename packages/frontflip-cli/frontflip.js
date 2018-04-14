@@ -14,16 +14,23 @@ const chalk = require('chalk');
 const program = require('commander');
 const fs = require('fs-extra');
 const path = require('path');
+const spawn = require('cross-spawn');
+const inquirer = require('inquirer');
+
+const flipScripts = require('frontflip-scripts');
 
 const packageJson = require('./package.json');
 
-let projectName
+let projectName;
+let command;
+let questions;
 
 program
   .version(packageJson.version)
   .command('init <name>')
   .action(name => {
     projectName = name;
+    command = 'init';
   })
 
 program.parse(process.argv);
@@ -33,12 +40,102 @@ if(typeof projectName === 'undefined'){
   process.exit(1);
 }
 
-bootstrapProject(projectName)
+switch (command) {
+  case 'init':
+    bootstrapProject(projectName)
+    break;
+  default:
 
-function bootstrapProject(name){
-  console.log('got here');
-  const root = path.resolve(name),
+}
+
+function bootstrapProject(projectPath){
+  console.log('Starting new Frontflip project');
+  const root = path.resolve(projectPath),
         appName = path.basename(root);
-  const projectPath = `./${name}`;
-  fs.ensureDirSync(name)
+
+
+  fs.ensureDirSync(appName);
+  const packageDotJson = {
+    name: appName,
+    version: '0.0.1',
+    private: true,
+  };
+
+  fs.writeFileSync(
+    path.join(root, 'package.json'),
+    JSON.stringify(packageDotJson, null, 2)
+  );
+
+  const initialDir = process.cwd;
+  process.chdir(root);
+
+  launch(root, appName, initialDir);
+}
+
+function launch(root, appName, initialDir){
+  // const coreDependencies = ['react', 'react-dom', 'frontflip-scripts'];
+  const coreDependencies = ['react', 'react-dom']
+  installDependencies(coreDependencies)
+    .then(()=>{
+
+      // const flipScriptsPath = path.resolve(
+      //   process.cwd,
+      //   'node_modules',
+      //   'frontflip-scripts',
+      //   'scripts',
+      //   'init'
+      // )
+
+      flipScripts.init(root, appName, initialDir);
+    })
+}
+
+function installDependencies(dependencies){
+  return new Promise((resolve, reject) => {
+    let command = 'npm';
+    let args = [
+      'install',
+      '--save',
+      '--save-exact',
+      '--loglevel',
+      'error',
+    ].concat(dependencies);
+
+    const childProcess = spawn(command, args, {stdio: 'inherit'});
+
+    childProcess.on('close', code => {
+      if (code !== 0) {
+        reject({
+          command: `${command} ${args.join(' ')}`
+        });
+        return;
+      }
+      resolve();
+    });
+  });
+}
+
+function installDevDependencies(devDependencies){
+  return new Promise((resolve, reject) => {
+    let command = 'npm';
+    let args = [
+      'install',
+      '--save-dev',
+      '--save-exact',
+      '--loglevel',
+      'error',
+    ].concat(devDependencies);
+
+    const childProcess = spawn(command, args, {stdio: 'inherit'});
+
+    childProcess.on('close', code => {
+      if (code !== 0) {
+        reject({
+          command: `${command} ${args.join(' ')}`
+        });
+        return;
+      }
+      resolve();
+    });
+  });
 }
