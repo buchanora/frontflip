@@ -13,5 +13,8 @@
     "frontflip-scripts": "^0.0.1",
     "fs-extra": "1.0.0",
     "inquirer": "^3.2.1"
+  },
+  "bin":{
+    "flip": "index.js"
   }
 }

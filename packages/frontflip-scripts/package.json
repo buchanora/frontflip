@@ -1,6 +1,6 @@
 {
   "name": "frontflip-scripts",
-  "version": "0.1.0-alpha.915ae201",
+  "version": "0.0.2",
   "description": "Build scripts for Frontflip CLI",
   "main": "index",
   "repository": "https://github.com/theEMFcompany/frontflip.git",

@@ -21,6 +21,8 @@ const flipScripts = require('frontflip-scripts');
 
 const packageJson = require('./package.json');
 
+const dependencies = require('./dependencies');
+
 let projectName;
 let command;
 let questions;
@@ -74,57 +76,32 @@ function bootstrapProject(projectPath){
 
 function launch(root, appName, initialDir){
   // const coreDependencies = ['react', 'react-dom', 'frontflip-scripts'];
-  const coreDependencies = ['react', 'react-dom']
+  const coreDependencies = dependencies.core;
+  const devDependencies = dependencies.dev;
   installDependencies(coreDependencies)
     .then(()=>{
-
-      // const flipScriptsPath = path.resolve(
-      //   process.cwd,
-      //   'node_modules',
-      //   'frontflip-scripts',
-      //   'scripts',
-      //   'init'
-      // )
-
+      return installDependencies(devDependencies, true)
+    })
+    .then(()=>{
       flipScripts.init(root, appName, initialDir);
+    })
+    .catch(error=>{
+      console.error('[LAUNCH] An error occurred while launching your project', error);
     })
 }
 
-function installDependencies(dependencies){
+function installDependencies(dependencies, dev){
+
   return new Promise((resolve, reject) => {
     let command = 'npm';
+    let save = dev ? '--save-dev' : '--save'
     let args = [
       'install',
-      '--save',
+      save,
       '--save-exact',
       '--loglevel',
       'error',
     ].concat(dependencies);
-
-    const childProcess = spawn(command, args, {stdio: 'inherit'});
-
-    childProcess.on('close', code => {
-      if (code !== 0) {
-        reject({
-          command: `${command} ${args.join(' ')}`
-        });
-        return;
-      }
-      resolve();
-    });
-  });
-}
-
-function installDevDependencies(devDependencies){
-  return new Promise((resolve, reject) => {
-    let command = 'npm';
-    let args = [
-      'install',
-      '--save-dev',
-      '--save-exact',
-      '--loglevel',
-      'error',
-    ].concat(devDependencies);
 
     const childProcess = spawn(command, args, {stdio: 'inherit'});
 
