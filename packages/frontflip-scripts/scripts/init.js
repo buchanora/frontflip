@@ -2,9 +2,10 @@
 const spawn = require('cross-spawn');
 const inquirer = require('inquirer');
 const questions = require('../config/quest_init').init;
+const defaultDependencies = require('../config/dependencies').init;
 const getDependencies = require('./getDeps');
-const installDeps = require('./installDeps');
-const templates = require('../templates/')
+const installDependencies = require('./installDeps');
+const scaffold = require('../scaffold/');
 
 module.exports = function(root, appName, initialDir){
   const prompt = inquirer.createPromptModule();
@@ -12,10 +13,10 @@ module.exports = function(root, appName, initialDir){
   prompt(questions)
     .then(answers=>{
       deps = getDependencies(answers)
-      return installDeps(deps.core)
+      return installDependencies(deps.core)
     })
     .then(()=>{
-      return installDeps(deps.dev.concat(templates.dependencies.dev), true)
+      return installDependencies(deps.dev.concat(defaultDependencies.dev), true)
     })
     .catch(error=>{
       console.log(error);

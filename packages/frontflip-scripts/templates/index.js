@@ -1,1 +1,1 @@
-exports.dependencies = require('./dependencies/')
+exports.webpack = require('./webpack/');
