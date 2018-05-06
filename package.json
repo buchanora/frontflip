@@ -3,5 +3,5 @@
 	"devDependencies": {
 		"lerna": "^2.0.0"
 	},
-	"description": "Powerful & Sexy components library for modern web development"
+	"description": "Frontflip is a collection of tools, components & conventions for developing modern frontend applications"
 }

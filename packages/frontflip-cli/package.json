@@ -1,6 +1,6 @@
 {
   "name": "frontflip-cli",
-  "version": "0.0.2-none.0",
+  "version": "0.0.2",
   "description": "A frontend development platform",
   "main": "index.js",
   "repository": "https://github.com/theEMFcompany/frontflip.git",
@@ -14,7 +14,7 @@
     "fs-extra": "1.0.0",
     "inquirer": "^3.2.1"
   },
-  "bin":{
+  "bin": {
     "flip": "index.js"
   }
 }

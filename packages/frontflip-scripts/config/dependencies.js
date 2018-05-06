@@ -30,6 +30,7 @@ exports.dev =[
     "style-loader",
     "url-loader",
     "webpack",
+    "webpack-cli",
     "webpack-dev-middleware",
     "webpack-dev-server",
     "webpack-hot-middleware",

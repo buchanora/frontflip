@@ -13,18 +13,25 @@ module.exports = (pathTree)=>{
     };
 
     function getFolders(structure, prevPath){
+        if(structure.files){
+            structure.files.forEach(file=>{
+                if(file.templateFile){
+                    files.push({
+                        to: prevPath + file.name,
+            prev: path.resolve(__dirname, '..', 'templates', (file.templateDir || '') , (file.templateFile || ''))
+                    })
+                }  else{
+                    files.push({
+                        to: prevPath + file.name,
+                        from: null
+                    })
+                } 
+            })
+        }
         if(structure.children){
             structure.children.forEach(child=>{
                 const currentPath = prevPath + child.path + '/'; 
                 folders.push(currentPath);
-                if(child.files){
-                    child.files.forEach(file=>{
-                        files.push({
-                            to: currentPath + file.name,
-                            from: path.resolve(__dirname, '..', 'templates', (file.templateDir || '') , (file.templateFile || ''))
-                        })
-                    })
-                }
                 getFolders(child, currentPath)
             });
         }

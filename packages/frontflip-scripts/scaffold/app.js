@@ -76,7 +76,18 @@ module.exports = {
                     name: 'styles.manifest.scss'
                 }
             ],
-            children: []
+            children: [
+                {
+                    path: 'grant',
+                    files: [
+                        {
+                            name: 'index.js',
+                            templateDir: 'app/lib',
+                            templateFile: 'grant.js'
+                        },
+                    ]
+                },
+            ]
         },
         {
             path: 'resources',

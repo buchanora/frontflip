@@ -50,12 +50,9 @@ const commonConfig = {
     // ],
     plugins:[
         new HtmlWebpackPlugin({
-            title: "Daju",
+            title: "Frontflip",
             template: './libs/template.html',
-            // devServer: 'http://localhost:8080',
             appMountId: 'app',
-            payStackURL: 'https://js.paystack.co/v1/inline.js',
-            googleMapsURL: 'https://maps.google.com/maps/api/js?libraries=places&key=AIzaSyCEqFETZeDbAHQjsZ2K_q5i5eRF5BJAg00',
             inject: false,
             mobile: true
         })

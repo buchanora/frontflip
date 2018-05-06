@@ -14,6 +14,7 @@ const chalk = require('chalk');
 const program = require('commander');
 const fs = require('fs-extra');
 const path = require('path');
+const execSync = require('child_process').execSync
 const spawn = require('cross-spawn');
 const inquirer = require('inquirer');
 
@@ -71,37 +72,54 @@ function bootstrapProject(projectPath){
   const initialDir = process.cwd;
   process.chdir(root);
 
-  launch(root, appName, initialDir);
+  launch(root, appName, initialDir, hasYarn());
 }
 
-function launch(root, appName, initialDir){
+function launch(root, appName, initialDir, useYarn){
   // const coreDependencies = ['react', 'react-dom', 'frontflip-scripts'];
   const coreDependencies = dependencies.core;
   const devDependencies = dependencies.dev;
-  installDependencies(coreDependencies)
+  installDependencies(coreDependencies, useYarn)
     .then(()=>{
-      return installDependencies(devDependencies, true)
+      return installDependencies(devDependencies, useYarn, true)
     })
     .then(()=>{
-      flipScripts.init(root, appName, initialDir);
+      flipScripts.init(root, appName, initialDir, useYarn);
     })
     .catch(error=>{
       console.error('[LAUNCH] An error occurred while launching your project', error);
     })
 }
 
-function installDependencies(dependencies, dev){
+function installDependencies(dependencies, dev, useYarn){
+  if(!dependencies.length > 0) return;
 
   return new Promise((resolve, reject) => {
-    let command = 'npm';
-    let save = dev ? '--save-dev' : '--save'
-    let args = [
-      'install',
-      save,
-      '--save-exact',
-      '--loglevel',
-      'error',
-    ].concat(dependencies);
+    let command;
+    let save;
+    let args;
+      
+    if(useYarn){
+      command = 'yarn';
+      save = dev? '-D' : '';
+      args = [
+        'add',
+      ].concat(dependencies);
+      if(save){
+        args = args.concat([save]);
+      }
+    }else{
+      command = 'npm';
+      save = dev ? '--save-dev' : '--save'
+      args = [
+        'install',
+        save,
+        '--save-exact',
+        '--loglevel',
+        'error',
+      ].concat(dependencies);
+    }
+    
 
     const childProcess = spawn(command, args, {stdio: 'inherit'});
 
@@ -115,4 +133,13 @@ function installDependencies(dependencies, dev){
       resolve();
     });
   });
+}
+
+function hasYarn(){
+  try {
+    execSync('yarnpkg --version', { stdio: 'ignore' });
+    return true;
+  } catch (error) {
+    return false;
+  }
 }
