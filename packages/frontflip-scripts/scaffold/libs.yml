@@ -1,9 +1,0 @@
-nodes:
-- type: file
-  name: 'webpackPartials.js'
-  templateDir: 'config'
-  templateFile: 'webpackPartials.js'
-- type: file
-  name: 'template.html'
-  templateDir: 'html'
-  templateFile: 'root.html'
