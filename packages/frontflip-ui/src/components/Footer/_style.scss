@@ -1,0 +1,17 @@
+.footer-wrap{
+  display: flex;
+  padding: 15px 0;
+}
+.footer-left{
+  justify-content: flex-start;
+}
+.footer-right{
+  justify-content: flex-end;
+  text-align: right;
+}
+.footer:nth-child(n){
+  min-width: 25%;
+}
+.hideFooter{
+  display: none;
+}

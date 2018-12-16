@@ -1,0 +1,20 @@
+{
+  "name": "frontflip",
+  "version": "0.0.1",
+  "description": "Style systems and architectural conventions for modern frontend development",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "keywords": [
+    "react",
+    "styles",
+    "scss",
+    "sass",
+    "frontend",
+    "ui",
+    "library"
+  ],
+  "author": "Buchanora",
+  "license": "MIT"
+}

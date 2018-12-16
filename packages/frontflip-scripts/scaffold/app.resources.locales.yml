@@ -1,0 +1,5 @@
+nodes:
+- type: file
+  name: 'en.json'
+  templateDir: 'resources'
+  templateFile: 'en.json'

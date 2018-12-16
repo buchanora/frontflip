@@ -1,0 +1,49 @@
+Arguments: 
+  /usr/local/Cellar/node/8.2.1/bin/node /usr/local/Cellar/yarn/0.27.5_1/libexec/bin/yarn.js -v
+
+PATH: 
+  /Users/admin/google-cloud-sdk/bin:/Users/admin/anaconda/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/X11/bin:/Users/admin/google-cloud-sdk/bin:/Users/admin/anaconda/bin
+
+Yarn version: 
+  0.27.5
+
+Node version: 
+  7.10.1
+
+Platform: 
+  darwin x64
+
+npm manifest: 
+  {
+    "name": "frontflip-scripts",
+    "version": "0.0.2",
+    "description": "Build scripts for Frontflip CLI",
+    "main": "index",
+    "repository": "https://github.com/theEMFcompany/frontflip.git",
+    "author": "Buchanora",
+    "license": "MIT",
+    "scripts": {
+      "test": "mocha './{,!(node_modules)/**}/*.spec.js' --timeout 10000"
+    },
+    "dependencies": {
+      "chalk": "^1.1.1",
+      "cross-spawn": "^4.0.0",
+      "fs-extra": "1.0.0",
+      "inquirer": "^3.2.1"
+    },
+    "devDependencies": {
+      "chai": "^4.1.2",
+      "mocha": "^5.1.1"
+    }
+  }
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile
+
+Trace: 
+  Error: getaddrinfo ENOTFOUND registry.yarnpkg.com registry.yarnpkg.com:443
+      at errnoException (dns.js:28:10)
+      at GetAddrInfoReqWrap.onlookup [as oncomplete] (dns.js:73:26)

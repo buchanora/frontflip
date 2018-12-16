@@ -1,0 +1,38 @@
+.action-sheet-wrapper{
+  position: relative;
+  @include breakpoint(medium){
+    position: relative;
+  }
+}
+.action-sheet-trigger{
+  background: transparent;
+  box-sizing: border-box;
+  border: none;
+  padding: 0;
+  margin: 0;
+}
+.action-sheet-trigger:focus,
+.action-sheet-trigger:hover{
+  border: none;
+  outline: none;
+}
+.action-sheet-dropdown{
+  position: absolute;
+  width: 100%;
+  height: inherit;
+  z-index: $z9;
+}
+.action-sheet-dropdown:focus{
+  outline: none;
+}
+.trigger-mask{
+  position: absolute;
+  display:block;
+  top:0;
+  right:0;
+  width:100%;
+  height: 45px;
+}
+.trigger-mask:hover{
+  cursor:pointer;
+}

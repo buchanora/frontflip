@@ -1,0 +1,5 @@
+nodes:
+- type: file
+  name: 'queries.js'
+  templateDir: 'js/api'
+  templateFile: 'queries.js'

@@ -1,0 +1,212 @@
+0 silly input [ 'publish' ]
+1 silly flags { _: [ 'publish' ], c: true, canary: true }
+2 verbose rootPath /Users/admin/DEV/frontflip
+3 info version 2.0.0
+4 info versioning independent
+5 silly isInitialized
+6 silly isInitialized true
+7 silly existsSync /Users/admin/DEV/frontflip/VERSION
+8 silly initialize attempt
+9 info canary enabled
+10 silly getUpdates
+11 info Checking for updated packages...
+12 silly hasTags
+13 verbose hasTags true
+14 silly getCurrentSHA
+15 verbose getCurrentSHA 915ae20184425a9abc42142f88465f492deacb3c
+16 info Comparing with 915ae201^..915ae201.
+17 silly diffSinceIn 915ae201^..915ae201 /Users/admin/DEV/frontflip/packages/datagrid
+18 silly diff
+19 silly diffSinceIn 915ae201^..915ae201 /Users/admin/DEV/frontflip/packages/fieldstack
+20 silly diff
+21 silly diffSinceIn 915ae201^..915ae201 /Users/admin/DEV/frontflip/packages/frontflip-cli
+22 silly diff packages/frontflip-cli/package.json
+23 silly diffSinceIn 915ae201^..915ae201 /Users/admin/DEV/frontflip/packages/frontflip-scripts
+24 silly diff
+25 silly diffSinceIn 915ae201^..915ae201 /Users/admin/DEV/frontflip/packages/frontflip-ui
+26 silly diff
+27 verbose updated frontflip-cli
+28 silly collectDependents
+29 silly isPackageDependentOf datagrid frontflip-cli
+30 silly isPackageDependentOf fieldstack frontflip-cli
+31 silly isPackageDependentOf frontflip-cli frontflip-cli
+32 silly isPackageDependentOf frontflip-scripts frontflip-cli
+33 silly isPackageDependentOf frontflip-ui frontflip-cli
+34 silly collectUpdates
+35 verbose has filtered update datagrid
+36 verbose has filtered update fieldstack
+37 verbose has filtered update frontflip-cli
+38 verbose has filtered update frontflip-scripts
+39 verbose has filtered update frontflip-ui
+40 silly getCurrentSHA
+41 verbose getCurrentSHA 915ae20184425a9abc42142f88465f492deacb3c
+42 silly getCurrentSHA
+43 verbose getCurrentSHA 915ae20184425a9abc42142f88465f492deacb3c
+44 silly getCurrentSHA
+45 verbose getCurrentSHA 915ae20184425a9abc42142f88465f492deacb3c
+46 silly getCurrentSHA
+47 verbose getCurrentSHA 915ae20184425a9abc42142f88465f492deacb3c
+48 silly getCurrentSHA
+49 verbose getCurrentSHA 915ae20184425a9abc42142f88465f492deacb3c
+50 silly initialize success
+51 silly execute attempt
+52 info publish Publishing packages to npm...
+53 silly existsSync /Users/admin/DEV/frontflip/packages/datagrid/scripts/prepublish.js
+54 verbose execScript No prepublish script found at /Users/admin/DEV/frontflip/packages/datagrid/scripts/prepublish.js
+55 silly existsSync /Users/admin/DEV/frontflip/packages/fieldstack/scripts/prepublish.js
+56 verbose execScript No prepublish script found at /Users/admin/DEV/frontflip/packages/fieldstack/scripts/prepublish.js
+57 silly existsSync /Users/admin/DEV/frontflip/packages/frontflip-cli/scripts/prepublish.js
+58 verbose execScript No prepublish script found at /Users/admin/DEV/frontflip/packages/frontflip-cli/scripts/prepublish.js
+59 silly existsSync /Users/admin/DEV/frontflip/packages/frontflip-scripts/scripts/prepublish.js
+60 verbose execScript No prepublish script found at /Users/admin/DEV/frontflip/packages/frontflip-scripts/scripts/prepublish.js
+61 silly existsSync /Users/admin/DEV/frontflip/packages/frontflip-ui/scripts/prepublish.js
+62 verbose execScript No prepublish script found at /Users/admin/DEV/frontflip/packages/frontflip-ui/scripts/prepublish.js
+63 verbose publishing datagrid
+64 silly publishTaggedInDir canary datagrid
+65 silly getExecOpts { cwd: '/Users/admin/DEV/frontflip/packages/datagrid' }
+66 verbose publishing fieldstack
+67 silly publishTaggedInDir canary fieldstack
+68 silly getExecOpts { cwd: '/Users/admin/DEV/frontflip/packages/fieldstack' }
+69 verbose publishing frontflip-cli
+70 silly publishTaggedInDir canary frontflip-cli
+71 silly getExecOpts { cwd: '/Users/admin/DEV/frontflip/packages/frontflip-cli' }
+72 verbose publishing frontflip-scripts
+73 silly publishTaggedInDir canary frontflip-scripts
+74 silly getExecOpts { cwd: '/Users/admin/DEV/frontflip/packages/frontflip-scripts' }
+75 error publish Retrying failed publish: datagrid
+76 verbose publish error Error: Command failed: npm publish --tag canary
+76 verbose publish error npm ERR! publish Failed PUT 403
+76 verbose publish error npm ERR! Darwin 17.4.0
+76 verbose publish error npm ERR! argv "/usr/local/Cellar/node/8.2.1/bin/node" "/usr/local/bin/npm" "publish" "--tag" "canary"
+76 verbose publish error npm ERR! node v7.10.1
+76 verbose publish error npm ERR! npm  v4.2.0
+76 verbose publish error npm ERR! code E403
+76 verbose publish error
+76 verbose publish error npm ERR! You do not have permission to publish "datagrid". Are you logged in as the correct user? : datagrid
+76 verbose publish error npm ERR!
+76 verbose publish error npm ERR! If you need help, you may report this error at:
+76 verbose publish error npm ERR!     <https://github.com/npm/npm/issues>
+76 verbose publish error
+76 verbose publish error npm ERR! Please include the following file with any support request:
+76 verbose publish error npm ERR!     /Users/admin/.npm/_logs/2018-04-01T20_14_39_533Z-debug.log
+76 verbose publish error
+76 verbose publish error     at Promise.all.then.arr (/usr/local/lib/node_modules/lerna/node_modules/execa/index.js:210:11)
+76 verbose publish error     at process._tickCallback (internal/process/next_tick.js:109:7)
+77 verbose publishing datagrid
+78 silly publishTaggedInDir canary datagrid
+79 silly getExecOpts { cwd: '/Users/admin/DEV/frontflip/packages/datagrid' }
+80 info published frontflip-cli
+81 silly existsSync /Users/admin/DEV/frontflip/packages/frontflip-cli/scripts/postpublish.js
+82 verbose execScript No postpublish script found at /Users/admin/DEV/frontflip/packages/frontflip-cli/scripts/postpublish.js
+83 verbose publishing frontflip-ui
+84 silly publishTaggedInDir canary frontflip-ui
+85 silly getExecOpts { cwd: '/Users/admin/DEV/frontflip/packages/frontflip-ui' }
+86 info published frontflip-scripts
+87 silly existsSync /Users/admin/DEV/frontflip/packages/frontflip-scripts/scripts/postpublish.js
+88 verbose execScript No postpublish script found at /Users/admin/DEV/frontflip/packages/frontflip-scripts/scripts/postpublish.js
+89 error publish Retrying failed publish: datagrid
+90 verbose publish error Error: Command failed: npm publish --tag canary
+90 verbose publish error npm ERR! publish Failed PUT 403
+90 verbose publish error npm ERR! Darwin 17.4.0
+90 verbose publish error npm ERR! argv "/usr/local/Cellar/node/8.2.1/bin/node" "/usr/local/bin/npm" "publish" "--tag" "canary"
+90 verbose publish error npm ERR! node v7.10.1
+90 verbose publish error npm ERR! npm  v4.2.0
+90 verbose publish error npm ERR! code E403
+90 verbose publish error
+90 verbose publish error npm ERR! You do not have permission to publish "datagrid". Are you logged in as the correct user? : datagrid
+90 verbose publish error npm ERR!
+90 verbose publish error npm ERR! If you need help, you may report this error at:
+90 verbose publish error npm ERR!     <https://github.com/npm/npm/issues>
+90 verbose publish error
+90 verbose publish error npm ERR! Please include the following file with any support request:
+90 verbose publish error npm ERR!     /Users/admin/.npm/_logs/2018-04-01T20_14_42_024Z-debug.log
+90 verbose publish error
+90 verbose publish error     at Promise.all.then.arr (/usr/local/lib/node_modules/lerna/node_modules/execa/index.js:210:11)
+90 verbose publish error     at process._tickCallback (internal/process/next_tick.js:109:7)
+91 verbose publishing datagrid
+92 silly publishTaggedInDir canary datagrid
+93 silly getExecOpts { cwd: '/Users/admin/DEV/frontflip/packages/datagrid' }
+94 info published frontflip-ui
+95 silly existsSync /Users/admin/DEV/frontflip/packages/frontflip-ui/scripts/postpublish.js
+96 verbose execScript No postpublish script found at /Users/admin/DEV/frontflip/packages/frontflip-ui/scripts/postpublish.js
+97 error publish Retrying failed publish: datagrid
+98 verbose publish error Error: Command failed: npm publish --tag canary
+98 verbose publish error npm ERR! publish Failed PUT 403
+98 verbose publish error npm ERR! Darwin 17.4.0
+98 verbose publish error npm ERR! argv "/usr/local/Cellar/node/8.2.1/bin/node" "/usr/local/bin/npm" "publish" "--tag" "canary"
+98 verbose publish error npm ERR! node v7.10.1
+98 verbose publish error npm ERR! npm  v4.2.0
+98 verbose publish error npm ERR! code E403
+98 verbose publish error
+98 verbose publish error npm ERR! You do not have permission to publish "datagrid". Are you logged in as the correct user? : datagrid
+98 verbose publish error npm ERR!
+98 verbose publish error npm ERR! If you need help, you may report this error at:
+98 verbose publish error npm ERR!     <https://github.com/npm/npm/issues>
+98 verbose publish error
+98 verbose publish error npm ERR! Please include the following file with any support request:
+98 verbose publish error npm ERR!     /Users/admin/.npm/_logs/2018-04-01T20_14_44_653Z-debug.log
+98 verbose publish error
+98 verbose publish error     at Promise.all.then.arr (/usr/local/lib/node_modules/lerna/node_modules/execa/index.js:210:11)
+98 verbose publish error     at process._tickCallback (internal/process/next_tick.js:109:7)
+99 verbose publishing datagrid
+100 silly publishTaggedInDir canary datagrid
+101 silly getExecOpts { cwd: '/Users/admin/DEV/frontflip/packages/datagrid' }
+102 error publish Retrying failed publish: datagrid
+103 verbose publish error Error: Command failed: npm publish --tag canary
+103 verbose publish error npm ERR! publish Failed PUT 403
+103 verbose publish error npm ERR! Darwin 17.4.0
+103 verbose publish error npm ERR! argv "/usr/local/Cellar/node/8.2.1/bin/node" "/usr/local/bin/npm" "publish" "--tag" "canary"
+103 verbose publish error npm ERR! node v7.10.1
+103 verbose publish error npm ERR! npm  v4.2.0
+103 verbose publish error npm ERR! code E403
+103 verbose publish error
+103 verbose publish error npm ERR! You do not have permission to publish "datagrid". Are you logged in as the correct user? : datagrid
+103 verbose publish error npm ERR!
+103 verbose publish error npm ERR! If you need help, you may report this error at:
+103 verbose publish error npm ERR!     <https://github.com/npm/npm/issues>
+103 verbose publish error
+103 verbose publish error npm ERR! Please include the following file with any support request:
+103 verbose publish error npm ERR!     /Users/admin/.npm/_logs/2018-04-01T20_14_46_498Z-debug.log
+103 verbose publish error
+103 verbose publish error     at Promise.all.then.arr (/usr/local/lib/node_modules/lerna/node_modules/execa/index.js:210:11)
+103 verbose publish error     at process._tickCallback (internal/process/next_tick.js:109:7)
+104 verbose publishing datagrid
+105 silly publishTaggedInDir canary datagrid
+106 silly getExecOpts { cwd: '/Users/admin/DEV/frontflip/packages/datagrid' }
+107 error publish Ran out of retries while publishing datagrid Error: Command failed: npm publish --tag canary
+107 error publish npm ERR! publish Failed PUT 403
+107 error publish npm ERR! Darwin 17.4.0
+107 error publish npm ERR! argv "/usr/local/Cellar/node/8.2.1/bin/node" "/usr/local/bin/npm" "publish" "--tag" "canary"
+107 error publish npm ERR! node v7.10.1
+107 error publish npm ERR! npm  v4.2.0
+107 error publish npm ERR! code E403
+107 error publish
+107 error publish npm ERR! You do not have permission to publish "datagrid". Are you logged in as the correct user? : datagrid
+107 error publish npm ERR!
+107 error publish npm ERR! If you need help, you may report this error at:
+107 error publish npm ERR!     <https://github.com/npm/npm/issues>
+107 error publish
+107 error publish npm ERR! Please include the following file with any support request:
+107 error publish npm ERR!     /Users/admin/.npm/_logs/2018-04-01T20_14_49_160Z-debug.log
+107 error publish
+107 error publish     at Promise.all.then.arr (/usr/local/lib/node_modules/lerna/node_modules/execa/index.js:210:11)
+107 error publish     at process._tickCallback (internal/process/next_tick.js:109:7)
+108 error execute callback with error
+108 error execute  Error: Command failed: npm publish --tag canary
+108 error execute npm ERR! publish Failed PUT 403
+108 error execute npm ERR! Darwin 17.4.0
+108 error execute npm ERR! argv "/usr/local/Cellar/node/8.2.1/bin/node" "/usr/local/bin/npm" "publish" "--tag" "canary"
+108 error execute npm ERR! node v7.10.1
+108 error execute npm ERR! npm  v4.2.0
+108 error execute npm ERR! code E403
+108 error execute
+108 error execute npm ERR! You do not have permission to publish "datagrid". Are you logged in as the correct user? : datagrid
+108 error execute npm ERR!
+108 error execute npm ERR! If you need help, you may report this error at:
+108 error execute npm ERR!     <https://github.com/npm/npm/issues>
+108 error execute
+108 error execute npm ERR! Please include the following file with any support request:
+108 error execute npm ERR!     /Users/admin/.npm/_logs/2018-04-01T20_14_49_160Z-debug.log
+108 error execute
+108 error execute     at Promise.all.then.arr (/usr/local/lib/node_modules/lerna/node_modules/execa/index.js:210:11)
+108 error execute     at process._tickCallback (internal/process/next_tick.js:109:7)

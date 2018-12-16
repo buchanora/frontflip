@@ -1,0 +1,5 @@
+nodes:
+- type: file
+  name: 'grant.js'
+  templateDir: 'js/lib'
+  templateFile: 'grant.js'

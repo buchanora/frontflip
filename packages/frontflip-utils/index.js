@@ -1,0 +1,1 @@
+exports.installDependencies = require('./installDependencies');

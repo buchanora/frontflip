@@ -1,0 +1,7 @@
+{
+	"license": "MIT",
+	"devDependencies": {
+		"lerna": "^2.0.0"
+	},
+	"description": "Frontflip is a collection of tools, components & conventions for developing modern frontend applications"
+}
