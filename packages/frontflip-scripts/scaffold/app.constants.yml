@@ -1,0 +1,9 @@
+nodes:
+- type: file
+  name: 'index.js'
+  templateDir: 'js/constants'
+  templateFile: 'index.js'
+- type: file
+  name: 'string.js'
+  templateDir: 'js/constants'
+  templateFile: 'string.js'

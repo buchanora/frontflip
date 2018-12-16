@@ -1,0 +1,11 @@
+nodes:
+- type: dir
+  name: audio
+- type: dir
+  name: images
+- type: dir
+  name: video
+- type: dir
+  name: fonts
+- type: dir
+  name: icons
