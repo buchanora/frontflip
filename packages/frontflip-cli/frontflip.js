@@ -19,17 +19,16 @@ const spawn = require('cross-spawn');
 const inquirer = require('inquirer');
 
 const flipScripts = require('frontflip-scripts');
+const flipUtils = require('frontflip-utils');
 
 const packageJson = require('./package.json');
-
 const dependencies = require('./dependencies');
 
 let projectName;
 let command;
-let questions;
 
 program
-  .version(packageJson.version)
+  .version(packageJson.version, '-v, --version')
   .command('init <name>')
   .action(name => {
     projectName = name;
@@ -45,10 +44,10 @@ if(typeof projectName === 'undefined'){
 
 switch (command) {
   case 'init':
-    bootstrapProject(projectName)
+    bootstrapProject(projectName);
     break;
   default:
-
+    run(program.args);
 }
 
 function bootstrapProject(projectPath){
@@ -72,74 +71,24 @@ function bootstrapProject(projectPath){
   const initialDir = process.cwd;
   process.chdir(root);
 
-  launch(root, appName, initialDir, hasYarn());
+  launch(root, appName, initialDir, flipUtils.hasYarn());
 }
 
 function launch(root, appName, initialDir, useYarn){
-  // const coreDependencies = ['react', 'react-dom', 'frontflip-scripts'];
   const coreDependencies = dependencies.core;
   const devDependencies = dependencies.dev;
-  installDependencies(coreDependencies, useYarn)
+  flipUtils.installDependencies(coreDependencies, useYarn)
     .then(()=>{
-      return installDependencies(devDependencies, useYarn, true)
+      return flipUtils.installDependencies(devDependencies, useYarn, true)
     })
     .then(()=>{
       flipScripts.init(root, appName, initialDir, useYarn);
     })
     .catch(error=>{
-      console.error('[LAUNCH] An error occurred while launching your project', error);
-    })
-}
-
-function installDependencies(dependencies, dev, useYarn){
-  if(!dependencies.length > 0) return;
-
-  return new Promise((resolve, reject) => {
-    let command;
-    let save;
-    let args;
-      
-    if(useYarn){
-      command = 'yarn';
-      save = dev? '-D' : '';
-      args = [
-        'add',
-      ].concat(dependencies);
-      if(save){
-        args = args.concat([save]);
-      }
-    }else{
-      command = 'npm';
-      save = dev ? '--save-dev' : '--save'
-      args = [
-        'install',
-        save,
-        '--save-exact',
-        '--loglevel',
-        'error',
-      ].concat(dependencies);
-    }
-    
-
-    const childProcess = spawn(command, args, {stdio: 'inherit'});
-
-    childProcess.on('close', code => {
-      if (code !== 0) {
-        reject({
-          command: `${command} ${args.join(' ')}`
-        });
-        return;
-      }
-      resolve();
+      console.error(`[LAUNCH] ${chalk.red("An error occurred while launching your project")}`, error);
     });
-  });
 }
 
-function hasYarn(){
-  try {
-    execSync('yarnpkg --version', { stdio: 'ignore' });
-    return true;
-  } catch (error) {
-    return false;
-  }
+function run(){
+  flipScripts.run(command, program.args);
 }

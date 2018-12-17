@@ -18,20 +18,18 @@ module.exports = function(root, appName, initialDir, useYarn){
     .then(ans=>{
       answers = ans;
       deps = getDependencies(ans);
-      return installDependencies(deps.core, useYarn)
+      return installDependencies(deps.core, useYarn);
     })
     .then(()=>{
-      return installDependencies(deps.dev.concat(defaultDependencies.dev), useYarn, true)
+      return installDependencies(deps.dev.concat(defaultDependencies.dev), useYarn, true);
     })
     .then(()=>{
-      addPackageScripts(root)
-      const project = getPaths(scaffold.project)
+      addPackageScripts(root);
+      const project = getPaths(scaffold.project);
       return buildProject(project, root, answers);
     })
     .catch(error=>{
       console.log(error);
-      process.exit(1)
+      process.exit(1);
     })
 }
-
-

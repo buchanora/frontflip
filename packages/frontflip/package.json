@@ -1,6 +1,7 @@
 {
   "name": "frontflip",
   "version": "0.0.1",
+  "repository": "https://github.com/buchanora/frontflip.git",
   "description": "Style systems and architectural conventions for modern frontend development",
   "main": "index.js",
   "scripts": {
@@ -16,5 +17,8 @@
     "library"
   ],
   "author": "Buchanora",
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "foundation-sites": "^6.2.3"
+  }
 }

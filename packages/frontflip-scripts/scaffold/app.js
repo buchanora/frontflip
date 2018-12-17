@@ -67,8 +67,7 @@ module.exports = {
                     templateFile: 'store.js'
                 },
             ],
-        }
-        ,
+        },
         {
             path: 'lib',
             files: [

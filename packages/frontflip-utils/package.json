@@ -12,5 +12,8 @@
     "frontflip"
   ],
   "author": "Buchanora",
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "cross-spawn": "^6.0.5"
+  }
 }
