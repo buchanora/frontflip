@@ -3,7 +3,7 @@
  * All rights reserved
  *
  * This code is lisenced under MIT-style lisence found in the
- * LISENCE file in the root directory of this source tree
+ * LISENCE file in the _root directory of this source tree
  */
 
 // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -14,81 +14,89 @@ const chalk = require('chalk');
 const program = require('commander');
 const fs = require('fs-extra');
 const path = require('path');
-const execSync = require('child_process').execSync
-const spawn = require('cross-spawn');
-const inquirer = require('inquirer');
 
-const flipScripts = require('frontflip-scripts');
 const flipUtils = require('frontflip-utils');
 
 const packageJson = require('./package.json');
 const dependencies = require('./dependencies');
 
-let projectName;
-let command;
+let projectPath, command, devEnvironment;
 
 program
   .version(packageJson.version, '-v, --version')
-  .command('init <name>')
-  .action(name => {
-    projectName = name;
-    command = 'init';
+  .command('init <project>', 'Create a new application')
+  .option('-d, --development', 'Run in development mode')
+  .action((cmd, name, _program) => {
+    if(!_program){
+      _program = name;
+      name = undefined;
+    }
+    projectPath = name
+    command = cmd; 
   })
 
-program.parse(process.argv);
 
-if(typeof projectName === 'undefined'){
+
+program.parse(process.argv);
+devEnvironment = program.development;
+
+if(typeof projectPath === 'undefined'){
   console.error('You must specify a directory for your project');
   process.exit(1);
 }
 
 switch (command) {
   case 'init':
-    bootstrapProject(projectName);
+    bootstrapProject(projectPath);
     break;
   default:
     run(program.args);
 }
 
-function bootstrapProject(projectPath){
-  console.log('Starting new Frontflip project');
-  const root = path.resolve(projectPath),
-        appName = path.basename(root);
-
-
+async function bootstrapProject(_projectPath){
+  const rootPath = path.resolve(_projectPath),
+        appName = path.basename(rootPath);
+  console.log('Starting new Frontflip project at:', chalk.green(appName));
   fs.ensureDirSync(appName);
   const packageDotJson = {
     name: appName,
     version: '0.0.1',
     private: true,
-  };
-
+  }
   fs.writeFileSync(
-    path.join(root, 'package.json'),
+    path.join(rootPath, 'package.json'),
     JSON.stringify(packageDotJson, null, 2)
-  );
-
+  )
   const initialDir = process.cwd;
-  process.chdir(root);
-
-  launch(root, appName, initialDir, flipUtils.hasYarn());
+  process.chdir(rootPath);
+  launch(rootPath, appName, initialDir, flipUtils.hasYarn());
+  console.log('bootstrap');  
 }
 
-function launch(root, appName, initialDir, useYarn){
+function launch(_root, appName, initialDir, useYarn){
   const coreDependencies = dependencies.core;
   const devDependencies = dependencies.dev;
-  flipUtils.installDependencies(coreDependencies, useYarn)
+  const installationType = devEnvironment ? 'linkDependencies' : 'installDependencies';
+  
+  flipUtils[installationType](coreDependencies, false, useYarn)
     .then(()=>{
-      return flipUtils.installDependencies(devDependencies, useYarn, true)
+      console.log('here at deps');
+      return flipUtils[installationType](devDependencies, true, useYarn);
     })
-    .then(()=>{
-      flipScripts.init(root, appName, initialDir, useYarn);
-    })
-    .catch(error=>{
-      console.error(`[LAUNCH] ${chalk.red("An error occurred while launching your project")}`, error);
-    });
+    // .then(()=>{
+    //   flipScripts = require(path.resolve(_root, 'node_modules/frontflip-scripts'));
+    //   flipScripts.init(_root, appName, initialDir, useYarn);
+    // })
+    // .catch(error=>{
+    //   console.error(`[LAUNCH] ${chalk.red("An error occurred while launching your project")}`, error);
+    // });
+    console.log('end game');    
 }
 
 function run(){
+  console.log('Running');
+  
+  const project_root = process.cwd;
+  flipScripts = require(path.resolve(cwd, 'node_modules/frontflip-scripts'))
   flipScripts.run(command, program.args);
 }

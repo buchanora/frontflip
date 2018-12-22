@@ -1,6 +1,6 @@
 exports.core = [
-    'frontflip-scripts',
+    'frontflip',
 ]
 exports.dev = [
-    
-]
+    'frontflip-scripts',   
+];
