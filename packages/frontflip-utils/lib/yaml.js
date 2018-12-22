@@ -1,4 +1,4 @@
-import yaml from 'js-yaml';
+const yaml = require('js-yaml');
 
 exports.parse = (file) => {
     let content;

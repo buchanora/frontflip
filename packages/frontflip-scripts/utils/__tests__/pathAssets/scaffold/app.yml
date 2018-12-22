@@ -1,0 +1,5 @@
+nodes:
+- type: file
+  name: 'app.js'
+  templateDir: ''
+  templateFile: 'app.hbs'

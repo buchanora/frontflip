@@ -1,8 +1,7 @@
 const spawn = require('cross-spawn');
-const execSync = require('child_process').execSync;
 module.exports = (dependencies, dev, useYarn) => {
-  if(!dependencies.length > 0) return;
   return new Promise((resolve, reject) => {
+    if(!dependencies.length > 0) return resolve();
     let command;
     let save;
     let args; 
@@ -28,16 +27,13 @@ module.exports = (dependencies, dev, useYarn) => {
       ].concat(dependencies);
     }
     
-    const childProcess = spawn(command, args, {stdio: 'inherit'});
-
-    childProcess.on('close', code => {
-      if (code !== 0) {
-        reject({
-          command: `${command} ${args.join(' ')}`
-        });
-        return;
-      }
-      resolve();
-    });
+    const childProcess = spawn.sync(command, args, {stdio: 'inherit'});
+    if(childProcess.status !== 0){
+      reject({
+        command: `${command} ${args.join(' ')}`
+      });
+      return;
+    }
+    resolve();
   });
 };

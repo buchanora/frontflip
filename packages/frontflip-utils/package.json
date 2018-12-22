@@ -1,6 +1,6 @@
 {
   "name": "frontflip-utils",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Cross package helper functions for frontflip",
   "main": "index.js",
   "scripts": {
@@ -8,12 +8,13 @@
   },
   "keywords": [
     "helpers",
-    "uitls",
+    "utils",
     "frontflip"
   ],
   "author": "Buchanora",
   "license": "MIT",
   "dependencies": {
-    "cross-spawn": "^6.0.5"
+    "cross-spawn": "^6.0.5",
+    "js-yaml": "^3.12.0"
   }
 }

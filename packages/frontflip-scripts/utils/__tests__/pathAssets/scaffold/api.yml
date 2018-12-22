@@ -1,0 +1,5 @@
+nodes:
+- type: file
+  name: 'api.js'
+  templateDir: 'api'
+  templateFile: 'api.js'

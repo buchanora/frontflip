@@ -1,0 +1,13 @@
+nodes:
+- type: file
+  name: 'app.js'
+  templateDir: ''
+  templateFile: 'app.hbs'
+- type: file
+  name: 'api.js'
+  templateDir: 'api'
+  templateFile: 'api.js'
+- type: dir
+  name: app
+- type: dir
+  name: api
