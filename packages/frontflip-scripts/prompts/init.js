@@ -1,6 +1,6 @@
 exports.init = [
   {
-    type: 'confirm',
+    type: 'list',
     name: 'stateManager',
     message: 'How would you like to handle state management?',
     choices: [{

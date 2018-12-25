@@ -24,26 +24,19 @@ let projectPath, command, devEnvironment;
 
 program
   .version(packageJson.version, '-v, --version')
-  .command('init <project>', 'Create a new application')
-  .option('-d, --development', 'Run in development mode')
-  .action((cmd, name, _program) => {
-    if(!_program){
-      _program = name;
-      name = undefined;
+  .command('init <project>')
+  .option('-d, --development', 'Run init in development mode')
+  .action((name, _program) => {
+    projectPath = name;
+    devEnvironment = _program.development;
+    command = 'init'; 
+    if ( typeof projectPath === 'undefined' ){
+      console.error(chalk.red('You must specify a directory for your project'));
+      process.exit(1);
     }
-    projectPath = name
-    command = cmd; 
-  })
+  });
 
-
-
-program.parse(process.argv);
-devEnvironment = program.development;
-
-if(typeof projectPath === 'undefined'){
-  console.error('You must specify a directory for your project');
-  process.exit(1);
-}
+program.parse( process.argv );
 
 switch (command) {
   case 'init':
@@ -53,10 +46,10 @@ switch (command) {
     run(program.args);
 }
 
-async function bootstrapProject(_projectPath){
+function bootstrapProject(_projectPath){
   const rootPath = path.resolve(_projectPath),
         appName = path.basename(rootPath);
-  console.log('Starting new Frontflip project at:', chalk.green(appName));
+  console.log('Starting new Frontflip project at:', chalk.blue(appName));
   fs.ensureDirSync(appName);
   const packageDotJson = {
     name: appName,
@@ -67,10 +60,10 @@ async function bootstrapProject(_projectPath){
     path.join(rootPath, 'package.json'),
     JSON.stringify(packageDotJson, null, 2)
   )
-  const initialDir = process.cwd;
+  const initialDir = process.cwd();
   process.chdir(rootPath);
   launch(rootPath, appName, initialDir, flipUtils.hasYarn());
-  console.log('bootstrap');  
+  console.log(chalk.blue('Completed Project Bootstrap'));
 }
 
 function launch(_root, appName, initialDir, useYarn){
@@ -80,23 +73,20 @@ function launch(_root, appName, initialDir, useYarn){
   
   flipUtils[installationType](coreDependencies, false, useYarn)
     .then(()=>{
-      console.log('here at deps');
+      console.log(chalk.blue('Linking Dev Dependencies'));
       return flipUtils[installationType](devDependencies, true, useYarn);
     })
-    // .then(()=>{
-    //   flipScripts = require(path.resolve(_root, 'node_modules/frontflip-scripts'));
-    //   flipScripts.init(_root, appName, initialDir, useYarn);
-    // })
-    // .catch(error=>{
-    //   console.error(`[LAUNCH] ${chalk.red("An error occurred while launching your project")}`, error);
-    // });
-    console.log('end game');    
+    .then(()=>{
+      flipScripts = require(path.resolve(_root, 'node_modules/frontflip-scripts'));
+      flipScripts.init(_root, appName, initialDir, useYarn);
+    })
+    .catch(error=>{
+      console.error(`[LAUNCH] ${chalk.red("An error occurred while launching your project")}`, error);
+    });   
 }
 
 function run(){
-  console.log('Running');
-  
-  const project_root = process.cwd;
-  flipScripts = require(path.resolve(cwd, 'node_modules/frontflip-scripts'))
+  const project_root = process.cwd();
+  flipScripts = require(path.resolve(project_root, 'node_modules/frontflip-scripts'))
   flipScripts.run(command, program.args);
 }

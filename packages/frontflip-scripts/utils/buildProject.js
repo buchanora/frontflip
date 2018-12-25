@@ -1,4 +1,3 @@
-const getPaths = require('./getPaths');
 const fs = require('fs-extra');
 const path = require('path')
 
@@ -10,11 +9,15 @@ module.exports = (project, projectRoot, answers)=>{
     }
     if(project.files){
         project.files.forEach(file=>{
-            const filePath = path.resolve(projectRoot, file.to)
-            if(file.from){
-                fs.copySync(file.from, filePath )
-            }else{
-                fs.ensureFileSync(filePath)
+            try {
+                const filePath = path.resolve(projectRoot, file.to)
+                if(file.from){
+                    fs.copySync(file.from, filePath ); 
+                }else{
+                    fs.ensureFileSync(filePath)
+                }
+            } catch (error) {
+                console.warn(error);
             }
         })
     }

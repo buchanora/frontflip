@@ -4,7 +4,6 @@ module.exports = function(dependencies){
     if(!dependencies.length > 0) {
       return resolve(null);
     }
-    console.log('Linking dependencies');
     
     const command = 'npm';
     const args = [
