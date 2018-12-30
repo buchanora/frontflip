@@ -1,16 +1,16 @@
 nodes:
 - type: file
-  name: 'main.js'
-  templateDir: app
+  name: 'index.jsx'
+  templateDir: js
   templateFile: 'main.js'
-- type: file
-  name: 'routes.js'
-  templateDir: 'js'
-  templateFile: 'routes.js'
 - type: file
   name: 'main.scss'
   templateDir: 'styles'
   templateFile: 'main.scss'
+- type: file
+  name: 'theme.scss'
+  templateDir: 'styles'
+  templateFile: 'theme.scss'
 - type: dir
   name: api
 - type: dir
@@ -20,8 +20,6 @@ nodes:
 - type: dir
   name: constants
 - type: dir
-  name: helpers
-- type: dir
   name: lib
 - type: dir
   name: modules
@@ -30,18 +28,18 @@ nodes:
 - type: dir
   name: services
 - type: dir
-  name: store
+  name: 'ui.primitives'
 - type: dir
-  name: ui.primitives
+  name: 'ui.components'
 - type: dir
-  name: ui.components
+  name: 'ui.widgets'
 - type: dir
-  name: ui.widgets
-- type: dir
-  name: 'ui.pages'
+  name: 'ui.pageViews'
 - type: dir
   name: 'ui.partials'
 - type: dir
   name: 'ui.templates'
 - type: dir
   name: utils
+- type: dir
+  name: vendor

@@ -8,7 +8,6 @@ const templateRoot = path.resolve(__dirname, 'pathAssets/templates');
 
 describe('utils - getFilePaths', ()=>{
     const result = getFilePaths(scaffoldRoot, templateRoot);
-    console.log(result);
     it('should return folders and files lists', (done)=>{
         result.should.be.a('object');
         result.should.have.property('folders');

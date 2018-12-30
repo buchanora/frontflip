@@ -35,6 +35,7 @@ exports.dev =[
     "react-test-renderer",
     "react-hot-loader",
     "react-loader",
+    "react-transition-group",
     "regenerator-runtime",
     "sass-loader",
     "script-loader",

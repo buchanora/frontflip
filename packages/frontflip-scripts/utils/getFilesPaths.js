@@ -26,14 +26,14 @@ module.exports = (scaffoldRoot, templateRoot, projectFile )=>{
             } else if(n.type === 'dir'){
                 const scaffoldPath = path.resolve(scaffoldRoot, n.scaffoldDir || '', n.scaffoldDir ? n.name + '.yml' : _root.split('/').join('.') + n.name + '.yml' );
                 const currentPath = _root + n.name;
-                if(!dirMap[currentPath]){
-                    folders.push(currentPath);
-                    dirMap[currentPath] = true;
-                }
                 try {
                     const scaffoldFile = fs.readFileSync(scaffoldPath);
-                    const content = ffUtils.yaml.parse(scaffoldFile);  
-                    return getFiles(content.nodes, currentPath + '/');
+                    const content = ffUtils.yaml.parse(scaffoldFile);
+                    if(!dirMap[currentPath]){
+                        folders.push(currentPath);
+                        dirMap[currentPath] = true;
+                    }
+                    return content && content.nodes && getFiles(content.nodes, currentPath + '/');
                 } catch (error) {
                     console.error(chalk.red(error.message));
                     return;

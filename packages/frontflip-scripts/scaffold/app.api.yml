@@ -1,7 +1,7 @@
 nodes:
 - type: file
-  name: 'sampleApi.js'
-  templateDir: 'js/api'
-  templateFile: 'sampleApi.js'
+  name: 'sample.js'
+  templateDir: 'js'
+  templateFile: 'api.sample.js'
 - type: dir
   name: utils

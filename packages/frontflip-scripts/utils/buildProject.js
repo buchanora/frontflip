@@ -1,25 +1,33 @@
 const fs = require('fs-extra');
-const path = require('path')
+const path = require('path');
+const compileTemplate = require('../utils/compileTemplate');
+const selectContext = require('../utils/selectContext');
+const chalk = require('chalk');
 
-module.exports = (project, projectRoot, answers)=>{
+module.exports = (project, projectRoot, answers) => {
+    console.log(chalk.blue('Starting Project Build'));
     if(project.folders){
-        project.folders.forEach(folder=>{
+        project.folders.forEach(folder => {
             fs.ensureDirSync(folder)
-        })
+        });
     }
     if(project.files){
-        project.files.forEach(file=>{
+        project.files.forEach(file => {
             try {
-                const filePath = path.resolve(projectRoot, file.to)
+                const filePath = path.resolve(projectRoot, file.to);
+                fs.ensureFileSync(filePath);
                 if(file.from){
-                    fs.copySync(file.from, filePath ); 
-                }else{
-                    fs.ensureFileSync(filePath)
+                    if (file.context){
+                        const template = compileTemplate(fs.readFileSync(file.from))(selectContext(answers, file.context));
+                        fs.writeFileSync(filePath, template);
+                        return;
+                    }
+                    fs.copySync(file.from, filePath);
                 }
             } catch (error) {
                 console.warn(error);
             }
-        })
+        });
     }
     return project;
 }

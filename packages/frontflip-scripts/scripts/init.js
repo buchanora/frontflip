@@ -16,6 +16,7 @@ module.exports = function(root, appName, initialDir, useYarn){
   prompt(questions.init)
     .then(ans=>{
       answers = ans;
+      answers.appName = appName;
       deps = getDependencies(ans);
       return ffutils.installDependencies(deps.core, useYarn);
     })

@@ -2,15 +2,12 @@ nodes:
 - type: file
   name: 'webpack.config.js'
   templateDir: 'config'
-  templateFile: 'webpackCore.js'
+  templateFile: 'webpack.config.hbs'
+  context: true
 - type: file
   name: 'postcss.config.js'
   templateDir: 'config'
-  templateFile: 'postcss.js'
-- type: file
-  name: 'webpack.config.js'
-  templateDir: 'config'
-  templateFile: 'webpack.config.js'
+  templateFile: 'postcss.config.js'
 - type: file
   name: 'README.md'
   templateDir: 'docs'

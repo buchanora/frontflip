@@ -7,7 +7,8 @@
   "author": "Buchanora",
   "license": "MIT",
   "scripts": {
-    "test": "mocha './{,!(node_modules)/**}/*.spec.js' --timeout 10000"
+    "test": "mocha './{,!(node_modules)/**}/*.spec.js' --timeout 10000",
+    "test-watch": "NODE_ENV=test mocha './{,!(node_modules)/**}/*.spec.js' --watch"
   },
   "dependencies": {
     "chalk": "^1.1.1",

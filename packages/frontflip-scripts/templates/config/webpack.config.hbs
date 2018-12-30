@@ -1,39 +1,37 @@
 require ('babel-register');
-const webpack = require("webpack");
-const path = require("path");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
-const ExtractTextPlugin = require("extract-text-webpack-plugin");
-const autoprefixer = require('autoprefixer');
 const partials = require("./libs/webpackPartials");
+const path = require('path');
 const pkg = require("./package.json");
-const dep = ["react", "react-dom", "react-router", "react-router-dom", "jquery"];
+const dep = pkg.dependencies;
 
 const TARGET = process.env.npm_lifecycle_event;
 
 process.env.BABEL_ENV = TARGET;
 // process.traceDeprecation = true;
 
-
 const PATHS = {
     app: path.resolve(__dirname, "app"),
     build: path.resolve(__dirname, "public"),
-    style: [
-        path.resolve(__dirname, "app", "main.scss"),
-        path.resolve(__dirname, "app/assets", "vendorCSS/fontawesome/font-awesome"),
-        path.resolve(__dirname, "app/assets", "vendorCSS/icofont/icofont")
-    ],
+    style: {
+        main: path.resolve(__dirname, "app", "main.scss"),
+        theme: path.resolve(__dirname, 'app/theme.scss'),
+        vendor: [
+            path.resolve(__dirname, "app/assets", "vendorCSS/fontawesome"),
+            path.resolve(__dirname, "app/assets", "vendorCSS/icofont")
+        ]
+    },
     image: path.resolve(__dirname, "app", "assets/img"),
     font: path.resolve(__dirname, "app", "assets/fonts"),
-    hmr: 'webpack/hot/only-dev-server',
+    hmr: 'react-hot-loader/patch',
     wds: 'webpack-dev-server/client?http://localhost:8080'
 };
 
 const merge = require("webpack-merge");
 
-
 const commonConfig = {
     entry: {
-        style: PATHS.style,
+        style: PATHS.style.main,
         app: PATHS.app
     },
     output: {
@@ -50,7 +48,7 @@ const commonConfig = {
     // ],
     plugins:[
         new HtmlWebpackPlugin({
-            title: "Frontflip",
+            title: {{projectName}},
             template: './libs/template.html',
             appMountId: 'app',
             inject: false,
@@ -58,14 +56,17 @@ const commonConfig = {
         })
     ],
     resolve: {
-        extensions:['.css', '.js', '.es6', '.json', '.scss', '.jsx', '.html']
+        extensions:['.css', '.js', '.es6', '.json', '.scss', '.jsx', '.html'],
+        modules: [
+            path.resolve('./app'),
+            'node_modules',
+            path.resolve(__dirname, './node_modules')
+        ]
     },
     module: {
       noParse:[path.resolve(__dirname, 'node_modules/localforage/')],
     },
-
 };
-
 
 var config;
 
@@ -105,14 +106,15 @@ switch (process.env.npm_lifecycle_event){
             partials.devServer({
                 host: process.env.HOST,
                 port: process.env.PORT,
-                publicPath: '/',
-                contentBase: '/assets'
+                // publicPath: 'http://localhost:8080',
+                // contentBase: '/assets/'
             }),
             {
-                entry: {
-                    wds: PATHS.wds,
-                    hmr: PATHS.hmr
-                },
+                entry: [
+                    PATHS.wds,
+                    PATHS.app,
+                    PATHS.hmr
+                ],
                 devtool: "eval-source-map"
             },
             partials.setupCSS(PATHS.style),

@@ -1,0 +1,15 @@
+nodes:
+- type: file
+  name: 'grant.js'
+  templateDir: 'js'
+  templateFile: 'utils.grant.js'
+- type: file
+  name: 'queryString.js'
+  templateDir: 'js'
+  templateFile: 'utils.queryString.js'
+- type: file
+  name: 'api.queries.js'
+  templateDir: 'js'
+  templateFile: 'api.utils.queries.js'
+- type: dir
+  name: helpers

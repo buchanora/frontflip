@@ -1,0 +1,198 @@
+//************************Define Custom Colors
+//********************************************
+$color-secondary-0: #12D5ED;	// Main Secondary color */
+$color-secondary-1: #42DDF0;
+$color-secondary-2: #59E2F2;
+$color-secondary-3: #71E6F4;
+$color-secondary-4: #88EAF6;
+
+$color-primary-0: #43689E;	// Main Primary color (1) */
+$color-primary-1: #4B73AF;
+$color-primary-2: #5B80B9;
+$color-primary-3: #698BBF;
+$color-primary-4: #7796C5;
+
+$color-tetiary-0: #00B6C4;	// Main Tetiary color (2) */
+$color-tetiary-1: #00C8D6;
+$color-tetiary-2: #00DBEB;
+$color-tetiary-3: #00E4F5;
+$color-tetiary-4: #0AEFFF;
+
+$color-dark-0: #2A384D;	// Main Dark color (2) */
+$color-dark-1: #30415A;
+$color-dark-2: #394D6A;
+$color-dark-3: #405677;
+$color-dark-4: #476085;
+
+$color-gray-0: #9DA9CA;	// Main Gray color (2) */
+$color-gray-1: #ACB5D2;
+$color-gray-2: #BDC4DB;
+$color-gray-3: #CDD3E4;
+$color-gray-4: #DEE1ED;
+
+$color-tint-0: #E7E9F0;	// Main Light color (2) */
+$color-tint-1: #ECEEF3;
+$color-tint-2: #F2F3F7;
+$color-tint-3: #F9F9FB;
+$color-tint-4: #FFFFFF;
+
+$color-dark-0-transprent: rgba(0,0,0,0.08);
+
+// As RGBa codes */
+
+$rgba-primary-0: rgba( 83,138,182,1);	// Main Primary color */
+// $rgba-primary-0: #1076bc;
+$rgba-primary-1: rgba(101,150,190,1);
+$rgba-primary-2: rgba(119,162,197,1);
+$rgba-primary-3: rgba(137,175,205,1);
+$rgba-primary-4: rgba(155,187,212,1);
+
+$rgba-secondary-0: rgba(132,209,199,1);	// Main Secondary color (1) */
+$rgba-secondary-1: rgba(151,216,207,1);
+$rgba-secondary-2: rgba(170,223,216,1);
+$rgba-secondary-3: rgba(188,230,224,1);
+$rgba-secondary-4: rgba(207,237,233,1);
+
+$rgba-tetiary-0: rgba(144,123,159,1);	// Main Secondary color (2) */
+$rgba-tetiary-1: rgba(128,136,168,1);
+$rgba-tetiary-2: rgba(143,150,178,1);
+$rgba-tetiary-3: rgba(158,164,189,1);
+$rgba-tetiary-4: rgba(173,178,199,1);
+
+$color-dark-transparent-0: rgba(0, 0, 0, 0.5);
+$color-dark-transparent-1: rgba(0, 0, 0, 0.4);
+$color-dark-transparent-2: rgba(0, 0, 0, 0.3);
+$color-dark-transparent-3: rgba(0, 0, 0, 0.2);
+$color-dark-transparent-4: rgba(0, 0, 0, 0.1);
+
+$color-white-transparent: rgba(222, 225, 237, 0.85);
+$color-white-transparent-0: rgba(255, 255, 255, 0.9);
+$color-white-transparent-1: rgba(255, 255, 255, 0.8);
+$color-white-transparent-2: rgba(255, 255, 255, 0.7);
+$color-white-transparent-3: rgba(255, 255, 255, 0.6);
+$color-white-transparent-4: rgba(255, 255, 255, 0.5);
+
+// Neutral Tones
+$color-white:      $color-tint-4;
+$color-off-white:  $color-tint-1;
+$color-light-gray: $color-gray-4;
+$color-mid-gray:   $color-gray-4;
+$color-dark-gray:  $color-dark-0;
+// $color-dark-gray:  #293e6f;
+
+$color-danger: rgb(196, 19, 93);
+$color-warning: rgb(196, 164, 19);
+$color-success: rgb(19, 196, 151);
+
+// Tints and shades to handle element states
+$disabled-scale: 30%;
+$hover-scale: 6%;
+$hover-scale-1: 10%;
+$color-primary-tinted : lighten( $color-primary-0, $disabled-scale);
+$color-primary-shaded: darken($color-primary-0, $hover-scale);
+$color-primary-shaded-1: darken($color-primary-0, $hover-scale-1);
+$color-secondary-tinted: lighten($color-secondary-0, $disabled-scale);
+$color-secondary-shaded: darken($color-secondary-0, $hover-scale);
+
+$color-tetiary-tinted: lighten($color-tetiary-0, $disabled-scale);
+$color-tetiary-shaded: darken($color-tetiary-0, $hover-scale);
+
+//***************************Define Gradients
+//********************************************
+$linear-gradient-primary-0: linear-gradient(75deg, $color-primary-0, $color-primary-4);
+$linear-gradient-primary-2: linear-gradient(75deg, $color-primary-2, $color-secondary-2);
+$linear-gradient-secondary-2: linear-gradient(75deg, $color-secondary-2, $color-primary-2);
+$radial-gradient-primary-2: radial-gradient(circle at center, $color-secondary-2 0, $color-primary-2 30%,  $color-primary-0 70%);
+
+//***************************Define font scale
+//********************************************
+$font-size-default: 100%;
+$font-size-up-1: 1.2rem;
+$font-size-up-2: 1.6rem;
+$font-size-up-3: 1.8rem;
+$font-size-xl: 2.4rem;
+$font-size-down-1: 0.9rem;
+$font-size-down-2: 0.8rem;
+$font-size-down-3: 0.7rem;
+
+//************************Define Z-index scale
+//********************************************
+$z0: 1;
+$z1: 10;
+$z2: 20;
+$z3: 30; // Overlapping Layout Items
+$z4: 40;
+$z5: 50;
+$z6: 60;
+$z7: 70; // Free FLoating Elements
+$z8: 80;
+$z9: 90;
+$z10: 100;
+
+//************************Define Shadow Scale
+//********************************************
+$shadow-z2: 0 1px 2px 0 $color-dark-transparent-4;
+$shadow-z3: 0 2px 4px 0 $color-dark-transparent-4;
+$shadow-z4: 0 3px 6px 0 $color-dark-transparent-4;
+$shadow-z5: 0 4px 8px 0 $color-dark-transparent-4;
+$shadow-z6: 0 5px 10px 0 $color-dark-transparent-4;
+$shadow-z7: 0 6px 12px 0 $color-dark-transparent-4;
+$shadow-z8: 0 7px 14px 0 $color-dark-transparent-4;
+$shadow-z9: 0 8px 16px 0 $color-dark-transparent-4;
+$shadow-z10: 0 9px 18px 0 $color-dark-transparent-4;
+
+//******************Define Animation Keyframes
+//********************************************
+$slide-in-right: rightmove 1s 1 ease-in-out;
+$slide-in-left: scaleout 0.4s 1 ease-in-out;
+$fade-in: fadin 0.5s 1 ease-in-out;
+$glide-up: glideup 1s 1 ease-in-out;
+
+//**************Define other utility variables
+//********************************************
+$global-rounded: 50%;
+$edge-radius: 4px;
+$wrap-width: 90%;
+$wrap-max: 1080px;
+$box-width: 720px;
+$form-width: 560px;
+
+@keyframes rightmove {
+    0%{
+      transform:translateX(-100%);
+    }
+    100%{
+      transform:translateX(0);
+    }
+  }
+  @keyframes glideup {
+    0%{
+      transform:translateY(-100%);
+    }
+    100%{
+      transform:translateY(0);
+    }
+  }
+  @keyframes scaleout {
+    0%{
+      transform:scale(0,0);
+    }
+    100%{
+      transform:scale(1,1);
+    }
+  }
+  @keyframes fadein {
+    0%{
+      opacity: 0;
+    }
+    100%{
+      opacity: 1;
+    }
+  }
+
+//***************import foundation core styles
+//********************************************
+@import './assets/vendorCSS/foundation/foundation-config';
+//*************************Import Google Fonts
+//********************************************
+@import url('https://fonts.googleapis.com/css?family=Roboto:400,700');

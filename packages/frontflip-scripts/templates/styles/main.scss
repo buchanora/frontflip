@@ -1,0 +1,543 @@
+//****************************import app theme
+//********************************************
+@import './theme';
+@import '~fieldstack/lib/config';
+@import '~fieldstack/lib/styles';
+
+//************************Define color classes
+//********************************************
+.primary{color: $color-primary-0;}
+.secondary{color: $color-secondary-0;}
+.tetiary{color: $color-tetiary-0;}
+.gray{color: $color-mid-gray;}
+//*************************Define Font Classes
+//********************************************
+.font-size-0 { font-size: 100%;}
+.font-size-1 { font-size: 0.6rem;}
+.font-size-2 { font-size: 0.8rem;}
+.font-size-3 { font-size: 1.0rem;}
+.font-size-4 { font-size: 1.2rem;}
+.font-size-5 { font-size: 1.6rem;}
+.font-size-6 { font-size: 1.8rem;}
+.font-size-7 { font-size: 2.0rem;}
+.font-size-8 { font-size: 2.2rem;}
+.font-size-9 { font-size: 2.4rem;}
+.font-size-10{ font-size: 2.6rem;}
+.font-size-20{ font-size: 4.8rem;} 
+//******************************Define Margins
+//********************************************
+.mt1{
+    margin-top: 15px;
+  }
+  .mt2{
+    margin-top: 30px;
+  }
+  .mt3{
+    margin-top: 45px;
+  }
+  .mt4{
+    margin-top: 60px;
+  }
+  .mt5{
+    margin-top: 75px;
+  }
+  .mt6{
+    margin-top: 90px;
+  }
+  .mb1{
+    margin-bottom: 15px;
+  }
+  .mb2{
+    margin-bottom: 30px;
+  }
+  .mb3{
+    margin-bottom: 45px;
+  }
+  .mb4{
+    margin-bottom: 60px;
+  }
+  .mb5{
+    margin-bottom: 75px;
+  }
+  .mb6{
+    margin-bottom: 90px;
+  }
+  .ml1{
+    margin-left: 15px;
+  }
+  .ml2{
+    margin-left: 30px;
+  }
+  .ml3{
+    margin-left: 45px;
+  }
+  .ml4{
+    margin-left: 60px;
+  }
+  .ml5{
+    margin-left: 75px;
+  }
+  .ml6{
+    margin-left: 90px;
+  }
+  .mr1{
+    margin-right: 15px;
+  }
+  .mr2{
+    margin-right: 30px;
+  }
+  .mr3{
+    margin-right: 45px;
+  }
+  .mr4{
+    margin-right: 60px;
+  }
+  .mr5{
+    margin-right: 75px;
+  }
+  .mr6{
+    margin-right: 90px;
+  }
+  
+  //******************************Define Padding
+  //********************************************
+  .pt1{
+    padding-top: 15px;
+  }
+  .pt2{
+    padding-top: 30px;
+  }
+  .pt3{
+    padding-top: 45px;
+  }
+  .pt4{
+    padding-top: 60px;
+  }
+  .pt5{
+    padding-top: 75px;
+  }
+  .pt6{
+    padding-top: 90px;
+  }
+  .pb1{
+    padding-bottom: 15px;
+  }
+  .pb2{
+    padding-bottom: 30px;
+  }
+  .pb3{
+    padding-bottom: 45px;
+  }
+  .pb4{
+    padding-bottom: 60px;
+  }
+  .pb5{
+    padding-bottom: 75px;
+  }
+  .pb6{
+    padding-bottom: 90px;
+  }
+  .pl1{
+    padding-left: 15px;
+  }
+  .pl2{
+    padding-left: 30px;
+  }
+  .pl3{
+    padding-left: 45px;
+  }
+  .pl4{
+    padding-left: 60px;
+  }
+  .pl5{
+    padding-left: 75px;
+  }
+  .pl6{
+    padding-left: 90px;
+  }
+  .pr1{
+    padding-right: 15px;
+  }
+  .pr2{
+    padding-right: 30px;
+  }
+  .pr3{
+    padding-right: 45px;
+  }
+  .pr4{
+    padding-right: 60px;
+  }
+  .pr5{
+    padding-right: 75px;
+  }
+  .pr6{
+    padding-right: 90px;
+  }
+  
+  //************************Define Backgrond colors Scale
+  //********************************************
+  .bg-primary-0{
+    background-color: $color-primary-0;
+  }
+  .bg-primary-1{
+    background-color: $color-primary-1;
+  }
+  .bg-primary-2{
+    background-color: $color-primary-2;
+  }
+  .bg-primary-3{
+    background-color: $color-primary-3;
+  }
+  .bg-primary-4{
+    background-color: $color-primary-4;
+  }
+  
+  .bg-secondary-0{
+    background-color: $color-secondary-0;
+  }
+  .bg-secondary-1{
+    background-color: $color-secondary-1;
+  }
+  .bg-secondary-2{
+    background-color: $color-secondary-2;
+  }
+  .bg-secondary-3{
+    background-color: $color-secondary-3;
+  }
+  .bg-secondary-4{
+    background-color: $color-secondary-4;
+  }
+  
+  .bg-tetiary-0{
+    background-color: $color-tetiary-0;
+  }
+  .bg-tetiary-1{
+    background-color: $color-tetiary-1;
+  }
+  .bg-tetiary-2{
+    background-color: $color-tetiary-2;
+  }
+  .bg-tetiary-3{
+    background-color: $color-tetiary-3;
+  }
+  .bg-tetiary-4{
+    background-color: $color-tetiary-4;
+  }
+  
+  .bg-tint-0{
+    background-color: $color-tint-0;
+  }
+  .bg-tint-1{
+    background-color: $color-tint-1;
+  }
+  .bg-tint-2{
+    background-color: $color-tint-2;
+  }
+  .bg-tint-3{
+    background-color: $color-tint-3;
+  }
+  .bg-tint-4{
+    background-color: $color-tint-4;
+  }
+  
+  .bg-gray-0{
+    background-color: $color-gray-0;
+  }
+  .bg-gray-1{
+    background-color: $color-gray-1;
+  }
+  .bg-gray-2{
+    background-color: $color-gray-2;
+  }
+  .bg-gray-3{
+    background-color: $color-gray-3;
+  }
+  .bg-gray-4{
+    background-color: $color-gray-4;
+  }
+  
+  .bg-dark-0{
+    background-color: $color-dark-0;
+  }
+  .bg-dark-1{
+    background-color: $color-dark-1;
+  }
+  .bg-dark-2{
+    background-color: $color-dark-2;
+  }
+  .bg-dark-3{
+    background-color: $color-dark-3;
+  }
+  .bg-dark-4{
+    background-color: $color-dark-4;
+  }
+  //*******************Define Font Color classes
+  //********************************************
+  .color-primary-0{
+    color: $color-primary-0;
+  }
+  .color-primary-1{
+    color: $color-primary-1;
+  }
+  .color-primary-2{
+    color: $color-primary-2;
+  }
+  .color-primary-3{
+    color: $color-primary-3;
+  }
+  .color-primary-4{
+    color: $color-primary-4;
+  }
+  
+  .color-secondary-0{
+    color: $color-secondary-0;
+  }
+  .color-secondary-1{
+    color: $color-secondary-1;
+  }
+  .color-secondary-2{
+    color: $color-secondary-2;
+  }
+  .color-secondary-3{
+    color: $color-secondary-3;
+  }
+  .color-secondary-4{
+    color: $color-secondary-4;
+  }
+  
+  .color-tetiary-0{
+    color: $color-tetiary-0;
+  }
+  .color-tetiary-1{
+    color: $color-tetiary-1;
+  }
+  .color-tetiary-2{
+    color: $color-tetiary-2;
+  }
+  .color-tetiary-3{
+    color: $color-tetiary-3;
+  }
+  .color-tetiary-4{
+    color: $color-tetiary-4;
+  }
+  
+  .color-tint-0{
+    color: $color-tint-0;
+  }
+  .color-tint-1{
+    color: $color-tint-1;
+  }
+  .color-tint-2{
+    color: $color-tint-2;
+  }
+  .color-tint-3{
+    color: $color-tint-3;
+  }
+  .color-tint-4{
+    color: $color-tint-4;
+  }
+  
+  .color-gray-0{
+    color: $color-gray-0;
+  }
+  .color-gray-1{
+    color: $color-gray-1;
+  }
+  .color-gray-2{
+    color: $color-gray-2;
+  }
+  .color-gray-3{
+    color: $color-gray-3;
+  }
+  .color-gray-4{
+    color: $color-gray-4;
+  }
+  
+  .color-dark-0{
+    color: $color-dark-0;
+  }
+  .color-dark-1{
+    color: $color-dark-1;
+  }
+  .color-dark-2{
+    color: $color-dark-2;
+  }
+  .color-dark-3{
+    color: $color-dark-3;
+  }
+  .color-dark-4{
+    color: $color-dark-4;
+  }
+  //********************Define elevation Classes
+  //********************************************
+  .elevation-2{
+    z-index: $z2;
+    box-shadow: $shadow-z2;
+  }
+  .elevation-3{
+    z-index: $z3;
+    box-shadow: $shadow-z3;
+  }
+  .elevation-4{
+    z-index: $z4;
+    box-shadow: $shadow-z4;
+  }
+  .elevation-5{
+    z-index: $z5;
+    box-shadow: $shadow-z5;
+  }
+  .elevation-6{
+    z-index: $z6;
+    box-shadow: $shadow-z6;
+  }
+  .elevation-5{
+    z-index: $z5;
+    box-shadow: $shadow-z5;
+  }
+  .elevation-6{
+    z-index: $z6;
+    box-shadow: $shadow-z6;
+  }
+  .elevation-8{
+    z-index: $z8;
+    box-shadow: $shadow-z8;
+  }
+  .elevation-9{
+    z-index: $z9;
+    box-shadow: $shadow-z9;
+  }
+  .elevation-10{
+    z-index: $z10;
+    box-shadow: $shadow-z10;
+  }
+
+  //****************Animation Utiltities Classes
+  //********************************************
+  .fadeSlideUp-enter{
+    opacity: 0.01;
+    transform: translate(0, 80px);
+  }
+  .fadeSlideUp-enter.fadeSlideUp-enter-active{
+    opacity: 1;
+    transform: translate(0, 0);
+    transition: all 500ms ease-in;
+  }
+  .fadeSlideUp-exit{
+    transform: translate(0, 0);
+    opacity: 1;
+  }
+  .fadeSlideUp-exit.fadeSlideUp-exit-active{
+    opacity: 0;
+    transform: translate(0, -80px);
+    transition: all 500ms ease-in;
+  } 
+  
+  .fadeSlideDown-enter{
+    opacity: 0.01;
+    transform: translate(0, -80px);
+  }
+  .fadeSlideDown-enter.fadeSlideDown-enter-active{
+    opacity: 1;
+    transform: translate(0, 0);
+    transition: all 500ms ease-in;
+  }
+  .fadeSlideDown-exit{
+    transform: translate(0, 0);
+    opacity: 1;
+  }
+  .fadeSlideDown-exit.fadeSlideDown-exit-active{
+    opacity: 0;
+    transform: translate(0, 80px);
+    transition: all 500ms ease-in;
+  } 
+
+  .fade-enter{
+    opacity: 0.01;
+  }
+  .fade-enter.fade-enter-active{
+    opacity: 1;
+    transition: all 500ms ease-in;
+  }
+  .fade-exit{
+    opacity: 1;
+  }
+  .fade-exit.fade-exit-active{
+    opacity: 0;
+    transition: all 500ms ease-in;
+  } 
+
+  .fold-enter{
+    transform: translateY(-100%);
+    position: absolute;
+  }
+  .fold-enter.fold-enter-active{
+    transform-origin: top;
+    transform: translateY(0);
+    transition: transform 500ms ease-in-out;
+  }
+  .fold-exit{
+    transform: translateY(0);
+    position: absolute;
+  }
+  .fold-exit.fold-exit-active{
+    transform-origin: bottom;
+    transform: translateY(-100%);
+    transition: transform 500ms ease-in-out;
+  } 
+//********************Other Utiltities Classes
+//********************************************
+  html{
+    overflow-y: scroll;
+  }
+  html, body {
+      height: 100%;
+      padding: 0;
+      // overflow: scroll;
+  }
+  body {
+      background: #fff;
+      color: $color-dark-gray;
+    } 
+  .wrap{
+    width: 100%;
+    @include breakpoint(large){
+      width: $wrap-width;
+    }
+  }
+  div, 
+  header, 
+  footer, 
+  section, 
+  span {
+    box-sizing: border-box;
+  } 
+  hr{
+    border-bottom-color: $color-tint-0;
+  }
+  .app-wrapper, 
+  #app,
+  .routeWrapper,
+  #app > div{
+    position: relative;
+    width: 100%;
+    height: 100%;
+  }
+  button:hover{
+    cursor: pointer;
+  }
+  .show-element{
+    display: block;
+  }
+  .hide-element{
+    display: none;
+  }
+  .formWrap{
+    width: 100%;
+    max-width: 520px;
+    margin: 0 auto;
+  }
+  .align-block-center{
+    display: block!important;
+    margin-right: auto!important;
+    margin-left: auto!important;
+  }

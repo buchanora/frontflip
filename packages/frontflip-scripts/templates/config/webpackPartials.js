@@ -1,31 +1,25 @@
 const webpack = require("webpack");
 const CleanWebpackPlugin = require("clean-webpack-plugin");
 const ExtractTextPlugin = require("extract-text-webpack-plugin");
-const PurifyCSSPlugin = require("purifycss-webpack-plugin")
+const PurifyCSSPlugin = require("purifycss-webpack");
+const path = require('path');
 
 exports.devServer = function(options) {
     return {
         devServer: {
             historyApiFallback: true,
-
             inline: true,
             hot: true,
-
             stats: "errors-only",
-
             host: options.host,
             port: options.port,
-
-            // publicPath: options.publicPath,
-
-            // contentBase: options.contentBase
-
-
+            publicPath: options.publicPath,
+            contentBase: options.contentBase
         },
         plugins: [
-            new webpack.HotModuleReplacementPlugin({
-                multistep: true
-            }),
+            // new webpack.HotModuleReplacementPlugin({
+            //     multistep: true
+            // }),
             new webpack.NamedModulesPlugin(),
         ]
     };
@@ -89,13 +83,25 @@ exports.extractSCSS = function(paths){
     return{
         module: {
             rules: [
+                { test: /\.css$/, use: ['style-loader', 'css-loader'] },
                 {
-                    test:[/\.scss$/, /\.css$/, /\.sass$/],
+                    test:[/\.scss$/, /\.sass$/],
                     use: ExtractTextPlugin.extract({
                         fallback: "style-loader",
-                        use: ["css-loader?sourceMap", "postcss-loader", "sass-loader?sourceMap"]
+                        use: [
+                            "css-loader?sourceMap", 
+                            "postcss-loader", 
+                            {
+                                loader: 'sass-loader',
+                                options:{
+                                    sourceMap: true,
+                                    data: `@import "${paths.theme}";`,
+                                    includePaths: paths.vendor
+                                }
+                            }
+                        ]
                     }),
-                    include: paths
+                    include: paths.vendor
                 }
             ]
         },
@@ -104,18 +110,37 @@ exports.extractSCSS = function(paths){
         ]
     };
 }
-// Alternative css config for dev server
+// Alternative css loader config for dev server
 exports.setupCSS = function(paths){
     return{
         module:{
             rules: [
+                { test: /\.css$/, use: ['style-loader', 'css-loader'] },
                 {
-                    test: [/\.scss$/, /\.css$/, /\.sass$/],
-                    use: [  {loader: 'style-loader'},
-                            {loader: 'css-loader'},
-                            {loader: 'postcss-loader'},
-                            {loader: 'sass-loader'}],
-                    include: paths
+                    test: [/\.scss$/, /\.sass$/],
+                    use: [  
+                            {
+                                loader: 'style-loader',
+                            },
+                            {
+                                loader: 'css-loader?sourceMap',
+                                options:{
+                                    sourceMap: true
+                                }
+                            },
+                            {
+                                loader: 'postcss-loader',
+                            },
+                            {
+                                loader: 'sass-loader',
+                                options:{
+                                    sourceMap: true,
+                                    data: `@import "${paths.theme}";`,
+                                    includePaths: paths.vendor
+                                }
+                            }
+                        ],
+
                 }
             ]
         }
@@ -127,9 +152,9 @@ exports.purifyCSS = function(paths){
             new PurifyCSSPlugin({
                 basePath: process.cwd(),
                 paths: paths,
-                resolveExtensions: ['.html', '.jsx', '.js'],
+                moduleExtensions: ['.html', '.jsx', '.js'],
                 purifyOptions:{
-                   minify: true,
+                    minify: true,
                     info: true,
                     // rejected: true
                 }
@@ -161,9 +186,7 @@ exports.loadImages = function(paths){
             rules: [
                 {
                     test: /.*\.(svg|jpg|png)$/i,
-                    // use: 'file?name=./assets/img/[name].[hash].[ext]!image-webpack?{optimizationLevel: 7, interlaced: false, pngquant:{quality: "65-90", speed: 4}, mozjpeg: {quality: 65}}',
                     use: 'file-loader?name=./assets/img/[name].[hash].[ext]',
-
                     include: paths
                 }
             ]
@@ -202,9 +225,6 @@ exports.transformJSHot = function(paths){
                 {
                     test: [/\.es6$/, /\.js$/, /\.jsx$/],
                     use: [
-                        {
-                            loader: 'react-hot-loader'
-                        },
                         {
                             loader: 'babel-loader?cacheDirectory',
                         }

@@ -1,9 +1,17 @@
 nodes:
 - type: file
   name: 'server.js'
-  templateDir: 'js/config'
-  templateFile: 'server.js'
+  templateDir: 'js'
+  templateFile: 'config.server.js'
 - type: file
   name: 'store.js'
-  templateDir: 'js/config'
-  templateFile: 'store.js'
+  templateDir: 'js'
+  templateFile: 'config.store.js'
+- type: file
+  name: 'reducer.js'
+  templateDir: 'js'
+  templateFile: 'config.reducer.js'
+- type: file
+  name: 'Routes.jsx'
+  templateDir: 'js'
+  templateFile: 'config.routes.js'

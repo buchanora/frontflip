@@ -24,7 +24,7 @@ exports.init = [
     default: 0
   },{
     type: 'checkbox',
-    name: 'utility packages',
+    name: 'utilityPackages',
     message: 'Select Optonal modules',
     choices: [
       {

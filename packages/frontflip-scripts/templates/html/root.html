@@ -19,6 +19,10 @@
   <link href="/<%= htmlWebpackPlugin.files.css[css] %>" rel="stylesheet">
   <% } %>
 
+  <% if (htmlWebpackPlugin.options.googleMapsURL) { %>
+  <script src="<%= htmlWebpackPlugin.options.googleMapsURL %>"></script>
+  <% } %>
+
 </head>
 <body>
 <% if (htmlWebpackPlugin.options.unsupportedBrowser) { %>
@@ -56,7 +60,6 @@
 <% if (htmlWebpackPlugin.options.devServer) { %>
 <script src="<%= htmlWebpackPlugin.options.devServer%>/webpack-dev-server.js"></script>
 <% } %>
-
 
 <% if (htmlWebpackPlugin.options.googleAnalytics) { %>
 <script>
