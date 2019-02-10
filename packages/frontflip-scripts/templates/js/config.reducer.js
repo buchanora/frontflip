@@ -1,8 +1,8 @@
 import {combineReducers} from 'redux';
-import onboarding from 'modules/Onboard/state';
+import {onboard} from 'modules/Onboard/state';
 
 const rootReducer = combineReducers({
-  onboarding,
+  onboard,
 });
 
 export default rootReducer;

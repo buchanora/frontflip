@@ -3,7 +3,7 @@ const HtmlWebpackPlugin = require("html-webpack-plugin");
 const partials = require("./libs/webpackPartials");
 const path = require('path');
 const pkg = require("./package.json");
-const dep = pkg.dependencies;
+const dep = Object.keys(pkg.dependencies || []);
 
 const TARGET = process.env.npm_lifecycle_event;
 
@@ -48,11 +48,29 @@ const commonConfig = {
     // ],
     plugins:[
         new HtmlWebpackPlugin({
-            title: {{projectName}},
+            title: '{{appName}}',
             template: './libs/template.html',
             appMountId: 'app',
             inject: false,
-            mobile: true
+            mobile: true,
+            files:{
+                appleIcon57x57: 'assets/favicons/apple-icon-57x57.png',
+                appleIcon60x60: 'assets/favicons/apple-icon-60x60.png',
+                appleIcon72x72: 'assets/favicons/apple-icon-72x72.png',
+                appleIcon76x76: 'assets/favicons/apple-icon-76x76.png',
+                appleIcon114x114: 'assets/favicons/apple-icon-114x114.png',
+                appleIcon120x120: 'assets/favicons/apple-icon-120x120.png',
+                appleIcon144x144: 'assets/favicons/apple-icon-144x144.png',
+                appleIcon152x152: 'assets/favicons/apple-icon-152x152.png',
+                appleIcon180x180: 'assets/favicons/apple-icon-180x180.png',
+                androidIcon192x192: 'assets/favicons/android-icon-192x192.png',
+                appleIcon180x180: 'assets/favicons/apple-icon-180x180.png',
+                favicon32x32: 'assets/favicons/favicon-32x32.png',
+                favicon96x96: 'assets/favicons/favicon-96x96.png',
+                favicon16x16: 'assets/favicons/favicon-16x16.png',
+                manifest: 'assets/favicons/manifest.json',
+                msIcon144x144: 'assets/favicons/ms-icon-144x144.png'
+            }
         })
     ],
     resolve: {

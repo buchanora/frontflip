@@ -1,0 +1,109 @@
+@keyframes slide-in-right {
+    0%{
+        transform:translateX(-100%);
+    }
+    100%{
+        transform:translateX(0);
+    }
+}
+
+@keyframes glide-up {
+    0%{
+        transform:translateY(-100%);
+    }
+    100%{
+        transform:translateY(0);
+    }
+}
+
+@keyframes scale-out {
+    0%{
+        transform:scale(0,0);
+    }
+    100%{
+        transform:scale(1,1);
+    }
+}
+
+@keyframes fade-in {
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+
+//****************Animation Utiltities Classes
+  //********************************************
+  .fadeSlideUp-enter{
+    opacity: 0.01;
+    transform: translate(0, 80px);
+  }
+  .fadeSlideUp-enter.fadeSlideUp-enter-active{
+    opacity: 1;
+    transform: translate(0, 0);
+    transition: all 500ms ease-in;
+  }
+  .fadeSlideUp-exit{
+    transform: translate(0, 0);
+    opacity: 1;
+  }
+  .fadeSlideUp-exit.fadeSlideUp-exit-active{
+    opacity: 0;
+    transform: translate(0, -80px);
+    transition: all 500ms ease-in;
+  } 
+  
+  .fadeSlideDown-enter{
+    opacity: 0.01;
+    transform: translate(0, -80px);
+  }
+  .fadeSlideDown-enter.fadeSlideDown-enter-active{
+    opacity: 1;
+    transform: translate(0, 0);
+    transition: all 500ms ease-in;
+  }
+  .fadeSlideDown-exit{
+    transform: translate(0, 0);
+    opacity: 1;
+  }
+  .fadeSlideDown-exit.fadeSlideDown-exit-active{
+    opacity: 0;
+    transform: translate(0, 80px);
+    transition: all 500ms ease-in;
+  } 
+
+  .fade-enter{
+    opacity: 0.01;
+  }
+  .fade-enter.fade-enter-active{
+    opacity: 1;
+    transition: all 500ms ease-in;
+  }
+  .fade-exit{
+    opacity: 1;
+  }
+  .fade-exit.fade-exit-active{
+    opacity: 0;
+    transition: all 500ms ease-in;
+  } 
+
+  .fold-enter{
+    transform: translateY(-100%);
+    position: absolute;
+  }
+  .fold-enter.fold-enter-active{
+    transform-origin: top;
+    transform: translateY(0);
+    transition: transform 500ms ease-in-out;
+  }
+  .fold-exit{
+    transform: translateY(0);
+    position: absolute;
+  }
+  .fold-exit.fold-exit-active{
+    transform-origin: bottom;
+    transform: translateY(-100%);
+    transition: transform 500ms ease-in-out;
+  } 

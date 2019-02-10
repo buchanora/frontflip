@@ -10,7 +10,9 @@ exports.init = [
           core: [
             "redux",
             "react-redux",
-            "redux-persist"
+            "reselect",
+            "redux-persist",
+            "redux-saga"
           ]
         }
       },{

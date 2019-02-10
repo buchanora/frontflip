@@ -1,0 +1,166 @@
+//************************Define Custom Colors
+//********************************************
+
+
+$color-primary-0: #B32E56 !default;	// Main Primary color (1) */
+$color-primary-1: #BF325C !default;
+$color-primary-2: #CC3562 !default;
+$color-primary-3: #D93868 !default;
+$color-primary-4: #E63C6E !default;
+
+$color-secondary-0: #C48A57 !default;	// Main Secondary color */
+$color-secondary-1: #D4945E !default;
+$color-secondary-2: #E09D63 !default;
+$color-secondary-3: #EDA669 !default;
+$color-secondary-4: #FAAF6E !default;
+
+$color-tetiary-0: #6D3575 !default;	// Main Tetiary color (2) */
+$color-tetiary-1: #793B82 !default;
+$color-tetiary-2: #85418F !default;
+$color-tetiary-3: #91479C !default;
+$color-tetiary-4: #9D4DA8 !default;
+
+$color-gray-dark-0: #2A384D !default;	// Main Dark color (2) */
+$color-gray-dark-1: #30415A !default;
+$color-gray-dark-2: #394D6A !default;
+$color-gray-dark-3: #405677 !default;
+$color-gray-dark-4: #476085 !default;
+
+$color-gray-medium-0: #9DA9CA !default;	// Main Gray color (2) */
+$color-gray-medium-1: #ACB5D2 !default;
+$color-gray-medium-2: #BDC4DB !default;
+$color-gray-medium-3: #CDD3E4 !default;
+$color-gray-medium-4: #DEE1ED !default;
+
+$color-gray-light-0: #E7E9F0 !default;	// Main Light color (2) */
+$color-gray-light-1: #ECEEF3 !default;
+$color-gray-light-2: #F2F3F7 !default;
+$color-gray-light-3: #F9F9FB !default;
+$color-gray-light-4: #FFFFFF !default;
+
+
+
+// As RGBa codes */
+
+$rgba-primary-0: rgba( 179,46,86,1) !default;	// Main Primary color */
+$rgba-primary-1: rgba(191,50,92,1) !default;
+$rgba-primary-2: rgba(204,53,98,1) !default;
+$rgba-primary-3: rgba(217,56,104,1) !default;
+$rgba-primary-4: rgba(230,60,110,1) !default;
+
+$rgba-secondary-0: rgba(196,138,87,1) !default;	// Main Secondary color (1) */
+$rgba-secondary-1: rgba(212,148,94,1) !default;
+$rgba-secondary-2: rgba(224,157,99,1) !default;
+$rgba-secondary-3: rgba(237,166,105,1) !default;
+$rgba-secondary-4: rgba(250,175,110,1) !default;
+
+$rgba-tetiary-0: rgba(109,53,117,1) !default;	// Main Secondary color (2) */
+$rgba-tetiary-1: rgba(121,59,130,1) !default;
+$rgba-tetiary-2: rgba(133,65,143,1) !default;
+$rgba-tetiary-3: rgba(145,71,156,1) !default;
+$rgba-tetiary-4: rgba(157,77,168,1) !default;
+
+$color-dark-transparent-0: rgba(0, 0, 0, 0.5) !default;
+$color-dark-transparent-1: rgba(0, 0, 0, 0.4) !default;
+$color-dark-transparent-2: rgba(0, 0, 0, 0.3) !default;
+$color-dark-transparent-3: rgba(0, 0, 0, 0.2) !default;
+$color-dark-transparent-4: rgba(0, 0, 0, 0.1) !default;
+
+$color-white-transparent-0: rgba(255, 255, 255, 0.9) !default;
+$color-white-transparent-1: rgba(255, 255, 255, 0.8) !default;
+$color-white-transparent-2: rgba(255, 255, 255, 0.7) !default;
+$color-white-transparent-3: rgba(255, 255, 255, 0.6) !default;
+$color-white-transparent-4: rgba(255, 255, 255, 0.5) !default;
+
+// Neutral Tones
+$color-white:      $color-gray-light-4 !default;
+$color-off-white:  $color-gray-light-1 !default;
+$color-light-gray: $color-gray-medium-4 !default;
+$color-mid-gray:   $color-gray-medium-4 !default;
+$color-dark-gray:  $color-gray-dark-0 !default;
+
+$color-danger: rgb(196, 19, 93) !default;
+$color-warning: rgb(196, 164, 19) !default;
+$color-success: rgb(19, 196, 151) !default;
+
+// Tints and shades to handle element states
+$disabled-scale: 30% !default;
+$hover-scale: 6% !default;
+
+$color-primary-tinted : lighten( $color-primary-0, $disabled-scale) !default;
+$color-primary-shaded: darken($color-primary-0, $hover-scale) !default;
+
+$color-secondary-tinted: lighten($color-secondary-0, $disabled-scale) !default;
+$color-secondary-shaded: darken($color-secondary-0, $hover-scale) !default;
+
+$color-tetiary-tinted: lighten($color-tetiary-0, $disabled-scale) !default;
+$color-tetiary-shaded: darken($color-tetiary-0, $hover-scale) !default;
+
+//***************************Define Gradients
+//********************************************
+$linear-gradient-primary: linear-gradient(75deg, $color-primary-0, $color-primary-4) !default;
+$linear-gradient-secondary: linear-gradient(75deg, $color-secondary-2, $color-primary-2) !default;
+
+$radial-gradient-secondary-to-primary: radial-gradient(circle at center, $color-secondary-2 0, $color-primary-2 30%,  $color-primary-0 70%) !default;
+
+//***************************Define font scale
+//********************************************
+
+$font-size-default: 100% !default;
+$font-size-0: 0.6rem !default;
+$font-size-1: 0.8rem !default;
+$font-size-2: 1.0rem !default;
+$font-size-3: 1.2rem !default;
+$font-size-4: 1.5rem !default;
+$font-size-5: 1.8rem !default;
+$font-size-6: 2.4rem !default;
+$font-size-7: 2.8rem !default;
+$font-size-8: 3.6rem !default;
+$font-size-9: 4.8rem !default;
+$font-size-10: 6.0rem !default;
+//************************Define Z-index scale
+//********************************************
+$z0: 1 !default;
+$z1: 10 !default;
+$z2: 20 !default;
+$z3: 30 !default; // Overlapping Layout Items
+$z4: 40 !default;
+$z5: 50 !default;
+$z6: 60 !default;
+$z7: 70 !default; // Free FLoating Elements
+$z8: 80 !default;
+$z9: 90 !default;
+$z10: 100 !default;
+//************************Define Shadow Scale
+//********************************************
+
+$shadow-z2: 0 1px 2px 0 $color-dark-transparent-4 !default;
+$shadow-z3: 0 2px 4px 0 $color-dark-transparent-4 !default;
+$shadow-z4: 0 3px 6px 0 $color-dark-transparent-4 !default;
+$shadow-z5: 0 4px 8px 0 $color-dark-transparent-4 !default;
+$shadow-z6: 0 5px 10px 0 $color-dark-transparent-4 !default;
+$shadow-z7: 0 6px 12px 0 $color-dark-transparent-4 !default;
+$shadow-z8: 0 7px 14px 0 $color-dark-transparent-4 !default;
+$shadow-z9: 0 8px 16px 0 $color-dark-transparent-4 !default;
+$shadow-z10: 0 9px 18px 0 $color-dark-transparent-4 !default;
+
+
+$global-radius: 4px !default;
+$global-rounded: 50% !default;
+$wrap-width: 960px !default;
+$box-width: 840px !default;
+$form-width: 720px !default;
+$type-width: 640px !default;
+$global-weight-bold: 700 !default;
+
+$edge-radius: 4px !default;
+$wrap-max: 700px !default;
+
+
+//******************Define Animation Keyframes
+//********************************************
+
+$slide-in-right: slide-in-right 1s 1 ease-in-out !default;
+$slide-in-left: scale-out 0.4s 1 ease-in-out !default;
+$fade-in: fade-in 0.5s 1 ease-in-out !default;
+$glide-up: glide-up 1s 1 ease-in-out !default;

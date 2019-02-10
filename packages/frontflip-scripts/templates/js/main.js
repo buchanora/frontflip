@@ -29,7 +29,7 @@ if(appNode){
   if (module.hot) {
     module.hot.accept('./config/Routes', () => {
       const NextApp = require('./config/Routes').default;
-      render(<AppContainer><NextApp /></AppContainer>, appNode);
+      render(<AppContainer><NextApp/></AppContainer>, appNode);
     });
   }
 }

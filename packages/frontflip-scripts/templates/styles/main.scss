@@ -1,8 +1,6 @@
 //****************************import app theme
 //********************************************
 @import './theme';
-@import '~fieldstack/lib/config';
-@import '~fieldstack/lib/styles';
 
 //************************Define color classes
 //********************************************
@@ -26,7 +24,7 @@
 .font-size-20{ font-size: 4.8rem;} 
 //******************************Define Margins
 //********************************************
-.mt1{
+  .mt1{
     margin-top: 15px;
   }
   .mt2{
@@ -500,9 +498,7 @@
     } 
   .wrap{
     width: 100%;
-    @include breakpoint(large){
-      width: $wrap-width;
-    }
+    max-width: $wrap-width;
   }
   div, 
   header, 

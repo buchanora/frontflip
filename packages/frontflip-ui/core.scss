@@ -1,0 +1,59 @@
+//*************************import core modules
+//********************************************
+@import './lib/normalize';
+@import './lib/variables';
+@import './lib/mixins';
+@import './lib/animations';
+@import './lib/boxUtils';
+@import './lib/colorUtils';
+@import './lib/typeUtils';
+@import './lib/visibility';
+
+//********************Other Utiltities Classes
+//********************************************
+  html{
+    overflow-y: scroll;
+  }
+  html, body {
+      height: 100%;
+      padding: 0;
+      // overflow: scroll;
+  }
+  body {
+      background: #fff;
+      color: $color-dark-gray;
+    } 
+  // .wrap{
+  //   width: 100%;
+  //   @include breakpoint(large){
+  //     width: $wrap-width;
+  //   }
+  // }
+  div, 
+  header, 
+  footer, 
+  section, 
+  span {
+    box-sizing: border-box;
+  } 
+  hr{
+    border-bottom-color: $color-tint-0;
+  }
+  .main-wrapper,{
+    position: relative;
+    width: 100%;
+    height: 100%;
+  }
+  button:hover{
+    cursor: pointer;
+  }
+  .formWrap{
+    width: 100%;
+    max-width: 520px;
+    margin: 0 auto;
+  }
+  .align-block-center{
+    display: block!important;
+    margin-right: auto!important;
+    margin-left: auto!important;
+  }

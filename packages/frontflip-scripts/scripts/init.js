@@ -18,10 +18,10 @@ module.exports = function(root, appName, initialDir, useYarn){
       answers = ans;
       answers.appName = appName;
       deps = getDependencies(ans);
-      return ffutils.installDependencies(deps.core, useYarn);
+      return ffutils.installDependencies(deps.core.concat(defaultDependencies.core), false, useYarn);
     })
     .then(()=>{
-      return ffutils.installDependencies(deps.dev.concat(defaultDependencies.dev), useYarn, true);
+      return ffutils.installDependencies(deps.dev.concat(defaultDependencies.dev), true, useYarn);
     })
     .then(()=>{
       addPackageScripts(root, answers);

@@ -1,0 +1,28 @@
+- type: dir
+  name: __tests__
+  nodes: 
+  - type: file
+    fileExtension: spec.js
+    nameContext: name
+    templateDir: 'module'
+    templateFile: 'test.hbs'
+- type: dir
+  name: components
+  nodes:
+  - type: file
+    name: index.js
+  - type: scaffold
+    name: component
+    context: true
+- type: file
+  name: 'index.js'
+  templateDir: 'module'
+  templateFile: 'index.hbs'
+- type: file
+  name: 'sagas.js'
+  templateDir: 'module'
+  templateFile: 'sagas.hbs'
+- type: file
+  name: 'state.js'
+  templateDir: 'module'
+  templateFile: 'state.hbs'

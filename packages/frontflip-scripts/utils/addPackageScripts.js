@@ -10,7 +10,7 @@ module.exports = (rootPath, ans)=>{
         "stats": "cross-env webpack --profile --json > stats.json",
         "lint": "cross-env eslint --ext .js --ext .jsx .",
     }
-    switch (ans.testSuite && ans.testSuite.name) {
+    switch (ans.testSuite && ans.testSuite.key) {
         case "mocha":
             scripts = Object.assign({}, scripts, {
                 "test": "cross-env NODE_ENV=test mocha --recursive test",

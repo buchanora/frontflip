@@ -18,7 +18,7 @@ module.exports = (project, projectRoot, answers) => {
                 fs.ensureFileSync(filePath);
                 if(file.from){
                     if (file.context){
-                        const template = compileTemplate(fs.readFileSync(file.from))(selectContext(answers, file.context));
+                        const template = compileTemplate(fs.readFileSync(file.from, 'utf8'))(selectContext(answers, typeof file.context === 'string' && file.context));
                         fs.writeFileSync(filePath, template);
                         return;
                     }

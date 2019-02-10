@@ -1,3 +1,7 @@
 nodes:
+- type: file
+  name: 'languages.json'
+  templateDir: 'json'
+  templateFile: 'resources.languages.json'
 - type: dir
   name: locales

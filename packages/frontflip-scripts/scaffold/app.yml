@@ -40,6 +40,8 @@ nodes:
 - type: dir
   name: 'ui.templates'
 - type: dir
+  name: 'ui.decorators'
+- type: dir
   name: utils
 - type: dir
   name: vendor

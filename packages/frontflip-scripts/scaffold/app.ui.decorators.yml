@@ -1,0 +1,5 @@
+nodes:
+- type: file
+  name: 'Translate.js'
+  templateDir: 'js'
+  templateFile: 'ui.decorators.translate.js'

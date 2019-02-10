@@ -1,0 +1,14 @@
+{
+    "Header": {
+        "title": "Fronflip App",
+        "subtitle": "A good way of ranting in an Agile way",
+        "logout": "Logout",
+        "logon": "Login"
+    },
+    "LanguagePicker": {
+        "header": "Choose a language"
+    },
+    "Home": {
+        "pageTitle": "Home Page"
+    }
+}

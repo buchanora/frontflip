@@ -1,3 +1,24 @@
-nodes:
 - type: dir
-  name: example
+  name: Onboard
+  nodes:
+  - type: dir
+    name: __tests__
+    nodes:
+    - type: file
+      name: onboard.spec.js
+      templateDir: 'module'
+      templateFile: 'test.hbs'
+  - type: dir
+    name: components
+  - type: file
+    name: 'state.js'
+    templateDir: 'module'
+    templateFile: 'state.hbs'
+  - type: file
+    name: 'sagas.js'
+    templateDir: 'module'
+    templateFile: 'sagas.hbs'
+  - type: file
+    name: 'index.jsx'
+    templateDir: 'module'
+    templateFile: 'index.hbs'

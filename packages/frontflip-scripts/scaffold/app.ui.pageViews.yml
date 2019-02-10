@@ -1,0 +1,7 @@
+- type: dir
+  name: Home
+  nodes: 
+    - type: file
+      name: 'index.js'
+      templateDir: 'page'
+      templateFile: 'index.hbs'

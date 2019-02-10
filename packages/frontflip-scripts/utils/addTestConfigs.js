@@ -4,9 +4,9 @@ const path = require('path');
 module.exports = (rootPath, ans)=>{
     const jsonPath = path.resolve(rootPath, 'package.json');
     const packageDotJson = fs.readJsonSync(jsonPath);
-    switch (ans.testSuite && ans.testSuite.name) {
-        case "mocha":
-        packageDotJson.jest = {
+    switch (ans.testSuite && ans.testSuite.key) {
+        case "jest":
+          packageDotJson.jest = {
             "collectCoverage": true,
             "testRegex": "__tests__/.*\\.spec|snap.js$",
             "modulePaths": [

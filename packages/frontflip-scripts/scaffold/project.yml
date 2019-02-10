@@ -9,6 +9,10 @@ nodes:
   templateDir: 'config'
   templateFile: 'postcss.config.js'
 - type: file
+  name: '.babelrc'
+  templateDir: 'config'
+  templateFile: 'babelrc'
+- type: file
   name: 'README.md'
   templateDir: 'docs'
   templateFile: 'README.md'
