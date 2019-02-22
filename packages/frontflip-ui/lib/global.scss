@@ -1,0 +1,17 @@
+//*******************************Global Styles
+//********************************************
+html{
+    overflow-y: scroll;
+}
+html, 
+body {
+    height: 100%;
+    padding: 0;
+}
+div, 
+header, 
+footer, 
+section, 
+span {
+    box-sizing: border-box;
+} 

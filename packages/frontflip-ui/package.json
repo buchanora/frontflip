@@ -3,12 +3,12 @@
   "version": "0.0.1",
   "repository": "https://github.com/buchanora/frontflip.git",
   "description": "Style systems and architectural conventions for modern frontend development",
-  "main": "index.js",
+  "main": "main.js",
   "scripts": {
     "test": "test"
   },
   "keywords": [
-    "react",
+    "css",
     "styles",
     "scss",
     "sass",

@@ -1,0 +1,17 @@
+.star-wrap{
+  padding-bottom: 15px;
+  display: flex;
+  justify-content: center;
+}
+.star{
+  box-sizing: border-box;
+  display: inline-block;
+  padding: 4px;
+  // width: 20%;
+}
+.star-dormant{
+  color: $color-gray-0;
+}
+.star-active{
+  color: $color-secondary-0;
+}
