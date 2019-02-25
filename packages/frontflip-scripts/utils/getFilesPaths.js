@@ -1,9 +1,9 @@
 const path = require('path');
 const fs = require('fs-extra');
 const chalk = require('chalk');
-const ffUtils = require('frontflip-utils');
+const yaml = require('./yaml');
 module.exports = (scaffoldRoot, templateRoot, projectFile )=>{
-    const pathTree = ffUtils.yaml.parse(fs.readFileSync( path.resolve(scaffoldRoot, projectFile || 'project.yml' )));
+    const pathTree = yaml.parse(fs.readFileSync( path.resolve(scaffoldRoot, projectFile || 'project.yml' )));
     const folders = [];
     const files = [];
     const dirMap = {};
@@ -37,7 +37,7 @@ module.exports = (scaffoldRoot, templateRoot, projectFile )=>{
                 // Check if there is a file in the scaffold file path that matches the current directory's name
                 try {
                     const scaffoldFile = fs.readFileSync(scaffoldPath);
-                    const content = ffUtils.yaml.parse(scaffoldFile);
+                    const content = yaml.parse(scaffoldFile);
                     if (content && content.nodes){
                         return getFiles(content.nodes, currentPath + '/');
                     } else if (Array.isArray(content)){

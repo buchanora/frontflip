@@ -1,7 +1,6 @@
 'use strict';
 const path = require('path');
 const inquirer = require('inquirer');
-const ffutils = require('frontflip-utils');
 const questions = require('../prompts/init');
 const defaultDependencies = require('../config/dependencies');
 const getDependencies = require('../utils/getDeps');
@@ -10,18 +9,19 @@ const getPaths = require('../utils/getFilesPaths');
 const addPackageScripts = require('../utils/addPackageScripts');
 const addTestConfigs = require('../utils/addTestConfigs');
 
-module.exports = function(root, appName, initialDir, useYarn){
+module.exports = function(root, appName, initialDir, cliUtils){
   const prompt = inquirer.createPromptModule();
-  let deps, answers;
+  let deps, answers, useYarn;
   prompt(questions.init)
     .then(ans=>{
       answers = ans;
       answers.appName = appName;
       deps = getDependencies(ans);
-      return ffutils.installDependencies(deps.core.concat(defaultDependencies.core), false, useYarn);
+      useYarn = cliUtils.hasYarn();
+      return cliUtils.installDependencies(deps.core.concat(defaultDependencies.core), false, useYarn);
     })
     .then(()=>{
-      return ffutils.installDependencies(deps.dev.concat(defaultDependencies.dev), true, useYarn);
+      return cliUtils.installDependencies(deps.dev.concat(defaultDependencies.dev), true, useYarn);
     })
     .then(()=>{
       addPackageScripts(root, answers);

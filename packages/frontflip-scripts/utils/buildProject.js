@@ -1,8 +1,8 @@
 const fs = require('fs-extra');
 const path = require('path');
-const compileTemplate = require('../utils/compileTemplate');
-const selectContext = require('../utils/selectContext');
 const chalk = require('chalk');
+const compileTemplate = require('./compileTemplate');
+const selectContext = require('./selectContext');
 
 module.exports = (project, projectRoot, answers) => {
     console.log(chalk.blue('Starting Project Build'));

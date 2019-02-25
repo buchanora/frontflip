@@ -13,10 +13,8 @@
   "dependencies": {
     "chalk": "^1.1.1",
     "cross-spawn": "^4.0.0",
-    "frontflip-utils": "0.0.2",
     "fs-extra": "1.0.0",
     "handlebars": "^4.0.12",
-    "hogan": "^1.0.2",
     "inquirer": "^3.2.1",
     "js-yaml": "^3.12.0"
   },

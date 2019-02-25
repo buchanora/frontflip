@@ -1,16 +1,5 @@
 'use strict';
-
+const scripts = require('./scripts/');
 module.exports = {
-  init: require('./scripts/init'),
-  build: (command) => {
-
-  },
-  run: (command, args) => {
-    switch (command) {
-      case 'build':
-        require('./scripts/build')(args);
-        break;
-      default:
-    }
-  }
+  create: scripts.create,
 }
