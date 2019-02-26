@@ -129,17 +129,17 @@ class DataRow extends Component{
         {dataRow}
         {
           onEdit 
-          && <td className='data-table-action-button-wrap'>
+          &&  <td className='data-table-action-button-wrap'>
                 <span className='data-table-action-button icofont icofont-ui-edit' 
                       onClick={onEdit && onEdit.bind(null, rowIndex)}/>
               </td>
         }
         {
           onDelete 
-          && <td className='data-table-action-button-wrap'>
+          &&  <td className='data-table-action-button-wrap'>
                 <span className='data-table-action-button icofont icofont-ui-delete' 
                       onClick={onDelete && onDelete.bind(null,rowIndex)}/>
-            </td>
+              </td>
           }
         { 
           actions.length > 0 &&

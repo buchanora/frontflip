@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 
 /**
- * Copyright (c) 2009-present, theEMFcompany, Inc.
+ * Copyright (c) 2009-present, Buchanora Studios, Inc.
  * All rights reserved
  *
  * This code is lisenced under MIT-style lisence found in the
@@ -34,4 +34,4 @@ if (major < 4) {
   process.exit(1);
 }
 
-require('./frontflip');
+require('../frontflip');
