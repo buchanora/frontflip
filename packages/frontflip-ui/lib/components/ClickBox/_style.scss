@@ -1,5 +1,5 @@
 .clickbox{
-    border: 1px solid $color-tint-0;
+    border: 1px solid $color-gray-light-0;
     box-sizing: border-box;
     display: flex;
     flex-direction: column;
@@ -11,7 +11,7 @@
     padding: 30px 15px;
     border-radius: $edge-radius;
     background: $color-white;
-    color: $color-gray-0;
+    color: $color-gray-medium-0;
     font-weight: 700;
     box-shadow: none;
     transition: box-shadow 0.3s ease-in-out;

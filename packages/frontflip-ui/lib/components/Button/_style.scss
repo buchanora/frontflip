@@ -25,18 +25,18 @@
   cursor: pointer;
 }
 .button.button-disabled{
-  background-color: $color-tint-2;
+  background-color: $color-gray-light-2;
   color: $color-white;
-  border: 1px solid $color-tint-2;
+  border: 1px solid $color-gray-light-2;
 }
 .button.button-disabled:hover{
-  background-color: $color-tint-3;
+  background-color: $color-gray-light-3;
   color: $color-white;
-  border: 1px solid $color-tint-3;
+  border: 1px solid $color-gray-light-3;
   cursor: not-allowed;
 }
 .button-small{
-  font-size: $font-size-down-3;
+  font-size: $font-size-0;
   min-width: 80px;
   // max-width: 160px;
   padding-top: 7.5px;
@@ -51,8 +51,8 @@
   margin-right: 15px;
 }
 .button-medium{
-  font-size: $font-size-down-2;
-  line-height: $font-size-down-1;
+  font-size: $font-size-1;
+  line-height: $font-size-1;
   min-width: 180px;
   // max-width: 260px;
   padding-top: 14px;
@@ -119,37 +119,37 @@
 }
 // default solid button
 .solid-neutral{
-  background-color: $color-tint-2;
-  border-color: $color-tint-2;
-  color: $color-gray-2;
+  background-color: $color-gray-light-2;
+  border-color: $color-gray-light-2;
+  color: $color-gray-medium-2;
   // font-weight: 400;
 }
 .solid-neutral:hover{
-  color: $color-gray-0;
-  background-color: $color-tint-2;
-  border-color: $color-gray-0;
+  color: $color-gray-medium-0;
+  background-color: $color-gray-light-2;
+  border-color: $color-gray-medium-0;
 }
 .solid-neutral:disabled{
-  background-color: $color-tint-2;
-  border-color: $color-tint-2;
+  background-color: $color-gray-light-2;
+  border-color: $color-gray-light-2;
 }
 // defalut hollow button
 .hollow-neutral{
-  border-color: $color-dark-4;
-  color: $color-dark-3;
+  border-color: $color-gray-dark-4;
+  color: $color-gray-dark-3;
   opacity: 0.75;
 }
 .hollow-neutral:hover{
-  color: $color-dark-3;
+  color: $color-gray-dark-3;
   opacity: 1;
 }
 .hollow-neutral:disabled{
-  border-color: $color-tint-2;
-  color: $color-tint-2;
+  border-color: $color-gray-light-2;
+  color: $color-gray-light-2;
 }
 // primary solid button
 .solid-primary{
-  background: $linear-gradient-primary-2;
+  background: $linear-gradient-primary-0-4;
   color: $color-white;
   opacity: 1;
   // border: 1px solid $linear-gradient-primary-0;
@@ -180,7 +180,7 @@
 }
 // Secondary solid button
 .solid-secondary{
-  background: $linear-gradient-primary-2;
+  background: $linear-gradient-primary-0-4;
   // border: $linear-gradient-primary-0;
   color: $color-white;
 }

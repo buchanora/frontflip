@@ -1,4 +1,3 @@
-@import './theme';
 //**************************** Headline styles
 //********************************************
 .type-deck{
@@ -11,18 +10,18 @@
   display: inline
 }
 .screamer{
-    font-size: $font-size-up-3;
+    font-size: $font-size-5;
 }
 .title{
-  font-size: $font-size-up-3;
+  font-size: $font-size-5;
   // padding-bottom: 15px;
   // color: $color-primary-2;
 }
 .section-head{
   padding-bottom: 0;
-  color: $color-dark-4;
+  color: $color-gray-dark-4;
   @include breakpoint(medium){
-    font-size: $font-size-up-2;
+    font-size: $font-size-4;
   }
 }
 // .heading{
@@ -40,16 +39,16 @@
   font-size: $font-size-default
 }
 .sub-heading.small-sub-heading{
-  font-size: $font-size-down-1;
+  font-size: $font-size-1;
 }
 .kicker{
     font-size: $font-size-default;
 }
 .deck{
-    font-size: $font-size-down-1;
+    font-size: $font-size-1;
 }
 .meta{
-    font-size: $font-size-down-2;
+    font-size: $font-size-1;
     font-weight: 400;
 }
 .text{
@@ -71,7 +70,7 @@
 .text .iconClass{
   position: relative;
   line-height: unset!important;
-  // color: $color-gray-2;
+  // color: $color-gray-medium-2;
   // top: 1px;
 }
 .label-text{
@@ -80,7 +79,7 @@
   // margin-bottom: 5px;
 }
 .label-text-label{
-  font-size: $font-size-down-2;
+  font-size: $font-size-1;
   font-weight: 700;
   display: block;
   margin-bottom: 5px;

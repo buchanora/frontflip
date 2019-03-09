@@ -1,25 +1,21 @@
+> WARNING this document is a work in progress and ight not accurately reflect the state of this package.
 # Overview
-Frontflip-ui is a collection of high level widgets, low level components/elements and render utilities that help speed up your [React](https://facebook.github.io/react) frontend development workflow.
+Frontflip-ui-react is a collection of React components that map to all the ui elements and widgets found in the [Frontflip-ui](https://github.com/buchanora/frontflip/tree/master/packages/frontflip-ui) CSS framework. It also contains several higher order functions and other render utilities that help speed up your [React](https://facebook.github.io/react) frontend development workflow.
 
-##Instalation
-`npm install frontflip-ui`
+## Instalation
+`npm install frontflip-ui-react`
 
-## Components/Elements
+## Components
 
 ### Button
-#### Basic Example
+#### Usage
 ```
 ...
-    import {Button} from frontflip-ui;
+    import {Button} from frontflip-ui-react;
 
-    Button  label='Discover More'
+    <Button  label='Discover More'
             onClick={ event=>{} }
             style='SOLID_PRIMARY' />
-
-    <Button label='Discover More'  
-            type='LINK' 
-            to={`events/all`}
-            style='HOLLOW_PRIMARY' />
 ```
 
 #### props
@@ -50,4 +46,32 @@ Frontflip-ui is a collection of high level widgets, low level components/element
 ## Widgets
 
 ## Render Utilities
+
+## Development
+### Local Installation Steps
+1. Clone the mono repo
+```bash
+Git clone git@github.com:buchanora/frontflip.git
+```
+2. Link frontflip-ui package
+```bash
+cd <path/to/frontflip>/packages/frontflip-ui
+npm install
+npm link
+```
+3. Link frontflip-ui-react package to frontflip-ui
+```bash
+cd <path/to/frontflip>/packages/frontflip-ui-react
+npm install
+npm link frontflip-ui
+```
+4. Compile src and watch 
+```bash 
+npm run watch
+```
+
+4. Launch Story Book 
+```bash 
+npm run storybook
+```
 

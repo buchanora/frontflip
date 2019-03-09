@@ -18,15 +18,15 @@
   transform-origin: 50% 65%;
 }
 .query-filter-title{
-  // font-size: $font-size-down-1;
-  // color: $color-gray-0;
+  // font-size: $font-size-1;
+  // color: $color-gray-medium-0;
   padding: 15px;
 }
 .query-filter{
   // color: $color-primary-0;
-  font-size: $font-size-down-1;
+  font-size: $font-size-1;
   font-weight: $global-weight-bold;
-  border-top: 1px solid $color-gray-4;
+  border-top: 1px solid $color-gray-medium-4;
 }
 .query-filter:last-of-type{
   // border-bottom: 1px solid $color-mid-gray;
@@ -71,7 +71,7 @@
 }
 .query-filter-tab-active{
   z-index: $z8;
-  background: $linear-gradient-primary-2;
+  background: $linear-gradient-primary-0-4;
   color: $color-white;
   border-top-left-radius: 4px;
   border-top-right-radius: 4px;

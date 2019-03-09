@@ -1,4 +1,4 @@
-.fflip_addButton_wrap{
+.addButton-wrap{
   display: block;
   margin-bottom: 15px;
   text-align: center;
@@ -8,32 +8,32 @@
     margin-bottom: 0;
   };
 }
-.fflip_addButton_wrap:last-child{
+.addButton-wrap:last-child{
   margin-right: 0;
 }
-.fflip_addButton{
+.addButton{
   display: flex;
   flex-shrink: 1;
   justify-content: space-between;
   align-items: center;
   // width: 100%;
   // max-width: 460px;
-  background-color: $color-white-transparent-3;
-  color: $color-dark-4;
+  background-color: $color-white-transparent-4-3;
+  color: $color-gray-dark-4;
   font-weight: $global-weight-bold;
   padding: 7.5px 30px 7.5px 7.5px;
-  // font-size: $font-size-up-1;
-  border: 1px solid $color-gray-4;
+  // font-size: $font-size-3;
+  border: 1px solid $color-gray-medium-4;
   border-radius: 500px;
   // box-shadow: $shadow-z2;
   transition: all 0.5s ease-in-out;
 }
-.fflip_addButton i{
+.addButton i{
   // display: inline-block;
   // display: flex;
   justify-content: center;
   align-items: center;
-  background-color: $color-dark-4;
+  background-color: $color-gray-dark-4;
   color:$color-white ;
   padding: 10px;
   margin-right: 15px;
@@ -42,13 +42,13 @@
   border-radius: $global-rounded;
   font-size: 18px;
 }
-.fflip_addButton:hover{
+.addButton:hover{
   cursor: pointer;
   background-color: $color-white;
-  color: $color-dark-0;
+  color: $color-gray-dark-0;
   box-shadow: $shadow-z3;
 }
-.fflip_addButton em{
+.addButton em{
   flex: 1;
   font-style: normal;
   font-weight:  $global-weight-bold;

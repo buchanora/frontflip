@@ -35,7 +35,7 @@
 }
 .wizard-step-heading-divider{
   border: 0;
-  border-bottom: 1px solid $color-tint-1;
+  border-bottom: 1px solid $color-gray-light-1;
   flex: 1;
   margin-left: 7.5px;
   margin-right: 7.5px;
@@ -51,10 +51,10 @@
   border-radius: 50%;
   width: 35px;
   height: 35px;
-  font-size:  $font-size-down-2;
-  border: 1px solid $color-tint-1;
+  font-size:  $font-size-1;
+  border: 1px solid $color-gray-light-1;
   text-align: center;
-  color: $color-gray-3;
+  color: $color-gray-medium-3;
 }
 .wizard-step-heading-count{
   position: relative;
@@ -82,11 +82,11 @@
   line-height: 1.2;
   // width: 100%;
   // top: 36px;
-  color: $color-gray-3;
+  color: $color-gray-medium-3;
   font-weight: $global-weight-bold;
 }
 .wizard-active-step .wizard-step-heading-label{
-  color: $color-dark-4;
+  color: $color-gray-dark-4;
   font-weight: $global-weight-bold;
   // top: 52px;
 }
@@ -111,7 +111,7 @@
 }
 .wizard-footer{
   background: $color-white;
-  border-top: 1px solid $color-tint-1;
+  border-top: 1px solid $color-gray-light-1;
   display: flex;
   justify-content: space-between;
   padding: 30px 30px 30px 30px;

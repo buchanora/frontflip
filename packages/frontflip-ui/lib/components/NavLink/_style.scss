@@ -1,0 +1,22 @@
+.navLinks{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+  @include breakpoint(medium){
+    flex-direction: row;
+  };
+  // z-index: $z8;
+  // background: $color-white;
+}
+.navLink{
+  // text-transform: uppercase;
+  display: block;
+  padding-bottom: 5px;
+  @include breakpoint(medium){
+    padding-right: 30px;
+  };
+  // flex: 1;
+  // color: $color-gray-dark-4;
+}

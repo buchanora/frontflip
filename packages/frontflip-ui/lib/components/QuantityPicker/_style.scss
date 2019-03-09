@@ -7,8 +7,8 @@
   flex-direction: column-reverse;
   justify-content: center;
   align-items: center;
-  // border: 1px solid $color-gray-2;
-  color: $color-dark-4;
+  // border: 1px solid $color-gray-medium-2;
+  color: $color-gray-dark-4;
   @include breakpoint(medium){
     flex-direction: row;
     justify-content: flex-end;
@@ -24,9 +24,9 @@
   display: inline-block;
   vertical-align: middle;
   padding: 15px;
-  background: $color-tint-4;
-  border: 1px solid $color-tint-0;
-  // border-right: 1px solid $color-gray-2;
+  background: $color-gray-light-4;
+  border: 1px solid $color-gray-light-0;
+  // border-right: 1px solid $color-gray-medium-2;
 }
 .quantity-increment{
   box-sizing: border-box;
@@ -37,15 +37,15 @@
   display: inline-block;
   vertical-align: middle;
   padding: 15px;
-  background: $color-tint-4;
-  border: 1px solid $color-tint-0;
-  // border-left: 1px solid $color-gray-2;
+  background: $color-gray-light-4;
+  border: 1px solid $color-gray-light-0;
+  // border-left: 1px solid $color-gray-medium-2;
 }
 .quantity-increment:hover, .quantity-decrement:hover{
   cursor: pointer;
   box-shadow: $shadow-z3;
   color: $color-primary-2;
-  // background-color: $color-tint-3;
+  // background-color: $color-gray-light-3;
 }
 .quantity{
   box-sizing: border-box;
@@ -55,8 +55,8 @@
   // font-display: block;
   vertical-align: middle;
   display: inline-block;
-  line-height: $font-size-up-1;
-  font-size: $font-size-up-2;
+  line-height: $font-size-3;
+  font-size: $font-size-4;
   background: transparent;
   min-width: 60px;
   max-width: 90px;

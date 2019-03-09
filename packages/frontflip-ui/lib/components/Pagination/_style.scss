@@ -2,17 +2,17 @@
     margin-top: 30px;
 }
 .pagination a{
-    color: $color-dark-4;
+    color: $color-gray-dark-4;
 }
 .pagination .pagination-pageButton:hover{
-    background-color: $color-tint-4;
+    background-color: $color-gray-light-4;
     color: $color-primary-4;
     border-radius: $edge-radius;
     cursor: pointer;
 }
 .pagination .current{
-    background-color: $color-tint-4;
-    border: 1px solid $color-gray-4;   
+    background-color: $color-gray-light-4;
+    border: 1px solid $color-gray-medium-4;   
     border-radius: $edge-radius;
     font-weight: $global-weight-bold;
 }

@@ -78,7 +78,7 @@
   padding-right: 30px;
 }
 .block-divider{
-  border-bottom: 1px solid $color-gray-4;
+  border-bottom: 1px solid $color-gray-medium-4;
   padding-bottom: 15px;
   padding-top: 15px;
   margin-bottom: 15px;
@@ -89,19 +89,19 @@
 .block-divider:last-of-type{
   border-bottom: none;
 }
-.grid-section{
-  @include grid-layout(1, '.grid-section-item');
-}
-.grid-section-4{
-  @include breakpoint(medium){
-    @include grid-layout(4, '.grid-section-item');
-  }
-}
-.grid-section-3{
-  @include breakpoint(medium){
-    @include grid-layout(3, '.grid-section-item');
-  }
-}
+// .grid-section{
+//   @include grid-layout(1, '.grid-section-item');
+// }
+// .grid-section-4{
+//   @include breakpoint(medium){
+//     @include grid-layout(4, '.grid-section-item');
+//   }
+// }
+// .grid-section-3{
+//   @include breakpoint(medium){
+//     @include grid-layout(3, '.grid-section-item');
+//   }
+// }
 .grid-section-item{
   padding-right: 15px;
   padding-left: 15px;

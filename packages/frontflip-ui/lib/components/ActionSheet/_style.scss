@@ -1,22 +1,31 @@
-.fflip_actionSheet_wrapper{
+.action-sheet-wrapper{
   position: relative;
   @include breakpoint(medium){
     position: relative;
   }
 }
-.fflip_actionSheet_trigger{
+.action-sheet-trigger{
   background: transparent;
   box-sizing: border-box;
   border: none;
   padding: 0;
   margin: 0;
 }
-.fflip_actionSheet_trigger:focus,
-.fflip_actionSheet_trigger:hover{
+.action-sheet-trigger:focus,
+.action-sheet-trigger:hover{
   border: none;
   outline: none;
 }
-.fflip_actionSheet_trigger-mask{
+.action-sheet-dropdown{
+  position: absolute;
+  width: 100%;
+  height: inherit;
+  z-index: $z9;
+}
+.action-sheet-dropdown:focus{
+  outline: none;
+}
+.trigger-mask{
   position: absolute;
   display:block;
   top:0;
@@ -24,15 +33,6 @@
   width:100%;
   height: 45px;
 }
-.fflip_actionSheet_trigger-mask:hover{
+.trigger-mask:hover{
   cursor:pointer;
-}
-.fflip_actionSheet_dropdown{
-  position: absolute;
-  width: 100%;
-  height: inherit;
-  z-index: $z9;
-}
-.fflip_actionSheet_dropdown:focus{
-  outline: none;
 }

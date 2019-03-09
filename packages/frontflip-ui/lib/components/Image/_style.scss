@@ -1,0 +1,22 @@
+.imageDeck{
+    // width: 100%;
+    box-sizing: border-box;
+    display: block;
+    position: relative;
+    overflow: hidden;
+    @include breakpoint(medium){
+        display: inline-block;
+      };
+}
+.imageDeck img{
+    visibility: hidden;
+    box-sizing: border-box;
+    width: 100%;
+}
+.imageDeck .imageDiv{
+    box-sizing: border-box;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+}

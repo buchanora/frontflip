@@ -1,7 +1,8 @@
 **/*/node_modules/
+node_modules/
 packages/frontflip-cli/node_modules/
 packages/frontflip-scripts/node_modules/
+packages/frontflip-ui-react/node_modules/
 packages/frontflip-ui/node_modules/
 packages/frontflip-utils/node_modules/
-packages/frontflip/node_modules/
 *.DS_Store

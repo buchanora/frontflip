@@ -4,10 +4,10 @@
   align-items: center;
   position: relative;
   box-sizing: border-box;
-  background-color: $color-tint-1;
-  color: $color-gray-1;
+  background-color: $color-gray-light-1;
+  color: $color-gray-medium-1;
   // margin: 0 auto;
-  border: 2px solid $color-tint-3;
+  border: 2px solid $color-gray-light-3;
   overflow: hidden;
   // box-shadow: $shadow-z3;
 }
@@ -30,7 +30,7 @@
 }
 .image-upload-button-wrap>i{
   font-size: 4em;
-  color: $color-gray-3;
+  color: $color-gray-medium-3;
 }
 .image-upload-hover-context-wrap{
   box-sizing: border-box;
@@ -83,7 +83,7 @@
 
 .progress-wrapper{
   position: absolute;
-  background-color: $color-tint-4;
+  background-color: $color-gray-light-4;
   // height: 10px;
   border-radius: 500px;
   overflow: hidden;

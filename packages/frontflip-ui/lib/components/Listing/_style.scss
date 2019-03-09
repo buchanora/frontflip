@@ -43,7 +43,7 @@
   justify-content: space-between;
   padding: 15px;
   flex: 1;
-  color: $color-dark-0;
+  color: $color-gray-dark-0;
 }
 .listing-grid .listing-info .heading{
   // white-space: nowrap;
@@ -53,7 +53,7 @@
   text-overflow: ellipsis;
 }
 .listing-location{
-  color: $color-dark-4;
+  color: $color-gray-dark-4;
   display: flex;
   align-items: stretch;
 }
@@ -61,8 +61,8 @@
   padding: 15px;
   width: 96px;
   height: 96px;
-  color: $color-dark-4;
-  border-left: 1px solid $color-tint-1;
+  color: $color-gray-dark-4;
+  border-left: 1px solid $color-gray-light-1;
 }
 .listing-features{
   flex:1;
@@ -79,17 +79,17 @@
   align-items: center;
   float: right;
   text-align: center;
-  background-color: $color-white-transparent-0;
+  background-color: $color-white-transparent-4-0;
   padding: 3.5px 15px 3.5px 3.5px;
   border-radius: 1000px;
-  font-size: $font-size-down-3;
-  color: $color-dark-0;
+  font-size: $font-size-0;
+  color: $color-gray-dark-0;
   box-shadow: $shadow-z3;
   transition: all 0.25s ease-in-out;
 }
 .buyTicket-button i{
   display: inline-block;
-  background: $linear-gradient-primary-2;
+  background: $linear-gradient-primary-0-4;
   // background: $color-primary-2;
   color: $color-white;
   padding: 7.5px;
@@ -98,7 +98,7 @@
 }
 .buyTicket-button:hover{
   cursor: pointer;
-  background: $linear-gradient-primary-2;
+  background: $linear-gradient-primary-0-4;
   color: $color-white;
   box-shadow: $shadow-z4;
 }

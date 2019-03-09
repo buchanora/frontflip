@@ -13,6 +13,12 @@ module.exports = (baseConfig, env) => {
   config.entry.style = [
     path.resolve(__dirname, '../src/style.scss')
   ]
+
+  config.resolve.modules = [
+    ...config.resolve.modules,
+    'node_modules',
+    path.resolve(__dirname, '../node_modules')
+  ]
   
   config.module.rules.push({
     test: [/\.scss$/, /\.sass$/],

@@ -65,11 +65,11 @@ $color-dark-transparent-2: rgba(0, 0, 0, 0.3) !default;
 $color-dark-transparent-3: rgba(0, 0, 0, 0.2) !default;
 $color-dark-transparent-4: rgba(0, 0, 0, 0.1) !default;
 
-$color-white-transparent-0: rgba(255, 255, 255, 0.9) !default;
-$color-white-transparent-1: rgba(255, 255, 255, 0.8) !default;
-$color-white-transparent-2: rgba(255, 255, 255, 0.7) !default;
-$color-white-transparent-3: rgba(255, 255, 255, 0.6) !default;
-$color-white-transparent-4: rgba(255, 255, 255, 0.5) !default;
+$color-white-transparent-4-0: rgba(255, 255, 255, 0.9) !default;
+$color-white-transparent-4-1: rgba(255, 255, 255, 0.8) !default;
+$color-white-transparent-4-2: rgba(255, 255, 255, 0.7) !default;
+$color-white-transparent-4-3: rgba(255, 255, 255, 0.6) !default;
+$color-white-transparent-4-4: rgba(255, 255, 255, 0.5) !default;
 
 // Neutral Tones
 $color-white:      $color-gray-light-4 !default;
@@ -97,10 +97,10 @@ $color-tetiary-shaded: darken($color-tetiary-0, $hover-scale) !default;
 
 //***************************Define Gradients
 //********************************************
-$linear-gradient-primary: linear-gradient(75deg, $color-primary-0, $color-primary-4) !default;
-$linear-gradient-secondary: linear-gradient(75deg, $color-secondary-2, $color-primary-2) !default;
+$linear-gradient-primary-0-4: linear-gradient(75deg, $color-primary-0, $color-primary-4) !default;
+$linear-gradient-secondary-0-4: linear-gradient(75deg, $color-secondary-0, $color-secondary-4) !default;
 
-$radial-gradient-secondary-to-primary: radial-gradient(circle at center, $color-secondary-2 0, $color-primary-2 30%,  $color-primary-0 70%) !default;
+$radial-gradient-secondary-2-primary-2: radial-gradient(circle at center, $color-secondary-2 0, $color-primary-2 30%,  $color-primary-0 70%) !default;
 
 //***************************Define font scale
 //********************************************

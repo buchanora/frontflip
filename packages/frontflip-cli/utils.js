@@ -1,4 +1,5 @@
 const spawn = require('cross-spawn');
+const fs = require('fs-extra');
 const execSync = require('child_process').execSync;
 exports.hasYarn = () => {
     try {
@@ -63,3 +64,16 @@ exports.installDependencies = (dependencies, dev, useYarn) => {
         resolve();
     });
 };
+exports.removeDir = (dir) => {
+    try {
+        execSync('rm -rf ' + dir, {stdio: 'ignore'});
+        return true;
+    } catch (error) {
+        console.log(error.message);
+        return false;
+    }
+};
+exports.safeToMakeDirectory = (dirPath) =>{
+    // TODO: Check if dirname is suitable;
+    return fs.existsSync(dirPath);
+}

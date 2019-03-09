@@ -38,10 +38,10 @@ cd <path/to/frontflip>/packages/frontflip-cli
 npm install
 npm link
 ```
-4. You can now use the cli by running 
+4. You can now test the cli by running 
 ```bash 
 flip create <projectname> -d
 ```
 ### Repo Structure
-All frontflip repos can be found in the *packages* directory.
+All frontflip repos can be found in the *packages* directory. 
 

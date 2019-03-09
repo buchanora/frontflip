@@ -22,67 +22,120 @@ const dependencies = require('./dependencies');
 
 let projectPath, command, devEnvironment;
 
+const commands = {
+  CREATE: 'create',
+  INIT: 'init',
+  BUILD: 'build',
+  MIGRATE: 'migrate'
+}
+
+program.version(packageJson.version, '-v, --version');
 program
-  .version(packageJson.version, '-v, --version')
   .command('create <project>')
+  .description('Initite a new project and setup config/structural boilerplate')
   .option('-d, --development', 'Run create in development mode')
-  .action((name, _program) => {
+  .action((name, cmd) => {
     projectPath = name;
-    devEnvironment = _program.development;
-    command = 'create'; 
-    if ( typeof projectPath === 'undefined' ){
-      console.error(chalk.red('You must specify a directory for your project'));
-      process.exit(1);
-    }
+    setNodeEnv(cmd.development);
+    setPackageInstaller(flipUtils.hasYarn());
+    devEnvironment = cmd.development;
+    command = commands.CREATE; 
+    failIf(typeof projectPath === 'undefined', 'You must specify a directory for your project');
+    createProject(projectPath);
+  });
+program
+  .command('init <entity> [entityName]')
+  .description('Initiate a config object for project module/entity')
+  .option('-d, --development', 'Run create in development mode')
+  .action((entity, name, cmd) => {
+    setNodeEnv(cmd.development);
+    setPackageInstaller(flipUtils.hasYarn());
+    devEnvironment = cmd.development;
+  });
+program
+  .command('build <entity> [entityName]')
+  .description('Use the config object to build boilerplate files for a module/entity')
+  .option('-d, --development', 'Run create in development mode')
+  .action((entity, name, cmd) => {
+    setNodeEnv(cmd.development);
+    setPackageInstaller(flipUtils.hasYarn());
+    devEnvironment = cmd.development;
+  });
+program
+  .command('migrate <entity> [entityName]')
+  .description('Create a hange file location of a module/entity')
+  .option('-d, --development', 'Run create in development mode')
+  .action((entity, name, cmd) => {
+    setNodeEnv(cmd.development);
+    setPackageInstaller(flipUtils.hasYarn());
+    devEnvironment = cmd.development;
   });
 
 program.parse( process.argv );
 
-switch (command) {
-  case 'create':
-    bootstrapProject(projectPath);
-    break;
-  default:
-    run(program.args);
-}
-
-function launch(_root, appName, initialDir, useYarn){
+function launch(_root, appName, initialDir){
   const coreDependencies = dependencies.core;
   const devDependencies = dependencies.dev;
   const installationType = devEnvironment ? 'linkDependencies' : 'installDependencies';
   
-  flipUtils[installationType](coreDependencies, false, useYarn)
+  flipUtils[installationType](coreDependencies, false)
     .then(()=>{
-      console.log(chalk.blue('Linking Dev Dependencies'));
+      console.log(chalk.cyan('Linking Dev Dependencies'));
       return flipUtils[installationType](devDependencies, true, useYarn);
     })
     .then(()=>{
       flipScripts = require(path.resolve(_root, 'node_modules/frontflip-scripts/'));
-      console.log(installationType, flipScripts,);
-      
-      flipScripts.create(_root, appName, initialDir, useYarn);
+      flipScripts.create(_root, appName, initialDir, flipUtils);
     })
     .catch(error=>{
       console.error(`[LAUNCH] ${chalk.red("An error occurred while launching your project")}`, error);
+      flipUtils.removeDir(_root);
     });   
 }
 
-function bootstrapProject(_projectPath){
+function createProject(_projectPath){
   const rootPath = path.resolve(_projectPath),
         appName = path.basename(rootPath);
-  console.log('Starting new Frontflip project at:', chalk.blue(appName));
-  fs.ensureDirSync(appName);
-  const packageDotJson = {
-    name: appName,
-    version: '0.0.1',
-    private: true,
+  console.log('Starting new Frontflip project at:', chalk.green(appName));
+  try {
+    if ( flipUtils.safeToMakeDirectory(rootPath) ) throw new Error('Can\'t create project at the path you provided');
+    fs.ensureDirSync(appName);
+    const packageDotJson = {
+      name: appName,
+      version: '0.0.1',
+      private: true,
+    }
+    fs.writeJSONSync(
+      path.join(rootPath, 'package.json'),
+      packageDotJson
+    )
+    const initialDir = process.cwd();
+    process.chdir(rootPath);
+    launch(rootPath, appName, initialDir);
+    
+  } catch (error) {
+    console.log(chalk.magenta(error.message));
+    flipUtils.removeDir(rootPath);
   }
-  fs.writeJSONSync(
-    path.join(rootPath, 'package.json'),
-    packageDotJson
-  )
-  const initialDir = process.cwd();
-  process.chdir(rootPath);
-  launch(rootPath, appName, initialDir, flipUtils);
-  console.log(chalk.blue('Completed Project Bootstrap'));
+}
+function init(options){
+
+}
+function build(options){
+
+}
+function migrate(options){
+
+}
+function failIf(condition, message){
+  if(condition){
+    console.error(chalk.redBright(message));
+    return process.exit(1);
+  }
+}
+function setNodeEnv(dev){
+  process.env.NODE_ENV = dev ? 'development' : 'production';
+}
+function setPackageInstaller(hasYarn){
+  process.env.PACKAGE_INSTALLER = hasYarn ? 'YARN' : 'NPM';
 }
