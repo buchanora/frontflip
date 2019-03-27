@@ -11,6 +11,7 @@
     "test-watch": "NODE_ENV=test mocha './{,!(node_modules)/**}/*.spec.js' --watch"
   },
   "dependencies": {
+    "bluebird": "^3.5.3",
     "chalk": "^1.1.1",
     "cross-spawn": "^4.0.0",
     "fs-extra": "1.0.0",

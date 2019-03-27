@@ -1,39 +1,22 @@
 'use strict';
-const path = require('path');
-const inquirer = require('inquirer');
-const questions = require('../prompts/init');
-const defaultDependencies = require('../config/dependencies');
-const getDependencies = require('../utils/getDeps');
-const buildProject = require('../utils/buildProject');
-const getPaths = require('../utils/getFilesPaths');
-const addPackageScripts = require('../utils/addPackageScripts');
-const addTestConfigs = require('../utils/addTestConfigs');
+const questions = require('../prompts/');
+const build = require('./build');
+const utils = require('../utils/');
 
-module.exports = function(root, appName, initialDir, cliUtils){
-  const prompt = inquirer.createPromptModule();
-  let deps, answers, useYarn;
-  prompt(questions.init)
-    .then(ans=>{
-      answers = ans;
-      answers.appName = appName;
-      deps = getDependencies(ans);
-      useYarn = cliUtils.hasYarn();
-      return cliUtils.installDependencies(deps.core.concat(defaultDependencies.core), false, useYarn);
+module.exports = function(type, config, cli){
+  return cli.prompt(questions.create)
+    .then(answers=>{
+      config.adapter = answers.adapter.name;
+      const adapter = utils.getAdapter(config.adapter)(config);
+      cli.configure.projectAdapter(config.adapter, adapter);
+      const updatedConfig = cli.config.retrieve();
+      return build('project', Object.assign({}, config, updatedConfig), cli)
     })
     .then(()=>{
-      return cliUtils.installDependencies(deps.dev.concat(defaultDependencies.dev), true, useYarn);
-    })
-    .then(()=>{
-      addPackageScripts(root, answers);
-      addTestConfigs(root, answers);
-      const scaffoldRoot = path.resolve(__dirname, '..', 'scaffold');
-      const templateRoot = path.resolve(__dirname, '..', 'templates');
-      const projectFile = 'project.yml';
-      const project = getPaths(scaffoldRoot, templateRoot, projectFile);
-      return buildProject(project, root, answers);
+      cli.log.info('build successful');
     })
     .catch(error=>{
-      console.log(error);
+      cli.log.error(error);
       process.exit(1);
     })
 }

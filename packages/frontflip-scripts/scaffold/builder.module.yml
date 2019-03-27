@@ -11,7 +11,7 @@
   nodes:
   - type: file
     name: index.js
-  - type: scaffold
+  - type: builder
     name: component
     context: true
 - type: file
