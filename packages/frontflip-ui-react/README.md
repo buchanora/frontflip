@@ -51,7 +51,7 @@ Frontflip-ui-react is a collection of React components that map to all the ui el
 ### Local Installation Steps
 1. Clone the mono repo
 ```bash
-Git clone git@github.com:buchanora/frontflip.git
+git clone git@github.com:buchanora/frontflip.git
 ```
 2. Link frontflip-ui package
 ```bash
